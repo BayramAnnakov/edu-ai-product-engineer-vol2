@@ -19,8 +19,20 @@ def main():
     for line in (folder / "scoring-boundary.jsonl").read_text().splitlines():
         r = json.loads(line)
         print(f"{r['model']}: output={json.dumps(r['output'])}; ${r['cost_usd']:.7f}; {r['latency_seconds']:.3f}s")
+    print("Earlier Jev-as-final-scorer example. Current Jev task is executor choice.")
+    print("Earlier Jev-as-final-scorer example. Current Jev task is executor choice.")
     print("Expected score1/not_icp from the visible contract. A valid citation and schema do not prove the score.")
 
+    print("\nCurrent same-task model comparison and one-choice Jev router; selected excerpts only.")
+    for line in (folder / "model-choice-routing.jsonl").read_text().splitlines():
+        r = json.loads(line)
+        print(f"{r['model']}: output={json.dumps(r['output'])}; ${r['cost_usd']:.7f}; {r['latency_seconds']:.3f}s")
+    print("A routed workflow costs Jev plus its selected scorer, not Jev alone.")
+    print("\nCurrent same-task model comparison and one-choice Jev router; selected excerpts only.")
+    for line in (folder / "model-choice-routing.jsonl").read_text().splitlines():
+        r = json.loads(line)
+        print(f"{r['model']}: output={json.dumps(r['output'])}; ${r['cost_usd']:.7f}; {r['latency_seconds']:.3f}s")
+    print("A routed workflow costs Jev plus its selected scorer, not Jev alone.")
 
 if __name__ == "__main__":
     main()

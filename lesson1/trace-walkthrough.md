@@ -14,10 +14,20 @@ Run `python3 scripts/inspect_traces.py` from the repository root, or open [the J
 
 ## Scoring: a valid typed answer can still be wrong
 
-Read `scoring-boundary.jsonl`: same synthetic source has 24 employees/4 sales staff; the contract requires at least 50/10. The required score is1 / not_icp. The large model returns1; Jev returns3 / not_icp while citing a real supplied record. The evidence ID and JSON shape are valid; the decision is wrong.
+This is the optional earlier experiment with Jev as final scorer, not today’s executor router. This is the optional earlier experiment with Jev as final scorer, not today’s executor router. Read `scoring-boundary.jsonl`: same synthetic source has 24 employees/4 sales staff; the contract requires at least 50/10. The required score is1 / not_icp. The large model returns1; Jev returns3 / not_icp while citing a real supplied record. The evidence ID and JSON shape are valid; the decision is wrong.
 
 Ask: what does that error do downstream, and what is its business cost? The fixture does not show whether a sales workflow actually admitted or reviewed the lead. Jev has seven Choice questions in one paid request here; all returned usage is counted. It has no effort parameter; low/high replay aliases do not create a real effort comparison. One selected error does not estimate a population error rate.
 
 ## Separate test verdict and business decision
 
 [Bayram’s public post1844](https://t.me/ProductsAndStartups/1844) describes a different 616-case test: about 25% lower cost and 2.6× speed while lost good leads increased 1.4%→4.3%. The formal test failed; the owner chose rollout with followthrough. This is reported history, not the later follow-up result or this tiny sample. Preserve both records; a proposed classroom trial authorizes no production rollout.
+
+
+## Current model-choice and executor-routing example
+
+Read `traces/model-choice-routing.jsonl`. Sol, Luna and Terra receive the same scoring task. Jev receives one constrained executor-choice question; it does not produce the company score here. Compare Terra’s real cited record with the business policy, then inspect the full scoring outcome. For routing economics, add Jev’s attempt to the selected scorer rather than comparing the router’s cost alone. The local model-choice starter contains all 30 development cases and recorded outputs for a new pre-answer rule or routing experiment.
+
+
+## Current model-choice and executor-routing example
+
+Read `traces/model-choice-routing.jsonl`. Sol, Luna and Terra receive the same scoring task. Jev receives one constrained executor-choice question; it does not produce the company score here. Compare Terra’s real cited record with the business policy, then inspect the full scoring outcome. For routing economics, add Jev’s attempt to the selected scorer rather than comparing the router’s cost alone. The local model-choice starter contains all 30 development cases and recorded outputs for a new pre-answer rule or routing experiment.

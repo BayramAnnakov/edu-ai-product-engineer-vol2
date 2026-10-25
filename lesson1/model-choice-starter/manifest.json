@@ -1,0 +1,11 @@
+{
+  "files": {
+    "data.json": "efcdf1818d29a46b523044f909834f28c965666aea817d8c868b4cc14ccb297a",
+    "lab.py": "4d0dce94a39ad3f3cd1b18c5bff90cee7204cfd01537e8e1117a54fee7da41ec",
+    "router.py": "c8be231dfc60357c13036a864c4f98c26ee1ab775495672ad0abb2baa6a9bbe0",
+    "README.md": "6c1d249914b20c7411d3e38de5dabb86bd3549bbb10dc1d3eae75a285ed66431",
+    "test_lab.py": "5c146ab381bc1b908f4f509586c66d32d3ae2c56ab89fc278036d80a142db326",
+    "AGENTS.md": "b28dde853ebdbc2a5b2aa02f2ca156aead6108893eb66a425f5f7499c6423e78",
+    "CLAUDE.md": "4b214688f6e4aedfe11fe502a71234bfcb8f52b15f4e41b1750e497d711d77a4"
+  }
+}

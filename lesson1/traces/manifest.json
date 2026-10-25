@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "recorded_on": "2026-10-24",
-  "examples": 6,
-  "source_scope": "Four actual public-document cache calls plus two actual model calls on one synthetic development case. No customer traces.",
+  "recorded_on": "2026-10-24 and 2026-10-25",
+  "examples": 10,
+  "source_scope": "Four actual public-document cache calls, two earlier scorer calls, and four model-choice/router call excerpts on a synthetic development boundary. No customer traces.",
   "retained": [
     "provider/model names",
     "usage counters",
@@ -24,6 +24,7 @@
   ],
   "sha256": {
     "cache-pair.jsonl": "207f9bf8fb6553877aea0a38609ebe3b9d2301a08289a088d450bb4d905de76f",
-    "scoring-boundary.jsonl": "d8ed40ffd314a43758529e0a5fbc587d7b8123962c0bc9b17cdcbde1b8313181"
+    "scoring-boundary.jsonl": "d8ed40ffd314a43758529e0a5fbc587d7b8123962c0bc9b17cdcbde1b8313181",
+    "model-choice-routing.jsonl": "1e10edd5c9b93b2d3aa5a16ceaf5c8686f44ab4846420d13463aa353f5e89a46"
   }
 }

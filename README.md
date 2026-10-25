@@ -2,7 +2,7 @@
 
 Student materials for the advanced course: six workshops that build on a working agent. Workshop 1 asks: **can this work disappear, what does a correct completed job cost, and what would make us keep the change?**
 
-The core online workshop uses the instructor’s shared simulation. Participants make predictions and decisions aloud. The final 25 minutes are for one bounded individual application to a ready own workflow or the optional recorded starter. For local starter practice, get the standalone ZIP beforehand and check Python; no instructor host, provider account or API keys are needed. The broader worked take-home walkthrough follows the evaluation discussion.
+The core online workshop uses the instructor’s shared simulation: less reasoning, a cheaper model, rules, then Jev choosing an executor. Participants make predictions and decisions aloud. The final 25 minutes are for one bounded individual application to a ready own workflow or the optional recorded starter. For local starter practice, open the extracted starter folder in Codex or Claude Code and ask it to read AGENTS.md. The agent handles commands; you choose the hypothesis, limits and verdict. An available Python runtime is sufficient; no skill installation, instructor host, provider account or API keys are needed. The broader worked take-home walkthrough follows the evaluation discussion.
 
 Start with [Workshop 1 take-home](lesson1/README.md). The kit works with Python 3.10+ and has no runtime dependencies or required provider account.
 
@@ -10,17 +10,23 @@ Start with [Workshop 1 take-home](lesson1/README.md). The kit works with Python 
 - [Worksheet](lesson1/worksheet.md) and [homework](lesson1/homework.md): transfer to a workflow you own.
 - [Actual sanitized traces](lesson1/traces/README.md): provider usage, cache counters and a real model mistake.
 - [Coding-review](lesson1/examples/coding-review/README.md) and [support-triage](lesson1/examples/support-triage/README.md): separate offline projects for practicing the method.
-- [Recorded classroom starter](lesson1/recorded-starter/README.md): local policy experiments using actual saved calls; final evaluation packet released separately after freeze.
+- [Model-choice classroom starter](lesson1/model-choice-starter/README.md): local policy experiments using actual saved calls; 30 development cases with actual Sol/Luna/Terra calls and Jev choices; no keys or server.
 - [Optional hosted client](lesson1/workshop-client/README.md): reconnect to an instructor host only when that mode is used.
 - [Validation](VALIDATION.md): what has actually been tested and what remains unverified.
 
+## Let your coding agent evaluate your hypothesis
+
+Open the starter in Codex or Claude Code and ask it to read AGENTS.md. For a ready own project, give the agent skills/bakeoff/SKILL.md from this kit (or install it below) and say:
+
+> Help me choose and evaluate one bounded cost or latency hypothesis on this workflow. Ask me for the quality floor and budget, run the comparison using my existing evidence/runner, inspect a consequential case, and let me choose the final verdict. If execution inputs are missing, return an explicitly unexecuted plan.
+
+The agent handles code, commands and scorecards. You own the hypothesis, acceptable trade-offs and decision. New paid calls require your authorized access and budget; recorded starter practice does not.
+
 ## Use bakeoff in your own project
 
-Clone this repository, then install into a target project (the installer refuses to overwrite an existing skill):
+Download the instructor’s take-home ZIP and extract it, or clone this repository if you have access. From the extracted repository root, install into a target project (the installer refuses to overwrite an existing skill):
 
 ```bash
-git clone https://github.com/BayramAnnakov/edu-ai-product-engineer-vol2.git
-cd edu-ai-product-engineer-vol2
 python3 scripts/install_skill.py --host codex --target /path/to/your/project
 # Or:
 python3 scripts/install_skill.py --host claude --target /path/to/your/project
@@ -44,4 +50,4 @@ python3 scripts/inspect_traces.py
 
 Do not send personal/customer data with a homework submission. Publish a sanitized decision and the minimum traces needed to support it. The instructor's private evaluator, held-out answer key, provider credentials and private Langfuse project are not included.
 
-[Open the offline Field Notes replay](lesson1/replay.html): five questions, progressive reveals, actual sanitized receipts and a downloadable own-workflow plan. Download the repository ZIP and open this HTML file locally; GitHub’s code view does not execute it. No server or account is required.
+[Open the optional historical cache/scorer replay](lesson1/replay.html): five questions, progressive reveals, actual sanitized receipts and a downloadable own-workflow plan. Download the repository ZIP and open this HTML file locally; GitHub’s code view does not execute it. No server or account is required.
