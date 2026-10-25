@@ -1,0 +1,1874 @@
+{
+  "075fdb521e9f970c574cf03cbd8d3763abb8fd18bb5635cf96c1b22d0f631da3": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140364,
+        "id": "recorded-d46dbcad01b07ee3",
+        "latency_s": 0.23822395782917738,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3342,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.23822395782917738,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "0fd119ccada4630a654e133711a04ccbfd391874b747059fc042ce2767c3e51d": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144816,
+        "id": "recorded-2fbeeb24971e5de6",
+        "latency_s": 0.12872170889750123,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3448,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.12872170889750123,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "228060505af342a54b28286181bae6b2b50173f2804383d97b31751de106f567": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001306,
+        "id": "recorded-5893629ee1d6c8e3",
+        "latency_s": 1.6453069171402603,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 498,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 529
+        }
+      }
+    ],
+    "latency_s": 1.6453069171402603,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "2bcfa5204474c841f94ee870b7712ff3d1b7d20df51ea25660b03e0f1d520253": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00146,
+        "id": "recorded-51f4da3b958f674a",
+        "latency_s": 1.5511534998659045,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 575,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 606
+        }
+      }
+    ],
+    "latency_s": 1.5511534998659045,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "568272575874555bc408a96458901d9c3cf5045acb5cdc24e3acf4262fc692e6": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014158200000000001,
+        "id": "recorded-f456e5073a004699",
+        "latency_s": 0.12427658308297396,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3371,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.12427658308297396,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "634efac2b656dda6ea27b0864621e34fe52ffb01fa5e76420db16bafa1aa031e": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014158200000000001,
+        "id": "recorded-f456e5073a004699",
+        "latency_s": 0.12427658308297396,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3371,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.12427658308297396,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6b4727adfb10d6823697fa78a7843f351b63b014020d62e3db0a3e8a3de559a4": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001646,
+        "id": "recorded-2836ed9988a3ebb1",
+        "latency_s": 2.5871498330961913,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 498,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 65,
+          "output_tokens_details": {
+            "reasoning_tokens": 32
+          },
+          "total_tokens": 563
+        }
+      }
+    ],
+    "latency_s": 2.5871498330961913,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "70835915acdf6eae1a2636d2b12aed1d64bf3558012d06bdea7e3fabd082f2c7": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00174,
+        "id": "recorded-5fa5ffef541b4e49",
+        "latency_s": 1.9595320839434862,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 575,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 59,
+          "output_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "total_tokens": 634
+        }
+      }
+    ],
+    "latency_s": 1.9595320839434862,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a6082b36fbca140fc46ae6641af29a0ccb75e441a257d028b61752bebd677398": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001914,
+        "id": "recorded-21c45602bf6f42cc",
+        "latency_s": 2.548660125117749,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 597,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 72,
+          "output_tokens_details": {
+            "reasoning_tokens": 39
+          },
+          "total_tokens": 669
+        }
+      }
+    ],
+    "latency_s": 2.548660125117749,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a6b07b1cbc13bbdf899b268023556aea1ccbab5e96e24d3ca48743e4dc931c99": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00135,
+        "id": "recorded-3f154f518038656a",
+        "latency_s": 1.9464600421488285,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 520,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 551
+        }
+      }
+    ],
+    "latency_s": 1.9464600421488285,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b38d2915388f59e3decebbec33c65d02ceea51a36d87ba6dcdcb3a35f6a2d782": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144816,
+        "id": "recorded-2fbeeb24971e5de6",
+        "latency_s": 0.12872170889750123,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3448,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.12872170889750123,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b5ca118cf6e1b7bde84dbcb4d17613a92ec28a68fc22656f8e4dcc587bc9d9cb": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014359800000000002,
+        "id": "recorded-9ab58e8b1228b127",
+        "latency_s": 0.20597208384424448,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3419,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.20597208384424448,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "dfc612b10d81e3ff18b814a0d1ef76556239063ad8fe7a2684388bfbe3fa6129": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014359800000000002,
+        "id": "recorded-9ab58e8b1228b127",
+        "latency_s": 0.20597208384424448,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3419,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.20597208384424448,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e84b4070b58f2dd0063a31c5c03e47096f0ca3248bb557e75cd59f4856c5a770": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001504,
+        "id": "recorded-36dfcb8f8bff8822",
+        "latency_s": 1.2279565420467407,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 597,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 628
+        }
+      }
+    ],
+    "latency_s": 1.2279565420467407,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-010\",\n  \"company\": \"Solara Tools\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"OTHER-ACCOUNT\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-010-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 207,\n  \"id\": \"D-010\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-010\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-010-R2\",\n      \"text\": \"A sales note mentions a competitor contract for a different account; not evidence about this company.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "eab38ebea53a31f49db12e5102bea7ea9ae74390ea9b1348575bf52d60c91ba7": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00166,
+        "id": "recorded-b8bab90cd732b718",
+        "latency_s": 2.385090708034113,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 520,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 62,
+          "output_tokens_details": {
+            "reasoning_tokens": 29
+          },
+          "total_tokens": 582
+        }
+      }
+    ],
+    "latency_s": 2.385090708034113,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-010; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f4c9f6cf64e34adce38d05c14cf1c5d7eb8881ea237727a598f0d440c0be9f6b": {
+    "answer": {
+      "evidence_ids": [
+        "D-010-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140364,
+        "id": "recorded-d46dbcad01b07ee3",
+        "latency_s": 0.23822395782917738,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3342,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.23822395782917738,
+    "request": {
+      "case": {
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "conflicting": false,
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "expires": "2027-12-31",
+          "record_id": "D-010-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 207,
+        "id": "D-010",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R1",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "id": "D-010-R2",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-010\",\"company\":\"Solara Tools\",\"conflicting\":false,\"contract\":{\"account_id\":\"OTHER-ACCOUNT\",\"expires\":\"2027-12-31\",\"record_id\":\"D-010-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":207,\"id\":\"D-010\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R1\",\"text\":\"Verified company profile: B2B SaaS; 207 employees; sales team of 18.\"},{\"account_id\":\"D-010\",\"date\":\"2026-10-18\",\"id\":\"D-010-R2\",\"text\":\"A sales note mentions a competitor contract for a different account; not evidence about this company.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

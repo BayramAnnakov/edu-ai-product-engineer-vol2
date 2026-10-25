@@ -1,0 +1,1898 @@
+{
+  "0e31e0d431bdf524c880c3685714e5b67004909ddc207026a919b99d6275171a": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001538,
+        "id": "recorded-94cc92ab831ac7ae",
+        "latency_s": 1.78382679191418,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 584,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 621
+        }
+      }
+    ],
+    "latency_s": 1.78382679191418,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "0fa831dafcac41f8667383bf2fb16b3403235ae6bbd990115ba47f5d572f0ace": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144186,
+        "id": "recorded-73f2113e2b2c933d",
+        "latency_s": 0.17896849988028407,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3433,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.17896849988028407,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "17b3575c47b5c7bdb505ca845d8dc760b7787b37b11f6bfab9bb2d66ba783f0c": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002108,
+        "id": "recorded-653ce58a3c95dc3d",
+        "latency_s": 2.561759416013956,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 584,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 94,
+          "output_tokens_details": {
+            "reasoning_tokens": 55
+          },
+          "total_tokens": 678
+        }
+      }
+    ],
+    "latency_s": 2.561759416013956,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "2186997c6ab770688ae1942ec9d0ebdd103b16348020f3f80c63bd970246d9ba": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00138,
+        "id": "recorded-b8795840e7b181bc",
+        "latency_s": 1.597094250144437,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 505,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 542
+        }
+      }
+    ],
+    "latency_s": 1.597094250144437,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "60b1aa66954f959779db6583ea6b42b177beecd9816a3a38761c88f37a1f9a4e": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000142086,
+        "id": "recorded-f4769a8088972b04",
+        "latency_s": 0.20763687486760318,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3383,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.20763687486760318,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "853d8d115211c825fa39b09aea427a03bef418375868d3aec6d381a2ca1df6c2": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000145404,
+        "id": "recorded-f51fe824d2903003",
+        "latency_s": 0.14362220792099833,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3462,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.14362220792099833,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "8ea8ffc7260e625e189d34e93ce3e390335dd80392216596333bbb7f54f15a39": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001804,
+        "id": "recorded-565c5021755849d6",
+        "latency_s": 2.3651808749418706,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 527,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 75,
+          "output_tokens_details": {
+            "reasoning_tokens": 36
+          },
+          "total_tokens": 602
+        }
+      }
+    ],
+    "latency_s": 2.3651808749418706,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a576f509cfe93922b26c8d2187b6dc8357f699369f1840035876076c8865f20c": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144186,
+        "id": "recorded-73f2113e2b2c933d",
+        "latency_s": 0.17896849988028407,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3433,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.17896849988028407,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a6ad2ae850d8f934742629d6b41d49c66c222085ecf834cb152ad50c63c72210": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001902,
+        "id": "recorded-4fc81e3629c5b965",
+        "latency_s": 2.244851083960384,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 606,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 69,
+          "output_tokens_details": {
+            "reasoning_tokens": 30
+          },
+          "total_tokens": 675
+        }
+      }
+    ],
+    "latency_s": 2.244851083960384,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ab8fe2627c07d147881289c2ec80d6a63f5404df4c61952c965fb4115ba3ebe8": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000142086,
+        "id": "recorded-f4769a8088972b04",
+        "latency_s": 0.20763687486760318,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3383,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.20763687486760318,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b19726e9e3cf6f5abd425a06639f8768cf3a3374df1c396eebcd5fdabfc94221": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001424,
+        "id": "recorded-e2c1af58244c870c",
+        "latency_s": 2.8202419579029083,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 527,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 564
+        }
+      }
+    ],
+    "latency_s": 2.8202419579029083,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b53ccda285ef2b35642cac5c4fa2f8bf283a96f8de8cd2831695256c1cb91d80": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00188,
+        "id": "recorded-c1e3d1f7c2423f95",
+        "latency_s": 2.0546912499703467,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 505,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 87,
+          "output_tokens_details": {
+            "reasoning_tokens": 48
+          },
+          "total_tokens": 592
+        }
+      }
+    ],
+    "latency_s": 2.0546912499703467,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e8d2dec4c74be9f7e765543d42b49c25615c3581912986265a2b9f30719f189f": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1",
+        "D-028-R2"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001582,
+        "id": "recorded-55dda56924e66e24",
+        "latency_s": 1.6546915830112994,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 606,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 643
+        }
+      }
+    ],
+    "latency_s": 1.6546915830112994,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ed6d22eff939f0c31ef30dc0ea025f687219c3c74dd030ca07ae005110ca4015": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140868,
+        "id": "recorded-55d1d3fd7bed632f",
+        "latency_s": 0.13246308313682675,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3354,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.13246308313682675,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f1ebaaae84b07a17919b93242d4538082d803c1e55153bb1dda3d03c957da77a": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000145404,
+        "id": "recorded-f51fe824d2903003",
+        "latency_s": 0.14362220792099833,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3462,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.14362220792099833,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-028; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-028\",\n  \"company\": \"Kite Software 3\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-028\",\n    \"expires\": \"2025-12-31\",\n    \"record_id\": \"D-028-R2\",\n    \"status\": \"expired\",\n    \"verified\": true\n  },\n  \"headcount\": 261,\n  \"id\": \"D-028\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-028\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-028\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-028-R2\",\n      \"text\": \"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f54ba4b79a40057cab4b771de26bf9c490c329e1168362e447ede5f62fdf1e91": {
+    "answer": {
+      "evidence_ids": [
+        "D-028-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140868,
+        "id": "recorded-55d1d3fd7bed632f",
+        "latency_s": 0.13246308313682675,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3354,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.13246308313682675,
+    "request": {
+      "case": {
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-028",
+          "expires": "2025-12-31",
+          "record_id": "D-028-R2",
+          "status": "expired",
+          "verified": true
+        },
+        "headcount": 261,
+        "id": "D-028",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "id": "D-028-R1",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-028",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-028-R2",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-028\",\"company\":\"Kite Software 3\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-028\",\"expires\":\"2025-12-31\",\"record_id\":\"D-028-R2\",\"status\":\"expired\",\"verified\":true},\"headcount\":261,\"id\":\"D-028\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-028\",\"date\":\"2026-10-18\",\"id\":\"D-028-R1\",\"text\":\"Verified company profile: B2B SaaS; 261 employees; sales team of 18.\"},{\"account_id\":\"D-028\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-028-R2\",\"text\":\"Old competitor contract expired on 2025-12-31; no active renewal recorded.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

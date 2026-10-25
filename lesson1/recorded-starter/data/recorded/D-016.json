@@ -1,0 +1,1682 @@
+{
+  "0f70cacfc8f8984e00edacacb632e48fe207fb542f43f2e9127d701a29860704": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011487,
+        "id": "recorded-6722da7c4625e164",
+        "latency_s": 0.1245624590665102,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2735,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.1245624590665102,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "2067740e362fab1123123231bc94d0c5f0655bc46168f954f9762dd61ceab717": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001528,
+        "id": "recorded-56f07f252d22ff0b",
+        "latency_s": 1.7373116249218583,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 464,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 60,
+          "output_tokens_details": {
+            "reasoning_tokens": 27
+          },
+          "total_tokens": 524
+        }
+      }
+    ],
+    "latency_s": 1.7373116249218583,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "25db7052f33ff4199db8e92dc1b731de4c4dd3647a4f9c0b5868b0f8bb350658": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011676,
+        "id": "recorded-b876e48fa63f3807",
+        "latency_s": 0.12383270799182355,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2780,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12383270799182355,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "27f633232249824e63fb11f1211b33314649a71a7600d273e826d267f0ee40e4": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011676,
+        "id": "recorded-b876e48fa63f3807",
+        "latency_s": 0.12383270799182355,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2780,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12383270799182355,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "28b7292c1c3511df92567f63d1a9caeb83ce21016c886e11cd83f2d6d4cfa3a0": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001238,
+        "id": "recorded-a8faca265762ed24",
+        "latency_s": 1.424594292184338,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 464,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 495
+        }
+      }
+    ],
+    "latency_s": 1.424594292184338,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "3512b965bb85e8e039c31a34e47c0dd79e93a3068672299a4f428d2bb71833ad": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001282,
+        "id": "recorded-ad2a5ae4d8fc1534",
+        "latency_s": 1.3599792090244591,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 486,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 517
+        }
+      }
+    ],
+    "latency_s": 1.3599792090244591,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "53d0fb84e06a136adce7dee808520952aed76546ead5065fe3ebd293ad92ff01": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001192,
+        "id": "recorded-13b99ab58568415b",
+        "latency_s": 1.5736921250354499,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 441,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 472
+        }
+      }
+    ],
+    "latency_s": 1.5736921250354499,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5b21c1042b058b44b3d8561d1cd439d087798bb245e8aaf5e63e9ee4e1a11328": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000113652,
+        "id": "recorded-12a6e30405d53cfe",
+        "latency_s": 0.19779995898716152,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2706,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.19779995898716152,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5f97ad4655266e424f55f1ab7efb3f66809c6c0be542e5aab5bcd5f279d2659b": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115542,
+        "id": "recorded-73614cea6c379683",
+        "latency_s": 0.13428904209285975,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2751,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.13428904209285975,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6a3fd6628178c4b4b9669694f03d166d7335a483cfd4c518f7c235faf34acc95": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011487,
+        "id": "recorded-6722da7c4625e164",
+        "latency_s": 0.1245624590665102,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2735,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.1245624590665102,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "90640466a3213ae0743263de631697e440bf2098a7357b66bed9924bed9c4536": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000113652,
+        "id": "recorded-12a6e30405d53cfe",
+        "latency_s": 0.19779995898716152,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2706,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.19779995898716152,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "9b6ebf6410fd7be8052980cfb4cff04db5ce238a89789e60047bc74eb93e044d": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001282,
+        "id": "recorded-085cd546ead9a69e",
+        "latency_s": 1.8304523329716176,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 486,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 517
+        }
+      }
+    ],
+    "latency_s": 1.8304523329716176,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b7dd0d5061769921c8d0bef9b3f44f90d164c132b7529532b336631b88a53723": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115542,
+        "id": "recorded-73614cea6c379683",
+        "latency_s": 0.13428904209285975,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2751,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.13428904209285975,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-016\",\n  \"company\": \"Tern Studio 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 120,\n  \"id\": \"D-016\",\n  \"industry\": \"Agency\",\n  \"records\": [\n    {\n      \"account_id\": \"D-016\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-016-R1\",\n      \"text\": \"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "c7971285b5ad6427d87fc7ceed5e3c13b2f799d700e7a437780b1a938a5b6399": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001552,
+        "id": "recorded-89f2a7bac8e5faff",
+        "latency_s": 2.2162453341297805,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 441,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 67,
+          "output_tokens_details": {
+            "reasoning_tokens": 34
+          },
+          "total_tokens": 508
+        }
+      }
+    ],
+    "latency_s": 2.2162453341297805,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-016; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "cad0fc40c0156e8343818f6c6eb1dea59e90acb83e0820dcbab626590a8144b7": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001148,
+        "id": "recorded-254c831271ceef0b",
+        "latency_s": 1.9654350408818573,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 419,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 450
+        }
+      }
+    ],
+    "latency_s": 1.9654350408818573,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "cfd42ebb30bd394bacb320b5836b6f7b383160772bd79ac3baebf4fabad30f46": {
+    "answer": {
+      "evidence_ids": [
+        "D-016-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001398,
+        "id": "recorded-a2816bb8b1abb169",
+        "latency_s": 2.419033040991053,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 419,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 56,
+          "output_tokens_details": {
+            "reasoning_tokens": 23
+          },
+          "total_tokens": 475
+        }
+      }
+    ],
+    "latency_s": 2.419033040991053,
+    "request": {
+      "case": {
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 120,
+        "id": "D-016",
+        "industry": "Agency",
+        "records": [
+          {
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "id": "D-016-R1",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-016\",\"company\":\"Tern Studio 2\",\"conflicting\":false,\"contract\":null,\"headcount\":120,\"id\":\"D-016\",\"industry\":\"Agency\",\"records\":[{\"account_id\":\"D-016\",\"date\":\"2026-10-18\",\"id\":\"D-016-R1\",\"text\":\"Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 # One required homework artifact
 
-Choose **A: a coding-agent pipeline** or **B: an agent inside a product**. If you lack data, use either offline starter and explicitly label it a fixture.
+Choose **A: a coding-agent pipeline** or **B: an agent inside a product**. If you lack data, use the recorded model-choice starter (development replay), or one of the authored fixture projects. Name the evidence mode accurately.
 
-Use bakeoff on one bounded change. Start with at least30 labeled pilot cases for the course assignment, with separate tuning/evaluation or a dev-only rejection. Thirty is a starting sample, not a statistical guarantee; inspect important slices and costly failures. Set the actual bar from the workflow.
+Use bakeoff on one bounded change. Start with at least 30 labeled pilot cases for the course assignment, with separate tuning/evaluation or a dev-only rejection. Thirty is a starting sample, not a statistical guarantee; inspect important slices and costly failures. Set the actual bar from the workflow.
 
 Submit one decision record plus the tested config and enough sanitized receipts to reconstruct it:
 

@@ -1,0 +1,3913 @@
+{
+  "evidence_mode": "recorded-provider",
+  "recorded_on": "2026-10-25",
+  "scope": "30 synthetic development cases; actual scorer answers and router choices; no held-out cases or private judge.",
+  "scoring_criteria": {
+    "version": "field-notes-w1.3",
+    "as_of": "2026-10-25",
+    "client": "Northwind Analytics",
+    "product": "Pipeline forecasting software for B2B sales teams",
+    "fit": "B2B SaaS, verified 50\u20131000 employees and at least 10 sales staff.",
+    "exclude": "Agencies and accounts with an authoritative, unexpired competitor contract.",
+    "priority": "Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.",
+    "contract": "score 1\u20135; one listed reason_code; 1\u20132 distinct evidence_ids from this account.",
+    "reason_codes": [
+      "buying_signal",
+      "icp_fit",
+      "budget_frozen",
+      "locked_in_competitor",
+      "not_icp"
+    ]
+  },
+  "models": {
+    "sol": "gpt-6.1-sol",
+    "luna": "gpt-6-luna",
+    "terra": "gpt-5.6-terra"
+  },
+  "router_model": "jev-1.14.0",
+  "rows": [
+    {
+      "input": {
+        "id": "D-001",
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "headcount": 180,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-001-R1",
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "id": "D-001-R2",
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-001",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-001-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "locked_in_competitor",
+        "evidence_ids": [
+          "D-001-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-001-R2"
+            ]
+          },
+          "cost_usd": 0.001336,
+          "seconds": 2.905031875008717,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 536
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-001-R2"
+            ]
+          },
+          "cost_usd": 8.78e-05,
+          "seconds": 2.751677957829088,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 75,
+            "output_tokens_details": {
+              "reasoning_tokens": 40
+            },
+            "total_tokens": 578
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-001-R2"
+            ]
+          },
+          "cost_usd": 0.001402,
+          "seconds": 2.813744999933988,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 536
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.284e-05,
+          "seconds": 0.15356304193846881,
+          "usage": {
+            "input_tokens": 1020,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-002",
+        "account_id": "D-002",
+        "company": "Juniper Cloud",
+        "headcount": 183,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-002-R1",
+            "account_id": "D-002",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 183 employees; sales team of 18."
+          },
+          {
+            "id": "D-002-R2",
+            "account_id": "D-002",
+            "date": "2026-10-18",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "demo"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 5,
+        "reason_code": "buying_signal",
+        "evidence_ids": [
+          "D-002-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-002-R1",
+              "D-002-R2"
+            ]
+          },
+          "cost_usd": 0.001298,
+          "seconds": 1.6958705829456449,
+          "usage": {
+            "input_tokens": 464,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 501
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-002-R1",
+              "D-002-R2"
+            ]
+          },
+          "cost_usd": 7.59e-05,
+          "seconds": 1.2571598750073463,
+          "usage": {
+            "input_tokens": 464,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 59,
+            "output_tokens_details": {
+              "reasoning_tokens": 20
+            },
+            "total_tokens": 523
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-002-R1",
+              "D-002-R2"
+            ]
+          },
+          "cost_usd": 0.001372,
+          "seconds": 1.2865617079660296,
+          "usage": {
+            "input_tokens": 464,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 501
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.9732e-05,
+          "seconds": 0.11643049982376397,
+          "usage": {
+            "input_tokens": 946,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-003",
+        "account_id": "D-003",
+        "company": "Cedar Systems",
+        "headcount": 186,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-003-R1",
+            "account_id": "D-003",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 186 employees; sales team of 18."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-003-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-003-R1"
+            ]
+          },
+          "cost_usd": 0.001154,
+          "seconds": 1.4701413749717176,
+          "usage": {
+            "input_tokens": 422,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 453
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-003-R1"
+            ]
+          },
+          "cost_usd": 6.87e-05,
+          "seconds": 1.4444747089874,
+          "usage": {
+            "input_tokens": 422,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 53,
+            "output_tokens_details": {
+              "reasoning_tokens": 20
+            },
+            "total_tokens": 475
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-003-R1"
+            ]
+          },
+          "cost_usd": 0.001216,
+          "seconds": 1.1557461249176413,
+          "usage": {
+            "input_tokens": 422,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 453
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6834e-05,
+          "seconds": 0.13163774996064603,
+          "usage": {
+            "input_tokens": 877,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-004",
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "headcount": 189,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-004-R1",
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "id": "D-004-R2",
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "budget_frozen"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 2,
+        "reason_code": "budget_frozen",
+        "evidence_ids": [
+          "D-004-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-004-R1",
+              "D-004-R2"
+            ]
+          },
+          "cost_usd": 0.001304,
+          "seconds": 1.3957690000534058,
+          "usage": {
+            "input_tokens": 467,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 504
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-004-R2"
+            ]
+          },
+          "cost_usd": 7.37e-05,
+          "seconds": 1.4815887091681361,
+          "usage": {
+            "input_tokens": 467,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 54,
+            "output_tokens_details": {
+              "reasoning_tokens": 21
+            },
+            "total_tokens": 521
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-004-R1",
+              "D-004-R2"
+            ]
+          },
+          "cost_usd": 0.001378,
+          "seconds": 1.1521491662133485,
+          "usage": {
+            "input_tokens": 467,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 504
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.9942e-05,
+          "seconds": 0.2034253750462085,
+          "usage": {
+            "input_tokens": 951,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-005",
+        "account_id": "D-005",
+        "company": "Pine Metrics",
+        "headcount": 24,
+        "sales_staff": 4,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-005-R1",
+            "account_id": "D-005",
+            "date": "2026-10-18",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-005-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-005-R1"
+            ]
+          },
+          "cost_usd": 0.00146,
+          "seconds": 2.5402064591180533,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 61,
+            "output_tokens_details": {
+              "reasoning_tokens": 28
+            },
+            "total_tokens": 486
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-005-R1"
+            ]
+          },
+          "cost_usd": 0.0001345,
+          "seconds": 2.726911624893546,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 184,
+            "output_tokens_details": {
+              "reasoning_tokens": 151
+            },
+            "total_tokens": 609
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-005-R1"
+            ]
+          },
+          "cost_usd": 0.001222,
+          "seconds": 1.0670400420203805,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 456
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6792e-05,
+          "seconds": 0.11976504093036056,
+          "usage": {
+            "input_tokens": 876,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-006",
+        "account_id": "D-006",
+        "company": "Tern Studio",
+        "headcount": 120,
+        "sales_staff": 18,
+        "industry": "Agency",
+        "records": [
+          {
+            "id": "D-006-R1",
+            "account_id": "D-006",
+            "date": "2026-10-18",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-006-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-006-R1"
+            ]
+          },
+          "cost_usd": 0.001144,
+          "seconds": 1.5132738330867141,
+          "usage": {
+            "input_tokens": 417,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 448
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-006-R1"
+            ]
+          },
+          "cost_usd": 7.170000000000001e-05,
+          "seconds": 1.3134190829005092,
+          "usage": {
+            "input_tokens": 417,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 60,
+            "output_tokens_details": {
+              "reasoning_tokens": 27
+            },
+            "total_tokens": 477
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-006-R1"
+            ]
+          },
+          "cost_usd": 0.001206,
+          "seconds": 1.2290872919838876,
+          "usage": {
+            "input_tokens": 417,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 448
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6582e-05,
+          "seconds": 0.11070691607892513,
+          "usage": {
+            "input_tokens": 871,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-007",
+        "account_id": "D-007",
+        "company": "Harbor Stack",
+        "headcount": null,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-007-R1",
+            "account_id": "D-007",
+            "date": "2026-10-18",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-007-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-007-R1"
+            ]
+          },
+          "cost_usd": 0.001156,
+          "seconds": 4.086899041896686,
+          "usage": {
+            "input_tokens": 423,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 454
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-007-R1"
+            ]
+          },
+          "cost_usd": 5.78e-05,
+          "seconds": 1.2526179160922766,
+          "usage": {
+            "input_tokens": 423,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 454
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-007-R1"
+            ]
+          },
+          "cost_usd": 0.001218,
+          "seconds": 0.9371615829877555,
+          "usage": {
+            "input_tokens": 423,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 454
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 3.675e-05,
+          "seconds": 0.14331229194067419,
+          "usage": {
+            "input_tokens": 875,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-008",
+        "account_id": "D-008",
+        "company": "Kite Software",
+        "headcount": 201,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-008-R1",
+            "account_id": "D-008",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 201 employees; sales team of 18."
+          },
+          {
+            "id": "D-008-R2",
+            "account_id": "D-008",
+            "date": "2026-10-18",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-008",
+          "status": "expired",
+          "expires": "2025-12-31",
+          "verified": true,
+          "record_id": "D-008-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-008-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-008-R1",
+              "D-008-R2"
+            ]
+          },
+          "cost_usd": 0.001376,
+          "seconds": 1.5843789170030504,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 540
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-008-R1"
+            ]
+          },
+          "cost_usd": 8.280000000000001e-05,
+          "seconds": 1.941670959116891,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 65,
+            "output_tokens_details": {
+              "reasoning_tokens": 32
+            },
+            "total_tokens": 568
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-008-R1",
+              "D-008-R2"
+            ]
+          },
+          "cost_usd": 0.00145,
+          "seconds": 1.55150912492536,
+          "usage": {
+            "input_tokens": 503,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 540
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2798e-05,
+          "seconds": 0.13861883408389986,
+          "usage": {
+            "input_tokens": 1019,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-009",
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "headcount": 204,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-009-R1",
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "id": "D-009-R2",
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "text": "CRM says a competitor contract is active.",
+            "contract_status": "active"
+          },
+          {
+            "id": "D-009-R3",
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved.",
+            "contract_status": "disputed"
+          }
+        ],
+        "contract": {
+          "account_id": "D-009",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-009-R2"
+        },
+        "signals": [],
+        "conflicting": true,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-009-R3"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-009-R2",
+              "D-009-R3"
+            ]
+          },
+          "cost_usd": 0.001446,
+          "seconds": 2.0083047079388052,
+          "usage": {
+            "input_tokens": 538,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 575
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-009-R2",
+              "D-009-R3"
+            ]
+          },
+          "cost_usd": 0.00011980000000000001,
+          "seconds": 1.8203159999102354,
+          "usage": {
+            "input_tokens": 538,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 132,
+            "output_tokens_details": {
+              "reasoning_tokens": 93
+            },
+            "total_tokens": 670
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-009-R2",
+              "D-009-R3"
+            ]
+          },
+          "cost_usd": 0.00152,
+          "seconds": 1.4333208331372589,
+          "usage": {
+            "input_tokens": 538,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 575
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 4.5444e-05,
+          "seconds": 0.1207648750860244,
+          "usage": {
+            "input_tokens": 1082,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-010",
+        "account_id": "D-010",
+        "company": "Solara Tools",
+        "headcount": 207,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-010-R1",
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+          },
+          {
+            "id": "D-010-R2",
+            "account_id": "D-010",
+            "date": "2026-10-18",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-010-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-010-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-010-R1"
+            ]
+          },
+          "cost_usd": 0.001306,
+          "seconds": 1.6634392498526722,
+          "usage": {
+            "input_tokens": 498,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 529
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-010-R1"
+            ]
+          },
+          "cost_usd": 8.380000000000002e-05,
+          "seconds": 1.4575380829628557,
+          "usage": {
+            "input_tokens": 498,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 68,
+            "output_tokens_details": {
+              "reasoning_tokens": 35
+            },
+            "total_tokens": 566
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-010-R1"
+            ]
+          },
+          "cost_usd": 0.001368,
+          "seconds": 1.1875364158768207,
+          "usage": {
+            "input_tokens": 498,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 529
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2294000000000005e-05,
+          "seconds": 0.12853658315725625,
+          "usage": {
+            "input_tokens": 1007,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-011",
+        "account_id": "D-011",
+        "company": "Northstar Labs 2",
+        "headcount": 210,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-011-R1",
+            "account_id": "D-011",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 210 employees; sales team of 18."
+          },
+          {
+            "id": "D-011-R2",
+            "account_id": "D-011",
+            "date": "2026-10-18",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-011",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-011-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "locked_in_competitor",
+        "evidence_ids": [
+          "D-011-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-011-R2"
+            ]
+          },
+          "cost_usd": 0.00134,
+          "seconds": 1.494838290847838,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 538
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-011-R2"
+            ]
+          },
+          "cost_usd": 8.8e-05,
+          "seconds": 1.8440725419204682,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 75,
+            "output_tokens_details": {
+              "reasoning_tokens": 40
+            },
+            "total_tokens": 580
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-011-R2"
+            ]
+          },
+          "cost_usd": 0.001406,
+          "seconds": 0.9300692500546575,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 538
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2924e-05,
+          "seconds": 0.10643541719764471,
+          "usage": {
+            "input_tokens": 1022,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-012",
+        "account_id": "D-012",
+        "company": "Juniper Cloud 2",
+        "headcount": 213,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-012-R1",
+            "account_id": "D-012",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 213 employees; sales team of 18."
+          },
+          {
+            "id": "D-012-R2",
+            "account_id": "D-012",
+            "date": "2026-10-18",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "demo"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 5,
+        "reason_code": "buying_signal",
+        "evidence_ids": [
+          "D-012-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-012-R1",
+              "D-012-R2"
+            ]
+          },
+          "cost_usd": 0.001302,
+          "seconds": 1.6142363329418004,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 503
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-012-R1",
+              "D-012-R2"
+            ]
+          },
+          "cost_usd": 7.56e-05,
+          "seconds": 1.4727819161489606,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 58,
+            "output_tokens_details": {
+              "reasoning_tokens": 19
+            },
+            "total_tokens": 524
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-012-R1",
+              "D-012-R2"
+            ]
+          },
+          "cost_usd": 0.001376,
+          "seconds": 1.0101223329547793,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 503
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.9816e-05,
+          "seconds": 0.1521523748524487,
+          "usage": {
+            "input_tokens": 948,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-013",
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "headcount": 216,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-013-R1",
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-013-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-013-R1"
+            ]
+          },
+          "cost_usd": 0.001158,
+          "seconds": 1.6011402909643948,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 455
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-013-R1"
+            ]
+          },
+          "cost_usd": 6.840000000000001e-05,
+          "seconds": 1.3685237090103328,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 52,
+            "output_tokens_details": {
+              "reasoning_tokens": 19
+            },
+            "total_tokens": 476
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-013-R1"
+            ]
+          },
+          "cost_usd": 0.00122,
+          "seconds": 1.141131583135575,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 455
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6918e-05,
+          "seconds": 0.12143020890653133,
+          "usage": {
+            "input_tokens": 879,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-014",
+        "account_id": "D-014",
+        "company": "Orbit Works 2",
+        "headcount": 219,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-014-R1",
+            "account_id": "D-014",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 219 employees; sales team of 18."
+          },
+          {
+            "id": "D-014-R2",
+            "account_id": "D-014",
+            "date": "2026-10-18",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "budget_frozen"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 2,
+        "reason_code": "budget_frozen",
+        "evidence_ids": [
+          "D-014-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-014-R1",
+              "D-014-R2"
+            ]
+          },
+          "cost_usd": 0.001308,
+          "seconds": 1.7983213749248534,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 506
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-014-R2"
+            ]
+          },
+          "cost_usd": 7.740000000000001e-05,
+          "seconds": 1.5404464160092175,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 61,
+            "output_tokens_details": {
+              "reasoning_tokens": 28
+            },
+            "total_tokens": 530
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-014-R1",
+              "D-014-R2"
+            ]
+          },
+          "cost_usd": 0.001382,
+          "seconds": 1.1963296248577535,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 506
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.0026000000000006e-05,
+          "seconds": 0.16699170786887407,
+          "usage": {
+            "input_tokens": 953,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-015",
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "headcount": 24,
+        "sales_staff": 4,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-015-R1",
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-015-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-015-R1"
+            ]
+          },
+          "cost_usd": 0.001164,
+          "seconds": 1.9013997500296682,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 458
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-015-R1"
+            ]
+          },
+          "cost_usd": 5.8200000000000005e-05,
+          "seconds": 1.3517542500048876,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 458
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-015-R1"
+            ]
+          },
+          "cost_usd": 0.001226,
+          "seconds": 1.3568094170186669,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 458
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6876000000000004e-05,
+          "seconds": 0.11069537489674985,
+          "usage": {
+            "input_tokens": 878,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-016",
+        "account_id": "D-016",
+        "company": "Tern Studio 2",
+        "headcount": 120,
+        "sales_staff": 18,
+        "industry": "Agency",
+        "records": [
+          {
+            "id": "D-016-R1",
+            "account_id": "D-016",
+            "date": "2026-10-18",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-016-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-016-R1"
+            ]
+          },
+          "cost_usd": 0.001148,
+          "seconds": 2.0426846251357347,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 450
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-016-R1"
+            ]
+          },
+          "cost_usd": 7.44e-05,
+          "seconds": 1.3874940839596093,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 65,
+            "output_tokens_details": {
+              "reasoning_tokens": 32
+            },
+            "total_tokens": 484
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-016-R1"
+            ]
+          },
+          "cost_usd": 0.00121,
+          "seconds": 1.0794799579307437,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 450
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6666000000000004e-05,
+          "seconds": 0.12967808288522065,
+          "usage": {
+            "input_tokens": 873,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-017",
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "headcount": null,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-017-R1",
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-017-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-017-R1"
+            ]
+          },
+          "cost_usd": 0.00116,
+          "seconds": 2.0766494579147547,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 456
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-017-R1"
+            ]
+          },
+          "cost_usd": 7.65e-05,
+          "seconds": 1.4533902921248227,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 68,
+            "output_tokens_details": {
+              "reasoning_tokens": 35
+            },
+            "total_tokens": 493
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-017-R1"
+            ]
+          },
+          "cost_usd": 0.001222,
+          "seconds": 1.2553632918279618,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 456
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 3.6834e-05,
+          "seconds": 0.1080518749076873,
+          "usage": {
+            "input_tokens": 877,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-018",
+        "account_id": "D-018",
+        "company": "Kite Software 2",
+        "headcount": 231,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-018-R1",
+            "account_id": "D-018",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 231 employees; sales team of 18."
+          },
+          {
+            "id": "D-018-R2",
+            "account_id": "D-018",
+            "date": "2026-10-18",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-018",
+          "status": "expired",
+          "expires": "2025-12-31",
+          "verified": true,
+          "record_id": "D-018-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-018-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-018-R1",
+              "D-018-R2"
+            ]
+          },
+          "cost_usd": 0.00138,
+          "seconds": 1.8475486661773175,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 542
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-018-R1",
+              "D-018-R2"
+            ]
+          },
+          "cost_usd": 9.9e-05,
+          "seconds": 1.43591812485829,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 97,
+            "output_tokens_details": {
+              "reasoning_tokens": 58
+            },
+            "total_tokens": 602
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-018-R1",
+              "D-018-R2"
+            ]
+          },
+          "cost_usd": 0.001454,
+          "seconds": 1.2732279999181628,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 542
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.288200000000001e-05,
+          "seconds": 0.1308259170036763,
+          "usage": {
+            "input_tokens": 1021,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-019",
+        "account_id": "D-019",
+        "company": "Maple Logic 2",
+        "headcount": 234,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-019-R1",
+            "account_id": "D-019",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 234 employees; sales team of 18."
+          },
+          {
+            "id": "D-019-R2",
+            "account_id": "D-019",
+            "date": "2026-10-18",
+            "text": "CRM says a competitor contract is active.",
+            "contract_status": "active"
+          },
+          {
+            "id": "D-019-R3",
+            "account_id": "D-019",
+            "date": "2026-10-18",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved.",
+            "contract_status": "disputed"
+          }
+        ],
+        "contract": {
+          "account_id": "D-019",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-019-R2"
+        },
+        "signals": [],
+        "conflicting": true,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-019-R3"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-019-R2",
+              "D-019-R3"
+            ]
+          },
+          "cost_usd": 0.00145,
+          "seconds": 1.7002688341308385,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 577
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-019-R2",
+              "D-019-R3"
+            ]
+          },
+          "cost_usd": 0.000121,
+          "seconds": 2.3411564170382917,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 134,
+            "output_tokens_details": {
+              "reasoning_tokens": 95
+            },
+            "total_tokens": 674
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-019-R2",
+              "D-019-R3"
+            ]
+          },
+          "cost_usd": 0.00222,
+          "seconds": 1.6780397079419345,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 95,
+            "output_tokens_details": {
+              "reasoning_tokens": 56
+            },
+            "total_tokens": 635
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 4.552800000000001e-05,
+          "seconds": 0.18170249997638166,
+          "usage": {
+            "input_tokens": 1084,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-020",
+        "account_id": "D-020",
+        "company": "Solara Tools 2",
+        "headcount": 237,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-020-R1",
+            "account_id": "D-020",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 237 employees; sales team of 18."
+          },
+          {
+            "id": "D-020-R2",
+            "account_id": "D-020",
+            "date": "2026-10-18",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-020-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-020-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-020-R1"
+            ]
+          },
+          "cost_usd": 0.00131,
+          "seconds": 1.9079038340132684,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 531
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-020-R1"
+            ]
+          },
+          "cost_usd": 8.15e-05,
+          "seconds": 1.5558305829763412,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 63,
+            "output_tokens_details": {
+              "reasoning_tokens": 30
+            },
+            "total_tokens": 563
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-020-R1"
+            ]
+          },
+          "cost_usd": 0.001684,
+          "seconds": 1.3937237919308245,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 57,
+            "output_tokens_details": {
+              "reasoning_tokens": 24
+            },
+            "total_tokens": 557
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2378e-05,
+          "seconds": 0.20566687500104308,
+          "usage": {
+            "input_tokens": 1009,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-021",
+        "account_id": "D-021",
+        "company": "Northstar Labs 3",
+        "headcount": 240,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-021-R1",
+            "account_id": "D-021",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 240 employees; sales team of 18."
+          },
+          {
+            "id": "D-021-R2",
+            "account_id": "D-021",
+            "date": "2026-10-18",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-021",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-021-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "locked_in_competitor",
+        "evidence_ids": [
+          "D-021-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-021-R2"
+            ]
+          },
+          "cost_usd": 0.00134,
+          "seconds": 1.510117833968252,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 538
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-021-R2"
+            ]
+          },
+          "cost_usd": 8.55e-05,
+          "seconds": 2.547357458854094,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 70,
+            "output_tokens_details": {
+              "reasoning_tokens": 35
+            },
+            "total_tokens": 575
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "locked_in_competitor",
+            "evidence_ids": [
+              "D-021-R2"
+            ]
+          },
+          "cost_usd": 0.001406,
+          "seconds": 1.2377144999336451,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 33,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 538
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2924e-05,
+          "seconds": 0.12278266600333154,
+          "usage": {
+            "input_tokens": 1022,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-022",
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "headcount": 243,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-022-R1",
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "id": "D-022-R2",
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "demo"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 5,
+        "reason_code": "buying_signal",
+        "evidence_ids": [
+          "D-022-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-022-R1",
+              "D-022-R2"
+            ]
+          },
+          "cost_usd": 0.001302,
+          "seconds": 1.607942125061527,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 503
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-022-R1",
+              "D-022-R2"
+            ]
+          },
+          "cost_usd": 6.51e-05,
+          "seconds": 1.188209000043571,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 503
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 5,
+            "reason_code": "buying_signal",
+            "evidence_ids": [
+              "D-022-R1",
+              "D-022-R2"
+            ]
+          },
+          "cost_usd": 0.001376,
+          "seconds": 0.9603429159615189,
+          "usage": {
+            "input_tokens": 466,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 503
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.9816e-05,
+          "seconds": 0.14230104093439877,
+          "usage": {
+            "input_tokens": 948,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-023",
+        "account_id": "D-023",
+        "company": "Cedar Systems 3",
+        "headcount": 246,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-023-R1",
+            "account_id": "D-023",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 246 employees; sales team of 18."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-023-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-023-R1"
+            ]
+          },
+          "cost_usd": 0.001158,
+          "seconds": 1.648827999830246,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 455
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-023-R1"
+            ]
+          },
+          "cost_usd": 6.69e-05,
+          "seconds": 1.3675740829203278,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 49,
+            "output_tokens_details": {
+              "reasoning_tokens": 16
+            },
+            "total_tokens": 473
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-023-R1"
+            ]
+          },
+          "cost_usd": 0.00122,
+          "seconds": 1.4716913329903036,
+          "usage": {
+            "input_tokens": 424,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 455
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6918e-05,
+          "seconds": 0.10280266590416431,
+          "usage": {
+            "input_tokens": 879,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-024",
+        "account_id": "D-024",
+        "company": "Orbit Works 3",
+        "headcount": 249,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-024-R1",
+            "account_id": "D-024",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 249 employees; sales team of 18."
+          },
+          {
+            "id": "D-024-R2",
+            "account_id": "D-024",
+            "date": "2026-10-18",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "contract": null,
+        "signals": [
+          "budget_frozen"
+        ],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 2,
+        "reason_code": "budget_frozen",
+        "evidence_ids": [
+          "D-024-R2"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-024-R1",
+              "D-024-R2"
+            ]
+          },
+          "cost_usd": 0.001308,
+          "seconds": 1.533330500125885,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 506
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-024-R2"
+            ]
+          },
+          "cost_usd": 8.54e-05,
+          "seconds": 1.651523041073233,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 77,
+            "output_tokens_details": {
+              "reasoning_tokens": 44
+            },
+            "total_tokens": 546
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 2,
+            "reason_code": "budget_frozen",
+            "evidence_ids": [
+              "D-024-R1",
+              "D-024-R2"
+            ]
+          },
+          "cost_usd": 0.001382,
+          "seconds": 1.0955902920104563,
+          "usage": {
+            "input_tokens": 469,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 506
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.0026000000000006e-05,
+          "seconds": 0.10791979217901826,
+          "usage": {
+            "input_tokens": 953,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-025",
+        "account_id": "D-025",
+        "company": "Pine Metrics 3",
+        "headcount": 24,
+        "sales_staff": 4,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-025-R1",
+            "account_id": "D-025",
+            "date": "2026-10-18",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-025-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-025-R1"
+            ]
+          },
+          "cost_usd": 0.001404,
+          "seconds": 2.0685041251126677,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 55,
+            "output_tokens_details": {
+              "reasoning_tokens": 22
+            },
+            "total_tokens": 482
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-025-R1"
+            ]
+          },
+          "cost_usd": 7.57e-05,
+          "seconds": 1.228427667170763,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 66,
+            "output_tokens_details": {
+              "reasoning_tokens": 33
+            },
+            "total_tokens": 493
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-025-R1"
+            ]
+          },
+          "cost_usd": 0.001226,
+          "seconds": 1.113936458947137,
+          "usage": {
+            "input_tokens": 427,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 458
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6876000000000004e-05,
+          "seconds": 0.09358591609634459,
+          "usage": {
+            "input_tokens": 878,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-026",
+        "account_id": "D-026",
+        "company": "Tern Studio 3",
+        "headcount": 120,
+        "sales_staff": 18,
+        "industry": "Agency",
+        "records": [
+          {
+            "id": "D-026-R1",
+            "account_id": "D-026",
+            "date": "2026-10-18",
+            "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 1,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-026-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-026-R1"
+            ]
+          },
+          "cost_usd": 0.001148,
+          "seconds": 1.797715499997139,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 450
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-026-R1"
+            ]
+          },
+          "cost_usd": 6.890000000000001e-05,
+          "seconds": 1.2552597089670599,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 54,
+            "output_tokens_details": {
+              "reasoning_tokens": 21
+            },
+            "total_tokens": 473
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 1,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-026-R1"
+            ]
+          },
+          "cost_usd": 0.00121,
+          "seconds": 1.1248750002123415,
+          "usage": {
+            "input_tokens": 419,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 450
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 3.6666000000000004e-05,
+          "seconds": 0.13006779085844755,
+          "usage": {
+            "input_tokens": 873,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-027",
+        "account_id": "D-027",
+        "company": "Harbor Stack 3",
+        "headcount": null,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-027-R1",
+            "account_id": "D-027",
+            "date": "2026-10-18",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "contract": null,
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-027-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-027-R1"
+            ]
+          },
+          "cost_usd": 0.00116,
+          "seconds": 1.8135803749319166,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 456
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-027-R1"
+            ]
+          },
+          "cost_usd": 9.4e-05,
+          "seconds": 1.5647487919777632,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 103,
+            "output_tokens_details": {
+              "reasoning_tokens": 70
+            },
+            "total_tokens": 528
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-027-R1"
+            ]
+          },
+          "cost_usd": 0.001558,
+          "seconds": 1.4140399999450892,
+          "usage": {
+            "input_tokens": 425,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 59,
+            "output_tokens_details": {
+              "reasoning_tokens": 26
+            },
+            "total_tokens": 484
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 3.6834e-05,
+          "seconds": 0.14653695817105472,
+          "usage": {
+            "input_tokens": 877,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-028",
+        "account_id": "D-028",
+        "company": "Kite Software 3",
+        "headcount": 261,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-028-R1",
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+          },
+          {
+            "id": "D-028-R2",
+            "account_id": "D-028",
+            "date": "2026-10-18",
+            "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded.",
+            "authoritative": true
+          }
+        ],
+        "contract": {
+          "account_id": "D-028",
+          "status": "expired",
+          "expires": "2025-12-31",
+          "verified": true,
+          "record_id": "D-028-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-028-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-028-R1",
+              "D-028-R2"
+            ]
+          },
+          "cost_usd": 0.00138,
+          "seconds": 1.979352792026475,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 542
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-028-R1"
+            ]
+          },
+          "cost_usd": 8.65e-05,
+          "seconds": 1.8861438750755042,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 72,
+            "output_tokens_details": {
+              "reasoning_tokens": 39
+            },
+            "total_tokens": 577
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-028-R1",
+              "D-028-R2"
+            ]
+          },
+          "cost_usd": 0.001454,
+          "seconds": 1.3073997918982059,
+          "usage": {
+            "input_tokens": 505,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 542
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.288200000000001e-05,
+          "seconds": 0.13257649983279407,
+          "usage": {
+            "input_tokens": 1021,
+            "output_tokens": 33
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-029",
+        "account_id": "D-029",
+        "company": "Maple Logic 3",
+        "headcount": 264,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-029-R1",
+            "account_id": "D-029",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 264 employees; sales team of 18."
+          },
+          {
+            "id": "D-029-R2",
+            "account_id": "D-029",
+            "date": "2026-10-18",
+            "text": "CRM says a competitor contract is active.",
+            "contract_status": "active"
+          },
+          {
+            "id": "D-029-R3",
+            "account_id": "D-029",
+            "date": "2026-10-18",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved.",
+            "contract_status": "disputed"
+          }
+        ],
+        "contract": {
+          "account_id": "D-029",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-029-R2"
+        },
+        "signals": [],
+        "conflicting": true,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 3,
+        "reason_code": "not_icp",
+        "evidence_ids": [
+          "D-029-R3"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-029-R2",
+              "D-029-R3"
+            ]
+          },
+          "cost_usd": 0.00145,
+          "seconds": 1.738856374984607,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 37,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 577
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-029-R2",
+              "D-029-R3"
+            ]
+          },
+          "cost_usd": 0.0001045,
+          "seconds": 2.1205475840251893,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 101,
+            "output_tokens_details": {
+              "reasoning_tokens": 62
+            },
+            "total_tokens": 641
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 3,
+            "reason_code": "not_icp",
+            "evidence_ids": [
+              "D-029-R2",
+              "D-029-R3"
+            ]
+          },
+          "cost_usd": 0.002484,
+          "seconds": 1.8465372920036316,
+          "usage": {
+            "input_tokens": 540,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 117,
+            "output_tokens_details": {
+              "reasoning_tokens": 78
+            },
+            "total_tokens": 657
+          }
+        },
+        "jev": {
+          "choice": "sol",
+          "cost_usd": 4.552800000000001e-05,
+          "seconds": 0.11597475013695657,
+          "usage": {
+            "input_tokens": 1084,
+            "output_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "D-030",
+        "account_id": "D-030",
+        "company": "Solara Tools 3",
+        "headcount": 267,
+        "sales_staff": 18,
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "id": "D-030-R1",
+            "account_id": "D-030",
+            "date": "2026-10-18",
+            "text": "Verified company profile: B2B SaaS; 267 employees; sales team of 18."
+          },
+          {
+            "id": "D-030-R2",
+            "account_id": "D-030",
+            "date": "2026-10-18",
+            "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+          }
+        ],
+        "contract": {
+          "account_id": "OTHER-ACCOUNT",
+          "status": "active",
+          "expires": "2027-12-31",
+          "verified": true,
+          "record_id": "D-030-R2"
+        },
+        "signals": [],
+        "conflicting": false,
+        "version": "field-notes-w1.3"
+      },
+      "reference": {
+        "score": 4,
+        "reason_code": "icp_fit",
+        "evidence_ids": [
+          "D-030-R1"
+        ]
+      },
+      "recordings": {
+        "sol": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-030-R1"
+            ]
+          },
+          "cost_usd": 0.00131,
+          "seconds": 1.857038666959852,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 531
+          }
+        },
+        "luna": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-030-R1"
+            ]
+          },
+          "cost_usd": 8.35e-05,
+          "seconds": 1.441990208113566,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 67,
+            "output_tokens_details": {
+              "reasoning_tokens": 34
+            },
+            "total_tokens": 567
+          }
+        },
+        "terra": {
+          "answer": {
+            "score": 4,
+            "reason_code": "icp_fit",
+            "evidence_ids": [
+              "D-030-R1"
+            ]
+          },
+          "cost_usd": 0.001636,
+          "seconds": 1.3857768750749528,
+          "usage": {
+            "input_tokens": 500,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cache_write_tokens_details": {
+                "ttl_12h_tokens": 0,
+                "ttl_30m_tokens": 0
+              },
+              "cached_tokens": 0
+            },
+            "output_tokens": 53,
+            "output_tokens_details": {
+              "reasoning_tokens": 20
+            },
+            "total_tokens": 553
+          }
+        },
+        "jev": {
+          "choice": "luna",
+          "cost_usd": 4.2378e-05,
+          "seconds": 0.11014612508006394,
+          "usage": {
+            "input_tokens": 1009,
+            "output_tokens": 33
+          }
+        }
+      }
+    }
+  ]
+}

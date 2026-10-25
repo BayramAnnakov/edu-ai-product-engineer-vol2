@@ -1,0 +1,1682 @@
+{
+  "01fb0d77f2b8ef98018c80f3a09eacd55a24dcd814312b498a550045a566dec2": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011508000000000002,
+        "id": "recorded-a20549388b8559b0",
+        "latency_s": 0.12365287495777011,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2740,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12365287495777011,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "2b5963e6b0f48933c4f5abb150fd2c93637223655abde190ac4a5eb7531dfa83": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011386200000000002,
+        "id": "recorded-48f27ef1b0177c85",
+        "latency_s": 0.15355783398263156,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2711,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.15355783398263156,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "2b65275e150f0dc446e9baa3a9ecf3a43f86554b76de31cb802e8f5985cf42ba": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002218,
+        "id": "recorded-604145c18f749782",
+        "latency_s": 4.095462332945317,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 494,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 123,
+          "output_tokens_details": {
+            "reasoning_tokens": 90
+          },
+          "total_tokens": 617
+        }
+      }
+    ],
+    "latency_s": 4.095462332945317,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "49e5e6501103be900660c816b6f20d54788ed94bef865756f9c2d284675e81a2": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011697000000000001,
+        "id": "recorded-b36d62091836409f",
+        "latency_s": 0.2081864580977708,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2785,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.2081864580977708,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "4a1a1eeb2ce4ae2b59e3d45280f73f78b447bf16a1a8050445e6e4cba39a5314": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002414,
+        "id": "recorded-646f20a29ba6e27e",
+        "latency_s": 4.359504999825731,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 427,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 156,
+          "output_tokens_details": {
+            "reasoning_tokens": 123
+          },
+          "total_tokens": 583
+        }
+      }
+    ],
+    "latency_s": 4.359504999825731,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5698ff80ee35c5b6fa44bff33bf4b614ec1df6aca4eb8440df29c225365672ef": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002488,
+        "id": "recorded-a679c51f692f3226",
+        "latency_s": 3.956522125052288,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 494,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 150,
+          "output_tokens_details": {
+            "reasoning_tokens": 117
+          },
+          "total_tokens": 644
+        }
+      }
+    ],
+    "latency_s": 3.956522125052288,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5afb189ae8b5760e851d0b649501830947d6196c83430ddb2610dbae92e17f41": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011697000000000001,
+        "id": "recorded-b36d62091836409f",
+        "latency_s": 0.2081864580977708,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2785,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.2081864580977708,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "80063d8ca9d8fcc19a174422c37740e2d9abacc3b104d544911cb573d0781042": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011386200000000002,
+        "id": "recorded-48f27ef1b0177c85",
+        "latency_s": 0.15355783398263156,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2711,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.15355783398263156,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "89afd120cd4513281ce5fc8e1dc78f4efb5367482c9263110039bb0feeca93b0": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011508000000000002,
+        "id": "recorded-a20549388b8559b0",
+        "latency_s": 0.12365287495777011,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2740,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12365287495777011,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "8f540561b30b91c9cf1668e854cd6bb2996518738d4e973524f3bbc9a1d890b6": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011575200000000001,
+        "id": "recorded-00317dd255c0de0b",
+        "latency_s": 0.22357041598297656,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2756,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.22357041598297656,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "9ab30a47ccedac7efd4af2f1c76a3afa36d1a567fe47cd7477f56fa58d97f9ec": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001598,
+        "id": "recorded-ba1f5ff7b5428d6a",
+        "latency_s": 2.32407879200764,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 449,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 70,
+          "output_tokens_details": {
+            "reasoning_tokens": 37
+          },
+          "total_tokens": 519
+        }
+      }
+    ],
+    "latency_s": 2.32407879200764,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ac9e19c639b70aadc571cb2376c9851008cc3935d5f4a9b8408a4059e9d53a72": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011575200000000001,
+        "id": "recorded-00317dd255c0de0b",
+        "latency_s": 0.22357041598297656,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2756,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.22357041598297656,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "bc55b02d7828bb8100096fd754f59776aff074b467b75e8f7eacf6b12b0a4e44": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001594,
+        "id": "recorded-165f3d6d5cd50a3e",
+        "latency_s": 2.2760489170905203,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 472,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 65,
+          "output_tokens_details": {
+            "reasoning_tokens": 32
+          },
+          "total_tokens": 537
+        }
+      }
+    ],
+    "latency_s": 2.2760489170905203,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "c620d0c1ea74d6e6627ce4c1e9e439823f0af1da3b2685b74a4197566a0674b2": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002274,
+        "id": "recorded-f7b3377e4a523e35",
+        "latency_s": 3.058377542067319,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 472,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 133,
+          "output_tokens_details": {
+            "reasoning_tokens": 100
+          },
+          "total_tokens": 605
+        }
+      }
+    ],
+    "latency_s": 3.058377542067319,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-015\",\n  \"company\": \"Pine Metrics 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 24,\n  \"id\": \"D-015\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-015\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-015-R1\",\n      \"text\": \"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"\n    }\n  ],\n  \"sales_staff\": 4,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "cd591f2bbbcdca2527220abde5b66b3b5586f03934151637187e47ed49a095d3": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001164,
+        "id": "recorded-b1ff101339b2a595",
+        "latency_s": 1.9936737501993775,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 427,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 458
+        }
+      }
+    ],
+    "latency_s": 1.9936737501993775,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f994bf527fcfd0d38ba0e8279af9cd54e019ce939ed0c249de9e3dedf63fd6c3": {
+    "answer": {
+      "evidence_ids": [
+        "D-015-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002118,
+        "id": "recorded-937b5e0ee24d90d8",
+        "latency_s": 2.8683649580925703,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 449,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 122,
+          "output_tokens_details": {
+            "reasoning_tokens": 89
+          },
+          "total_tokens": 571
+        }
+      }
+    ],
+    "latency_s": 2.8683649580925703,
+    "request": {
+      "case": {
+        "account_id": "D-015",
+        "company": "Pine Metrics 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 24,
+        "id": "D-015",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-015",
+            "date": "2026-10-18",
+            "id": "D-015-R1",
+            "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+          }
+        ],
+        "sales_staff": 4,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-015; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-015\",\"company\":\"Pine Metrics 2\",\"conflicting\":false,\"contract\":null,\"headcount\":24,\"id\":\"D-015\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-015\",\"date\":\"2026-10-18\",\"id\":\"D-015-R1\",\"text\":\"Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum.\"}],\"sales_staff\":4,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

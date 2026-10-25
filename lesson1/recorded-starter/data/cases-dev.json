@@ -1,0 +1,1223 @@
+{
+  "as_of": "2026-10-25",
+  "cases": [
+    {
+      "account_id": "D-001",
+      "company": "Northstar Labs",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-001",
+        "expires": "2027-12-31",
+        "record_id": "D-001-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 18,
+      "headcount": 180,
+      "id": "D-001",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-001-R2"
+        ],
+        "reason_code": "locked_in_competitor",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-001",
+          "date": "2026-10-18",
+          "id": "D-001-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-001",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-001-R2",
+          "supports": [
+            "locked_in_competitor"
+          ],
+          "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-002",
+      "company": "Juniper Cloud",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 12,
+      "headcount": 183,
+      "id": "D-002",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-002-R2"
+        ],
+        "reason_code": "buying_signal",
+        "score": 5
+      },
+      "records": [
+        {
+          "account_id": "D-002",
+          "date": "2026-10-18",
+          "id": "D-002-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 183 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-002",
+          "date": "2026-10-18",
+          "id": "D-002-R2",
+          "supports": [
+            "buying_signal"
+          ],
+          "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "demo"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-003",
+      "company": "Cedar Systems",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 16,
+      "headcount": 186,
+      "id": "D-003",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-003-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-003",
+          "date": "2026-10-18",
+          "id": "D-003-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 186 employees; sales team of 18."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-004",
+      "company": "Orbit Works",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 40,
+      "headcount": 189,
+      "id": "D-004",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-004-R2"
+        ],
+        "reason_code": "budget_frozen",
+        "score": 2
+      },
+      "records": [
+        {
+          "account_id": "D-004",
+          "date": "2026-10-18",
+          "id": "D-004-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-004",
+          "date": "2026-10-18",
+          "id": "D-004-R2",
+          "supports": [
+            "budget_frozen"
+          ],
+          "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "budget_frozen"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-005",
+      "company": "Pine Metrics",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 10,
+      "headcount": 24,
+      "id": "D-005",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-005-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-005",
+          "date": "2026-10-18",
+          "id": "D-005-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+        }
+      ],
+      "sales_staff": 4,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-006",
+      "company": "Tern Studio",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 22,
+      "headcount": 120,
+      "id": "D-006",
+      "industry": "Agency",
+      "label": {
+        "evidence_ids": [
+          "D-006-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-006",
+          "date": "2026-10-18",
+          "id": "D-006-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-007",
+      "company": "Harbor Stack",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 35,
+      "headcount": null,
+      "id": "D-007",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-007-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-007",
+          "date": "2026-10-18",
+          "id": "D-007-R1",
+          "supports": [
+            "icp_fit",
+            "not_icp"
+          ],
+          "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-008",
+      "company": "Kite Software",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-008",
+        "expires": "2025-12-31",
+        "record_id": "D-008-R2",
+        "status": "expired",
+        "verified": true
+      },
+      "enrichment_s": 14,
+      "headcount": 201,
+      "id": "D-008",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-008-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-008",
+          "date": "2026-10-18",
+          "id": "D-008-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 201 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-008",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-008-R2",
+          "supports": [],
+          "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-009",
+      "company": "Maple Logic",
+      "conflicting": true,
+      "contract": {
+        "account_id": "D-009",
+        "expires": "2027-12-31",
+        "record_id": "D-009-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 55,
+      "headcount": 204,
+      "id": "D-009",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-009-R3"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-009",
+          "date": "2026-10-18",
+          "id": "D-009-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-009",
+          "contract_status": "active",
+          "date": "2026-10-18",
+          "id": "D-009-R2",
+          "supports": [],
+          "text": "CRM says a competitor contract is active."
+        },
+        {
+          "account_id": "D-009",
+          "contract_status": "disputed",
+          "date": "2026-10-18",
+          "id": "D-009-R3",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Procurement disputes the contract's validity; conflict is unresolved."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-010",
+      "company": "Solara Tools",
+      "conflicting": false,
+      "contract": {
+        "account_id": "OTHER-ACCOUNT",
+        "expires": "2027-12-31",
+        "record_id": "D-010-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 28,
+      "headcount": 207,
+      "id": "D-010",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-010-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-010",
+          "date": "2026-10-18",
+          "id": "D-010-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 207 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-010",
+          "date": "2026-10-18",
+          "id": "D-010-R2",
+          "supports": [],
+          "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-011",
+      "company": "Northstar Labs 2",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-011",
+        "expires": "2027-12-31",
+        "record_id": "D-011-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 19,
+      "headcount": 210,
+      "id": "D-011",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-011-R2"
+        ],
+        "reason_code": "locked_in_competitor",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-011",
+          "date": "2026-10-18",
+          "id": "D-011-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 210 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-011",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-011-R2",
+          "supports": [
+            "locked_in_competitor"
+          ],
+          "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-012",
+      "company": "Juniper Cloud 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 13,
+      "headcount": 213,
+      "id": "D-012",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-012-R2"
+        ],
+        "reason_code": "buying_signal",
+        "score": 5
+      },
+      "records": [
+        {
+          "account_id": "D-012",
+          "date": "2026-10-18",
+          "id": "D-012-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 213 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-012",
+          "date": "2026-10-18",
+          "id": "D-012-R2",
+          "supports": [
+            "buying_signal"
+          ],
+          "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "demo"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-013",
+      "company": "Cedar Systems 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 17,
+      "headcount": 216,
+      "id": "D-013",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-013-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-013",
+          "date": "2026-10-18",
+          "id": "D-013-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-014",
+      "company": "Orbit Works 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 41,
+      "headcount": 219,
+      "id": "D-014",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-014-R2"
+        ],
+        "reason_code": "budget_frozen",
+        "score": 2
+      },
+      "records": [
+        {
+          "account_id": "D-014",
+          "date": "2026-10-18",
+          "id": "D-014-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 219 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-014",
+          "date": "2026-10-18",
+          "id": "D-014-R2",
+          "supports": [
+            "budget_frozen"
+          ],
+          "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "budget_frozen"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-015",
+      "company": "Pine Metrics 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 11,
+      "headcount": 24,
+      "id": "D-015",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-015-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-015",
+          "date": "2026-10-18",
+          "id": "D-015-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+        }
+      ],
+      "sales_staff": 4,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-016",
+      "company": "Tern Studio 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 23,
+      "headcount": 120,
+      "id": "D-016",
+      "industry": "Agency",
+      "label": {
+        "evidence_ids": [
+          "D-016-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-016",
+          "date": "2026-10-18",
+          "id": "D-016-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-017",
+      "company": "Harbor Stack 2",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 36,
+      "headcount": null,
+      "id": "D-017",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-017-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-017",
+          "date": "2026-10-18",
+          "id": "D-017-R1",
+          "supports": [
+            "icp_fit",
+            "not_icp"
+          ],
+          "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-018",
+      "company": "Kite Software 2",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-018",
+        "expires": "2025-12-31",
+        "record_id": "D-018-R2",
+        "status": "expired",
+        "verified": true
+      },
+      "enrichment_s": 15,
+      "headcount": 231,
+      "id": "D-018",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-018-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-018",
+          "date": "2026-10-18",
+          "id": "D-018-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 231 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-018",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-018-R2",
+          "supports": [],
+          "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-019",
+      "company": "Maple Logic 2",
+      "conflicting": true,
+      "contract": {
+        "account_id": "D-019",
+        "expires": "2027-12-31",
+        "record_id": "D-019-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 56,
+      "headcount": 234,
+      "id": "D-019",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-019-R3"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-019",
+          "date": "2026-10-18",
+          "id": "D-019-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 234 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-019",
+          "contract_status": "active",
+          "date": "2026-10-18",
+          "id": "D-019-R2",
+          "supports": [],
+          "text": "CRM says a competitor contract is active."
+        },
+        {
+          "account_id": "D-019",
+          "contract_status": "disputed",
+          "date": "2026-10-18",
+          "id": "D-019-R3",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Procurement disputes the contract's validity; conflict is unresolved."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-020",
+      "company": "Solara Tools 2",
+      "conflicting": false,
+      "contract": {
+        "account_id": "OTHER-ACCOUNT",
+        "expires": "2027-12-31",
+        "record_id": "D-020-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 29,
+      "headcount": 237,
+      "id": "D-020",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-020-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-020",
+          "date": "2026-10-18",
+          "id": "D-020-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 237 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-020",
+          "date": "2026-10-18",
+          "id": "D-020-R2",
+          "supports": [],
+          "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-021",
+      "company": "Northstar Labs 3",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-021",
+        "expires": "2027-12-31",
+        "record_id": "D-021-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 20,
+      "headcount": 240,
+      "id": "D-021",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-021-R2"
+        ],
+        "reason_code": "locked_in_competitor",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-021",
+          "date": "2026-10-18",
+          "id": "D-021-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 240 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-021",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-021-R2",
+          "supports": [
+            "locked_in_competitor"
+          ],
+          "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-022",
+      "company": "Juniper Cloud 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 14,
+      "headcount": 243,
+      "id": "D-022",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-022-R2"
+        ],
+        "reason_code": "buying_signal",
+        "score": 5
+      },
+      "records": [
+        {
+          "account_id": "D-022",
+          "date": "2026-10-18",
+          "id": "D-022-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-022",
+          "date": "2026-10-18",
+          "id": "D-022-R2",
+          "supports": [
+            "buying_signal"
+          ],
+          "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "demo"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-023",
+      "company": "Cedar Systems 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 18,
+      "headcount": 246,
+      "id": "D-023",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-023-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-023",
+          "date": "2026-10-18",
+          "id": "D-023-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 246 employees; sales team of 18."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-024",
+      "company": "Orbit Works 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 42,
+      "headcount": 249,
+      "id": "D-024",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-024-R2"
+        ],
+        "reason_code": "budget_frozen",
+        "score": 2
+      },
+      "records": [
+        {
+          "account_id": "D-024",
+          "date": "2026-10-18",
+          "id": "D-024-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 249 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-024",
+          "date": "2026-10-18",
+          "id": "D-024-R2",
+          "supports": [
+            "budget_frozen"
+          ],
+          "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [
+        "budget_frozen"
+      ],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-025",
+      "company": "Pine Metrics 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 12,
+      "headcount": 24,
+      "id": "D-025",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-025-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-025",
+          "date": "2026-10-18",
+          "id": "D-025-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Verified B2B SaaS profile: 24 employees, sales team of 4. Below the stated minimum."
+        }
+      ],
+      "sales_staff": 4,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-026",
+      "company": "Tern Studio 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 24,
+      "headcount": 120,
+      "id": "D-026",
+      "industry": "Agency",
+      "label": {
+        "evidence_ids": [
+          "D-026-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 1
+      },
+      "records": [
+        {
+          "account_id": "D-026",
+          "date": "2026-10-18",
+          "id": "D-026-R1",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Marketing agency, 120 employees, seeking tools for its clients rather than its own sales team."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-027",
+      "company": "Harbor Stack 3",
+      "conflicting": false,
+      "contract": null,
+      "enrichment_s": 37,
+      "headcount": null,
+      "id": "D-027",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-027-R1"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-027",
+          "date": "2026-10-18",
+          "id": "D-027-R1",
+          "supports": [
+            "icp_fit",
+            "not_icp"
+          ],
+          "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-028",
+      "company": "Kite Software 3",
+      "conflicting": false,
+      "contract": {
+        "account_id": "D-028",
+        "expires": "2025-12-31",
+        "record_id": "D-028-R2",
+        "status": "expired",
+        "verified": true
+      },
+      "enrichment_s": 16,
+      "headcount": 261,
+      "id": "D-028",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-028-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-028",
+          "date": "2026-10-18",
+          "id": "D-028-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 261 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-028",
+          "authoritative": true,
+          "date": "2026-10-18",
+          "id": "D-028-R2",
+          "supports": [],
+          "text": "Old competitor contract expired on 2025-12-31; no active renewal recorded."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-029",
+      "company": "Maple Logic 3",
+      "conflicting": true,
+      "contract": {
+        "account_id": "D-029",
+        "expires": "2027-12-31",
+        "record_id": "D-029-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 57,
+      "headcount": 264,
+      "id": "D-029",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-029-R3"
+        ],
+        "reason_code": "not_icp",
+        "score": 3
+      },
+      "records": [
+        {
+          "account_id": "D-029",
+          "date": "2026-10-18",
+          "id": "D-029-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 264 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-029",
+          "contract_status": "active",
+          "date": "2026-10-18",
+          "id": "D-029-R2",
+          "supports": [],
+          "text": "CRM says a competitor contract is active."
+        },
+        {
+          "account_id": "D-029",
+          "contract_status": "disputed",
+          "date": "2026-10-18",
+          "id": "D-029-R3",
+          "supports": [
+            "not_icp"
+          ],
+          "text": "Procurement disputes the contract's validity; conflict is unresolved."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    },
+    {
+      "account_id": "D-030",
+      "company": "Solara Tools 3",
+      "conflicting": false,
+      "contract": {
+        "account_id": "OTHER-ACCOUNT",
+        "expires": "2027-12-31",
+        "record_id": "D-030-R2",
+        "status": "active",
+        "verified": true
+      },
+      "enrichment_s": 30,
+      "headcount": 267,
+      "id": "D-030",
+      "industry": "B2B SaaS",
+      "label": {
+        "evidence_ids": [
+          "D-030-R1"
+        ],
+        "reason_code": "icp_fit",
+        "score": 4
+      },
+      "records": [
+        {
+          "account_id": "D-030",
+          "date": "2026-10-18",
+          "id": "D-030-R1",
+          "supports": [
+            "icp_fit"
+          ],
+          "text": "Verified company profile: B2B SaaS; 267 employees; sales team of 18."
+        },
+        {
+          "account_id": "D-030",
+          "date": "2026-10-18",
+          "id": "D-030-R2",
+          "supports": [],
+          "text": "A sales note mentions a competitor contract for a different account; not evidence about this company."
+        }
+      ],
+      "sales_staff": 18,
+      "signals": [],
+      "version": "field-notes-w1.3"
+    }
+  ],
+  "rubric": {
+    "as_of": "2026-10-25",
+    "client": "Northwind Analytics",
+    "contract": "score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.",
+    "exclude": "Agencies and accounts with an authoritative, unexpired competitor contract.",
+    "fit": "B2B SaaS, verified 50–1000 employees and at least 10 sales staff.",
+    "priority": "Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.",
+    "product": "Pipeline forecasting software for B2B sales teams",
+    "reason_codes": [
+      "buying_signal",
+      "icp_fit",
+      "budget_frozen",
+      "locked_in_competitor",
+      "not_icp"
+    ],
+    "version": "field-notes-w1.3"
+  },
+  "version": "field-notes-w1.3"
+}

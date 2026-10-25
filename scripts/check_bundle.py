@@ -7,7 +7,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP = {".git", "__pycache__", ".bakeoff", "work", "dist"}
+SKIP = {".git", ".DS_Store", "__pycache__", ".bakeoff", "work", "dist"}
 FORBIDDEN = [r"us\.cloud\.langfuse\.com", r"github\.com/Empatika/twain", r"/Users/[A-Za-z]", r"[A-Za-z0-9._%+-]+@(?:gmail|empatika)\.", r"sk-(?:proj|lf)-[A-Za-z0-9_-]{12,}", r"pk-lf-[A-Za-z0-9_-]{12,}", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"]
 
 
