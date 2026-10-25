@@ -2,7 +2,7 @@
 
 Student materials for the advanced course: six workshops that build on a working agent. Workshop 1 asks: **can this work disappear, what does a correct completed job cost, and what would make us keep the change?**
 
-For the online classroom exercise, get the standalone recorded-call ZIP from the instructor before class. Its [Lead Scout source and instructions](lesson1/recorded-starter/README.md) are here; run it locally at the first hands-on block. The broader take-home walkthrough is for after the evaluation discussion. It includes actual development recordings and needs no instructor host, provider account or API keys.
+The core online workshop uses the instructor’s shared simulation. Participants make predictions and decisions aloud. The final 25 minutes are for one bounded individual application to a ready own workflow or the optional recorded starter. For local starter practice, get the standalone ZIP beforehand and check Python; no instructor host, provider account or API keys are needed. The broader worked take-home walkthrough follows the evaluation discussion.
 
 Start with [Workshop 1 take-home](lesson1/README.md). The kit works with Python 3.10+ and has no runtime dependencies or required provider account.
 

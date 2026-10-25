@@ -1,10 +1,10 @@
 # Lead Scout: recorded-call starter
 
-Run this exercise on your own laptop during the online workshop. Python 3.10+ is enough. No installs, server, provider account or API keys are needed.
+Use this optional exercise in the final individual-practice block or after the workshop. The core workshop uses the instructor’s shared simulation. Python 3.10+ is enough. No installs, server, provider account or API keys are needed.
 
 The included outputs are actual OpenAI GPT-6.1 Sol and TypeSafe Jev calls recorded on 24 October 2026, using synthetic company cases. Token usage and model costs come from those recordings. Replay spends no new API money. Company-data fetching time is simulated.
 
-## Before the workshop
+## Optional preparation
 
 Download and extract the ZIP. Open a terminal in the extracted folder and check Python. Then verify the bundle:
 
@@ -15,9 +15,9 @@ On Windows, use py -3 instead of python3 if that is your installed Python comman
 
 The ZIP contains the development examples, their reference answers/evidence-support annotations, and recorded model branches. Labels and support annotations are excluded from routing and provider inputs. Final evaluation data is supplied separately after policy freeze. It contains no provider keys, private Langfuse links or instructor case generator.
 
-## At the first hands-on block, around minute 45
+## During individual practice (90–115 minutes), or at home
 
-Choose the starting policy explicitly with the instructor:
+Choose the starting policy explicitly:
 
     python3 lab.py init --start rule-starter
     python3 lab.py compare
@@ -34,7 +34,7 @@ That starts with compact input and the large model, with the contract rule and J
 
 Fill all fields in prediction.json: hypothesis, minimum cost-per-correct improvement, task-quality floor and tuning time in minutes. They start blank. The savings gate uses the compact-input reference. Choose tolerances from business needs before tuning.
 
-For the model-choice experiment, change only typed from false to true in policy.json. For the rule experiment, change only rules from false to true. Keep strict true: it defines the rule we discussed. fallback is configured for eligible model routes; it does not activate Jev by itself. Threshold is an authored routing-feature score, not model confidence. Leave effort high for the first comparison.
+To explore model choice, change typed from false to true in policy.json. If the shared workshop already used this change, choose a new routing condition in router.py instead. For the rule experiment, change only rules from false to true. Keep strict true: it defines the rule we discussed. fallback is configured for eligible model routes; it does not activate Jev by itself. Threshold is an authored routing-feature score, not model confidence. Leave effort high for the first comparison.
 
     python3 lab.py run --effort fixed
     python3 lab.py run --effort adaptive
@@ -47,11 +47,11 @@ Read failures before averages. A lower-cost policy can still fail the quality fl
 
     python3 lab.py export --decision revert --reason "Explain the observed quality/cost trade-off"
 
-## Continue only when justified
+## Continue after practice only when justified
 
     python3 lab.py freeze
 
-The instructor then releases the separate evaluation packet through the course materials. It works locally too:
+For a later independent evaluation, the instructor releases a separate packet through the course materials after freeze. Reusing examples discussed together is practice rather than fresh validation. It works locally too:
 
     python3 lab.py evaluate --packet /path/to/evaluation-packet.json
 
@@ -59,7 +59,7 @@ The frozen policy, prediction and router must remain unchanged. Repeating evalua
 
     python3 lab.py export --decision keep --reason "Explain the evidence and best alternative"
 
-You get decision.md and decision.json. Discuss the result in the workshop; follow the instructor's chosen submission channel.
+You get decision.md and decision.json. Save the result for the closing discussion or homework.
 
 ## What you can change
 
