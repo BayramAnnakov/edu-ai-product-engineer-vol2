@@ -1,0 +1,1395 @@
+{
+  "schema": 1,
+  "contract": {
+    "name": "coding-review-canonical-docs-only-bypass",
+    "stage": "held-out",
+    "cases": "eval.json",
+    "dev_cases": "dev.json",
+    "pins": [
+      "workflow.py",
+      "runner.py",
+      "dev-model-bank.json",
+      "eval-model-bank.json",
+      "README.md",
+      "work/dev-boundary-probes.json"
+    ],
+    "prior_receipts": [
+      "work/dev-baseline.jsonl",
+      "work/dev-candidate.jsonl"
+    ],
+    "task_contract": "Return clear only for a nonempty documentation-only change (.md under docs/ or exact root README.md), or exclusively src/generated/ with verified provenance and unchanged generator. Mixed changes, empty input, spoofed generated paths, dependencies, absolute paths, and dot segments require review. Exact authored expected labels define task correctness. False clear is consequential; an unnecessary model call is a cost error. The authored model bank is perfect. Candidate intentionally only bypasses canonical documentation-only changes and routes all else to model.",
+    "hypothesis": "Removing model work only when all paths are canonical relative documentation paths preserves 100% exact task correctness and reduces fixture machine cost per correct result by at least 10%. Reject invalid or ambiguous paths; no ID, group, expected-label or bank access in router. No caching or model swap.",
+    "baseline": "always-model perfect authored fixture bank",
+    "candidate": "canonical-docs-only deterministic bypass; all other inputs model",
+    "quality_floor_percent": 100,
+    "minimum_cost_reduction_percent": 10,
+    "max_job_p95_seconds": 10,
+    "max_total_cost_usd": 3.0,
+    "max_tuning_minutes": 20,
+    "label_source": "Project-authored exact task labels; evaluation labels and eval model bank remain unopened by the learner until freeze. Judge acceptance is deliberately universal and nonauthoritative.",
+    "tuning_started_utc": "2026-10-25T00:39:09+00:00",
+    "tuning_finished_utc": "2026-10-25T00:40:19+00:00",
+    "tuning_minutes_observed": 1.1666666666666667,
+    "evidence_limits": "Offline authored fixtures. Cost and job_seconds are authored, not actual provider spend/latency. Actual local execution wall time recorded separately; enrichment/review/infra unpriced; review effort unmeasured. Actual development assistant token cost unavailable. No source skill changes, no network, no deployment."
+  },
+  "frozen_files": {
+    "experiment.json": "26fb1725dedf48e6537a4472c6ea8be5912b9467f17c0ef5c121bb56a040fb1a",
+    "eval.json": "4ece91da40317adb793758933fe87f42ecef258b04bb6134ec70087161294983",
+    "dev.json": "a1c439634515fd88fade711956a0f16b97b311b37afb1774cf910eec9e88337c",
+    "work/dev-baseline.jsonl": "ab71bb916201da93107159ff6557b2781e0f43d502b1bf6217a98011887162d4",
+    "work/dev-candidate.jsonl": "8acb98bf4e43ca1a859c29acf01833b1da859c9472643874933a1aa5671b85ea",
+    "workflow.py": "88890db8bfffa7c3812e59a4bb939e568b2f731e6ac2cb2d10d088416d83abde",
+    "runner.py": "bb01997c70e766cc3152bf272278cf352941fa0b4fe25db6ef6965a2243450ca",
+    "dev-model-bank.json": "19ccc783d970c1c09a1c8a2a1b436cfe387e99d742fa5d3a2cc9f0da33e865e0",
+    "eval-model-bank.json": "760c06af2d185bcfc049a4b4ada02fea11e47d9a7978837e23b0fac106c74b37",
+    "README.md": "fa520f11b4a894a0bf9f66c2a5bce16c2b745be64281c90449fdf62030d91451",
+    "work/dev-boundary-probes.json": "0628b373d3de3accc15331691992f65b830367b304f0013d0509db7001108d33"
+  },
+  "unique_evaluation_inputs": 30,
+  "budget_accounting": {
+    "prior": {
+      "known_cost_usd": 1.0800000000000005,
+      "unknown_cost_attempts": 0
+    },
+    "known_total_cost_usd": 2.1600000000000006,
+    "all_costs_known": true
+  },
+  "input_files": {
+    "work/eval-baseline.jsonl": "3e5273f030885768355e12d88a70a7726bcfbd700287160d8a438c633f52e5b9",
+    "work/eval-candidate.jsonl": "9ddb67076b8f371e5f28e24be88956c1feee668bc261066046b662d0b617430e"
+  },
+  "baseline": {
+    "n": 30,
+    "returned": 30,
+    "complete": true,
+    "task_correct": 30,
+    "judge_accepted": 30,
+    "quality_percent": 100.0,
+    "serious_failures": 0,
+    "machine_cost_usd": 0.6,
+    "known_attempt_cost_usd": 0.6,
+    "unknown_cost_attempts": 0,
+    "cost_per_correct": 0.02,
+    "cost_per_judge_accepted": 0.02,
+    "attempts": 30,
+    "failed_attempts": 0,
+    "job_p95_seconds": 9.0,
+    "review_seconds": null,
+    "reviewed_items": 0,
+    "evidence_modes": [
+      "fixture"
+    ],
+    "missing_cases": [],
+    "error_cases": []
+  },
+  "candidate": {
+    "n": 30,
+    "returned": 30,
+    "complete": true,
+    "task_correct": 30,
+    "judge_accepted": 30,
+    "quality_percent": 100.0,
+    "serious_failures": 0,
+    "machine_cost_usd": 0.48,
+    "known_attempt_cost_usd": 0.48,
+    "unknown_cost_attempts": 0,
+    "cost_per_correct": 0.016,
+    "cost_per_judge_accepted": 0.016,
+    "attempts": 24,
+    "failed_attempts": 0,
+    "job_p95_seconds": 9.0,
+    "review_seconds": null,
+    "reviewed_items": 0,
+    "evidence_modes": [
+      "fixture"
+    ],
+    "missing_cases": [],
+    "error_cases": []
+  },
+  "cost_reduction_percent": 19.999999999999996,
+  "gates": {
+    "quality": true,
+    "minimum_cost_reduction": true,
+    "latency": true,
+    "budget": true
+  },
+  "experiment_verdict": "worked",
+  "owner_decision": {
+    "choice": "keep",
+    "reason": "Keep the frozen documentation-only bypass in this isolated fixture: all 30 evaluation cases remain task-correct and fixture cost/correct falls 20%, with development plus comparison cost $2.16 under $3. This is a learner decision for the fixture only; it provides no production rollout or provider-quality evidence.",
+    "conditions": null,
+    "authorizes_deployment": false
+  },
+  "rows": {
+    "baseline": [
+      {
+        "case_id": "eval-01",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-01-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-02",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-02-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-03",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-03-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-04",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-04-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-05",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-05-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-06",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-06-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-07",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-07-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-08",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-08-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-09",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-09-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-10",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-10-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-11",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-11-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-12",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-12-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-13",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-13-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-14",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-14-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-15",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-15-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-16",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-16-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-17",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-17-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-18",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-18-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-19",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-19-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-20",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-20-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-21",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-21-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-22",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-22-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-23",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-23-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-24",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-24-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-25",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-25-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-26",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-26-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-27",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-27-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-28",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-28-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-29",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-29-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-30",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-30-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      }
+    ],
+    "candidate": [
+      {
+        "case_id": "eval-01",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-02",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-03",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-03-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-04",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-04-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-05",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-05-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-06",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-06-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-07",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-07-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-08",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-08-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-09",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-09-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-10",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-10-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-11",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-12",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-13",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-13-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-14",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-14-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-15",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-15-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-16",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-16-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-17",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-17-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-18",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-18-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-19",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-19-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-20",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-20-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-21",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-22",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 1.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "cheap",
+        "attempts": [],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-23",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-23-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-24",
+        "output": "clear",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-24-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-25",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-25-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-26",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-26-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-27",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-27-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-28",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-28-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-29",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-29-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      },
+      {
+        "case_id": "eval-30",
+        "output": "needs-review",
+        "judge_accepted": true,
+        "serious_failure": false,
+        "job_seconds": 9.0,
+        "review_seconds": null,
+        "evidence_mode": "fixture",
+        "route": "model",
+        "attempts": [
+          {
+            "id": "eval-30-model",
+            "status": "success",
+            "cost_usd": 0.02,
+            "input_tokens": 500,
+            "output_tokens": 20,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0
+          }
+        ],
+        "task_correct": true
+      }
+    ]
+  },
+  "limits": [
+    "Evidence modes are labels supplied by the runner, not authenticated receipts.",
+    "Offline or recorded rows do not establish fresh production savings.",
+    "Small samples do not establish stable p95 or rare failure rates.",
+    "Human review/rework remains separate from machine cost."
+  ]
+}

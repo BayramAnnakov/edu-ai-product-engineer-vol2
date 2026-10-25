@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "recorded_on": "2026-10-24",
+  "examples": 6,
+  "source_scope": "Four actual public-document cache calls plus two actual model calls on one synthetic development case. No customer traces.",
+  "retained": [
+    "provider/model names",
+    "usage counters",
+    "dated computed cost",
+    "observed latency",
+    "model answer/error semantics"
+  ],
+  "removed_or_replaced": [
+    "provider/trace/receipt IDs",
+    "private Langfuse URLs and project/account identifiers",
+    "headers/credentials/raw requests/responses",
+    "original synthetic company and record identifiers",
+    "complete prompt/public-document text"
+  ],
+  "limitations": [
+    "Sanitized excerpts are not exact serialized requests and cannot reproduce provider calls byte-for-byte.",
+    "Selected examples do not estimate population quality or production savings.",
+    "Expected answer annotation follows the visible worked-example contract; no private evaluator is shipped."
+  ],
+  "sha256": {
+    "cache-pair.jsonl": "207f9bf8fb6553877aea0a38609ebe3b9d2301a08289a088d450bb4d905de76f",
+    "scoring-boundary.jsonl": "d8ed40ffd314a43758529e0a5fbc587d7b8123962c0bc9b17cdcbde1b8313181"
+  }
+}

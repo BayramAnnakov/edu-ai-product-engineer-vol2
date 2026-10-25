@@ -1,0 +1,785 @@
+[
+  {
+    "id": "dev-01",
+    "group": "dev-entity-01",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-02",
+    "group": "dev-entity-02",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-03",
+    "group": "dev-entity-03",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-b",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "tenant-b-secret-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-04",
+    "group": "dev-entity-04",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v1",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v1"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-05",
+    "group": "dev-entity-05",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-10-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-06",
+    "group": "dev-entity-06",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-07",
+    "group": "dev-entity-07",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-08",
+    "group": "dev-entity-08",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "de",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-de"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-09",
+    "group": "dev-entity-09",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-10",
+    "group": "dev-entity-10",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  },
+  {
+    "id": "dev-11",
+    "group": "dev-entity-11",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-12",
+    "group": "dev-entity-12",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-13",
+    "group": "dev-entity-13",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-b",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "tenant-b-secret-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-14",
+    "group": "dev-entity-14",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v1",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v1"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-15",
+    "group": "dev-entity-15",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-10-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-16",
+    "group": "dev-entity-16",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-17",
+    "group": "dev-entity-17",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-18",
+    "group": "dev-entity-18",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "de",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-de"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-19",
+    "group": "dev-entity-19",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-20",
+    "group": "dev-entity-20",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  },
+  {
+    "id": "dev-21",
+    "group": "dev-entity-21",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-22",
+    "group": "dev-entity-22",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-23",
+    "group": "dev-entity-23",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-b",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "tenant-b-secret-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-24",
+    "group": "dev-entity-24",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v1",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v1"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-25",
+    "group": "dev-entity-25",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-10-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-26",
+    "group": "dev-entity-26",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-27",
+    "group": "dev-entity-27",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-28",
+    "group": "dev-entity-28",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "de",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-de"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-29",
+    "group": "dev-entity-29",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v2"
+    }
+  },
+  {
+    "id": "dev-30",
+    "group": "dev-entity-30",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "tenant-a",
+      "kb_version": "v2",
+      "locale": "en",
+      "as_of": "2026-10-24",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "tenant-a",
+        "kb_version": "v2",
+        "locale": "en",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  }
+]

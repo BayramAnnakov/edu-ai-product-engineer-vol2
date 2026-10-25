@@ -1,0 +1,122 @@
+{
+  "dev-01": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-02": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-03": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-04": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-05": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-06": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-07": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-08": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-09": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-10": {
+    "destination": "human",
+    "answer_id": null
+  },
+  "dev-11": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-12": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-13": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-14": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-15": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-16": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-17": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-18": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-19": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-20": {
+    "destination": "human",
+    "answer_id": null
+  },
+  "dev-21": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-22": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-23": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-24": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-25": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-26": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-27": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-28": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-29": {
+    "destination": "self-service",
+    "answer_id": "reset-v2"
+  },
+  "dev-30": {
+    "destination": "human",
+    "answer_id": null
+  }
+}

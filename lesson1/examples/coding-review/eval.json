@@ -1,0 +1,374 @@
+[
+  {
+    "id": "eval-01",
+    "group": "eval-entity-01",
+    "input": {
+      "files": [
+        "docs/usage-0.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-02",
+    "group": "eval-entity-02",
+    "input": {
+      "files": [
+        "README.md",
+        "docs/tutorial-1.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-03",
+    "group": "eval-entity-03",
+    "input": {
+      "files": [
+        "src/generated/api-2.py",
+        "src/generated/types-2.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-04",
+    "group": "eval-entity-04",
+    "input": {
+      "files": [
+        "src/generated/schema-3.ts"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-05",
+    "group": "eval-entity-05",
+    "input": {
+      "files": [
+        "docs/guide-4.mdx"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-06",
+    "group": "eval-entity-06",
+    "input": {
+      "files": [
+        "docs/guide-5.md",
+        "src/service-5.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-07",
+    "group": "eval-entity-07",
+    "input": {
+      "files": [
+        "src/generated/unverified-6.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-08",
+    "group": "eval-entity-08",
+    "input": {
+      "files": [
+        "src/generated/stale-7.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-09",
+    "group": "eval-entity-09",
+    "input": {
+      "files": [
+        "src/generated/client-8.py",
+        "tools/generate.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-10",
+    "group": "eval-entity-10",
+    "input": {
+      "files": [
+        "src/../docs/guide-9.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-11",
+    "group": "eval-entity-11",
+    "input": {
+      "files": [
+        "docs/usage-10.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-12",
+    "group": "eval-entity-12",
+    "input": {
+      "files": [
+        "README.md",
+        "docs/tutorial-11.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-13",
+    "group": "eval-entity-13",
+    "input": {
+      "files": [
+        "src/generated/api-12.py",
+        "src/generated/types-12.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-14",
+    "group": "eval-entity-14",
+    "input": {
+      "files": [
+        "src/generated/schema-13.ts"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-15",
+    "group": "eval-entity-15",
+    "input": {
+      "files": [
+        "docs/guide-14.mdx"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-16",
+    "group": "eval-entity-16",
+    "input": {
+      "files": [
+        "docs/guide-15.md",
+        "src/service-15.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-17",
+    "group": "eval-entity-17",
+    "input": {
+      "files": [
+        "src/generated/unverified-16.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-18",
+    "group": "eval-entity-18",
+    "input": {
+      "files": [
+        "src/generated/stale-17.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-19",
+    "group": "eval-entity-19",
+    "input": {
+      "files": [
+        "src/generated/client-18.py",
+        "tools/generate.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-20",
+    "group": "eval-entity-20",
+    "input": {
+      "files": [
+        "src/../docs/guide-19.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-21",
+    "group": "eval-entity-21",
+    "input": {
+      "files": [
+        "docs/usage-20.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-22",
+    "group": "eval-entity-22",
+    "input": {
+      "files": [
+        "README.md",
+        "docs/tutorial-21.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-23",
+    "group": "eval-entity-23",
+    "input": {
+      "files": [
+        "src/generated/api-22.py",
+        "src/generated/types-22.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-24",
+    "group": "eval-entity-24",
+    "input": {
+      "files": [
+        "src/generated/schema-23.ts"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "eval-25",
+    "group": "eval-entity-25",
+    "input": {
+      "files": [
+        "docs/guide-24.mdx"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-26",
+    "group": "eval-entity-26",
+    "input": {
+      "files": [
+        "docs/guide-25.md",
+        "src/service-25.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-27",
+    "group": "eval-entity-27",
+    "input": {
+      "files": [
+        "src/generated/unverified-26.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-28",
+    "group": "eval-entity-28",
+    "input": {
+      "files": [
+        "src/generated/stale-27.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-29",
+    "group": "eval-entity-29",
+    "input": {
+      "files": [
+        "src/generated/client-28.py",
+        "tools/generate.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "eval-30",
+    "group": "eval-entity-30",
+    "input": {
+      "files": [
+        "src/../docs/guide-29.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "my-workflow-one-change",
+  "stage": "held-out",
+  "cases": "cases.json",
+  "dev_cases": null,
+  "pins": [],
+  "prior_receipts": [],
+  "task_contract": "Define a useful correct result and the costly error directions.",
+  "hypothesis": "Name one changed mechanism and its expected effect.",
+  "baseline": "incumbent",
+  "candidate": "one-change",
+  "quality_floor_percent": 100,
+  "minimum_cost_reduction_percent": 10,
+  "max_job_p95_seconds": null,
+  "max_total_cost_usd": 5,
+  "max_tuning_minutes": 30,
+  "label_source": "Name who or what independently established correctness."
+}

@@ -1,0 +1,122 @@
+{
+  "eval-01": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-02": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-03": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-04": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-05": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-06": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-07": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-08": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-09": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-10": {
+    "destination": "human",
+    "answer_id": null
+  },
+  "eval-11": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-12": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-13": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-14": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-15": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-16": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-17": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-18": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-19": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-20": {
+    "destination": "human",
+    "answer_id": null
+  },
+  "eval-21": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-22": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-23": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-24": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-25": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-26": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-27": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-28": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-29": {
+    "destination": "self-service",
+    "answer_id": "reset-v3"
+  },
+  "eval-30": {
+    "destination": "human",
+    "answer_id": null
+  }
+}

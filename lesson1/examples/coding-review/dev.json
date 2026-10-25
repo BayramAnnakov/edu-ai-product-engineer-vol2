@@ -1,0 +1,359 @@
+[
+  {
+    "id": "dev-01",
+    "group": "dev-entity-01",
+    "input": {
+      "files": [
+        "docs/guide.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-02",
+    "group": "dev-entity-02",
+    "input": {
+      "files": [
+        "README.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-03",
+    "group": "dev-entity-03",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-04",
+    "group": "dev-entity-04",
+    "input": {
+      "files": [
+        "src/generated/types.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-05",
+    "group": "dev-entity-05",
+    "input": {
+      "files": [
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-06",
+    "group": "dev-entity-06",
+    "input": {
+      "files": [
+        "docs/guide.md",
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-07",
+    "group": "dev-entity-07",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-08",
+    "group": "dev-entity-08",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-09",
+    "group": "dev-entity-09",
+    "input": {
+      "files": [
+        "requirements.lock"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-10",
+    "group": "dev-entity-10",
+    "input": {
+      "files": [],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-11",
+    "group": "dev-entity-11",
+    "input": {
+      "files": [
+        "docs/guide.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-12",
+    "group": "dev-entity-12",
+    "input": {
+      "files": [
+        "README.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-13",
+    "group": "dev-entity-13",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-14",
+    "group": "dev-entity-14",
+    "input": {
+      "files": [
+        "src/generated/types.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-15",
+    "group": "dev-entity-15",
+    "input": {
+      "files": [
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-16",
+    "group": "dev-entity-16",
+    "input": {
+      "files": [
+        "docs/guide.md",
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-17",
+    "group": "dev-entity-17",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-18",
+    "group": "dev-entity-18",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-19",
+    "group": "dev-entity-19",
+    "input": {
+      "files": [
+        "requirements.lock"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-20",
+    "group": "dev-entity-20",
+    "input": {
+      "files": [],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-21",
+    "group": "dev-entity-21",
+    "input": {
+      "files": [
+        "docs/guide.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-22",
+    "group": "dev-entity-22",
+    "input": {
+      "files": [
+        "README.md"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-23",
+    "group": "dev-entity-23",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-24",
+    "group": "dev-entity-24",
+    "input": {
+      "files": [
+        "src/generated/types.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": true
+    },
+    "expected": "clear"
+  },
+  {
+    "id": "dev-25",
+    "group": "dev-entity-25",
+    "input": {
+      "files": [
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-26",
+    "group": "dev-entity-26",
+    "input": {
+      "files": [
+        "docs/guide.md",
+        "src/service.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-27",
+    "group": "dev-entity-27",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": true
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-28",
+    "group": "dev-entity-28",
+    "input": {
+      "files": [
+        "src/generated/client.py"
+      ],
+      "generated_provenance_verified": true,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-29",
+    "group": "dev-entity-29",
+    "input": {
+      "files": [
+        "requirements.lock"
+      ],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  },
+  {
+    "id": "dev-30",
+    "group": "dev-entity-30",
+    "input": {
+      "files": [],
+      "generated_provenance_verified": false,
+      "generator_unchanged": false
+    },
+    "expected": "needs-review"
+  }
+]

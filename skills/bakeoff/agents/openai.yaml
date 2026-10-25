@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bakeoff"
+  short_description: "Test agent quality, cost and workflow latency"
+  default_prompt: "Use $bakeoff to test one bounded optimization in this workflow."

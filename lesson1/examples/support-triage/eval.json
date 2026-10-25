@@ -1,0 +1,785 @@
+[
+  {
+    "id": "eval-01",
+    "group": "eval-entity-01",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-02",
+    "group": "eval-entity-02",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-02",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-03",
+    "group": "eval-entity-03",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "other-tenant",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-03",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "other-tenant-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-04",
+    "group": "eval-entity-04",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v2",
+        "locale": "es",
+        "expires_on": "2026-11-04",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-05",
+    "group": "eval-entity-05",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-10-24",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-06",
+    "group": "eval-entity-06",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-06",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-07",
+    "group": "eval-entity-07",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-08",
+    "group": "eval-entity-08",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "en",
+        "expires_on": "2026-11-08",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-en"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-09",
+    "group": "eval-entity-09",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-09",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-10",
+    "group": "eval-entity-10",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-10",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  },
+  {
+    "id": "eval-11",
+    "group": "eval-entity-11",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-11",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-12",
+    "group": "eval-entity-12",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-12",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-13",
+    "group": "eval-entity-13",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "other-tenant",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-13",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "other-tenant-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-14",
+    "group": "eval-entity-14",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v2",
+        "locale": "es",
+        "expires_on": "2026-11-14",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-15",
+    "group": "eval-entity-15",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-10-24",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-16",
+    "group": "eval-entity-16",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-16",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-17",
+    "group": "eval-entity-17",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-18",
+    "group": "eval-entity-18",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "en",
+        "expires_on": "2026-11-18",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-en"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-19",
+    "group": "eval-entity-19",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-19",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-20",
+    "group": "eval-entity-20",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-20",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  },
+  {
+    "id": "eval-21",
+    "group": "eval-entity-21",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-01",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-22",
+    "group": "eval-entity-22",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-02",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v3"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-23",
+    "group": "eval-entity-23",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "other-tenant",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-03",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "other-tenant-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-24",
+    "group": "eval-entity-24",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v2",
+        "locale": "es",
+        "expires_on": "2026-11-04",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-v2"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-25",
+    "group": "eval-entity-25",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-10-24",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "expired-reset"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-26",
+    "group": "eval-entity-26",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": true,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-06",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-27",
+    "group": "eval-entity-27",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": null
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-28",
+    "group": "eval-entity-28",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-0",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-0",
+        "kb_version": "v3",
+        "locale": "en",
+        "expires_on": "2026-11-08",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "reset-en"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-29",
+    "group": "eval-entity-29",
+    "input": {
+      "intent": "password_reset",
+      "tenant": "new-tenant-1",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": true,
+      "cache": {
+        "tenant": "new-tenant-1",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-09",
+        "answer": {
+          "destination": "self-service",
+          "answer_id": "unsafe-automatic-response"
+        }
+      }
+    },
+    "expected": {
+      "destination": "self-service",
+      "answer_id": "reset-v3"
+    }
+  },
+  {
+    "id": "eval-30",
+    "group": "eval-entity-30",
+    "input": {
+      "intent": "billing_dispute",
+      "tenant": "new-tenant-2",
+      "kb_version": "v3",
+      "locale": "es",
+      "as_of": "2026-10-25",
+      "urgent": false,
+      "ambiguous": false,
+      "cache": {
+        "tenant": "new-tenant-2",
+        "kb_version": "v3",
+        "locale": "es",
+        "expires_on": "2026-11-10",
+        "answer": {
+          "destination": "human",
+          "answer_id": null
+        }
+      }
+    },
+    "expected": {
+      "destination": "human",
+      "answer_id": null
+    }
+  }
+]
