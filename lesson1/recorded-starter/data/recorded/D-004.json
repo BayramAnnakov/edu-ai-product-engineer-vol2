@@ -1,0 +1,1817 @@
+{
+  "0db2e837496cda33f6fb269b6a4910c1dc60db84204599fe757e23bd2c89f0c3": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001304,
+        "id": "recorded-6eabb6bea9f0a1c4",
+        "latency_s": 1.6759910411201417,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 467,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 504
+        }
+      }
+    ],
+    "latency_s": 1.6759910411201417,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "14781cdaebef684bca9e3969bd55192b003010cc59e8bc00f1da3863dd178360": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001476,
+        "id": "recorded-94a3e93b79e8ec25",
+        "latency_s": 2.0808439168613404,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 553,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 590
+        }
+      }
+    ],
+    "latency_s": 2.0808439168613404,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "21481e11da52fbc1a4a5763ad9d67957665a4c27eef301ee21d42e05645f8612": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000142716,
+        "id": "recorded-0ab4addb54e93efe",
+        "latency_s": 0.1459660828113556,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3398,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.1459660828113556,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "3eb5225649b4c47f6a5b6d6ca886393fe873d2ef374cc31463c42094685dcf1b": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001644,
+        "id": "recorded-ea5b3601cb7565b0",
+        "latency_s": 2.2802886669524014,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 467,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 71,
+          "output_tokens_details": {
+            "reasoning_tokens": 32
+          },
+          "total_tokens": 538
+        }
+      }
+    ],
+    "latency_s": 2.2802886669524014,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "3f1486a490a72c277e2d63cb68fbda65dd37fef88deab6f8e1be62c9c6aa21a9": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001878,
+        "id": "recorded-e38d62b22df87e06",
+        "latency_s": 2.797810875112191,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 489,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 90,
+          "output_tokens_details": {
+            "reasoning_tokens": 51
+          },
+          "total_tokens": 579
+        }
+      }
+    ],
+    "latency_s": 2.797810875112191,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5410c9bf7b8acb87c0e60b5ae6490a6c623be410c8386c2022debdfb877586b1": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014149800000000002,
+        "id": "recorded-87895af5cb912b3c",
+        "latency_s": 0.20607295888476074,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3369,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.20607295888476074,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "569168f81012c57e24ece5ac7465e59910e922d6a2cca866c9f19c35e007a3bd": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001372,
+        "id": "recorded-a3d6aa9f3aa0cc6b",
+        "latency_s": 2.0021630842238665,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 531,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 562
+        }
+      }
+    ],
+    "latency_s": 2.0021630842238665,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5d145ce6b4728872bb8e7163f0c48ea48b0587853660b2ae347c2f8568cc9583": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001476,
+        "id": "recorded-7441f3e33417f3d9",
+        "latency_s": 1.856398249976337,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 553,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 590
+        }
+      }
+    ],
+    "latency_s": 1.856398249976337,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6846ee5abb19092cb41900150a0cb8c5cf89ee848973389f6e1d2d40dd5527a6": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00013881,
+        "id": "recorded-c9df4d5cd62dd820",
+        "latency_s": 0.1479154161643237,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3305,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.1479154161643237,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "834fb868b51af443388094adfed6d52192188843deaa7778b77806c0c267995c": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000142716,
+        "id": "recorded-0ab4addb54e93efe",
+        "latency_s": 0.1459660828113556,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3398,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.1459660828113556,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "aa8811c13e93df93567e8396f036e82f6332f61b2cf050af31ffa595497450ee": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014149800000000002,
+        "id": "recorded-87895af5cb912b3c",
+        "latency_s": 0.20607295888476074,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3369,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.20607295888476074,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ab8445891feed594eb15c9a83ac7f1d2963ba507ccd9a7cb99e49f0c0a49caa4": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001348,
+        "id": "recorded-4b8d2d9765161b50",
+        "latency_s": 2.100261874962598,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 489,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 526
+        }
+      }
+    ],
+    "latency_s": 2.100261874962598,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "af52943958bf950ccaabdccf2c202eaf56ce0ef408e8854ce7a3aa40b08342ef": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014002800000000002,
+        "id": "recorded-f988718aa0d8b8b6",
+        "latency_s": 0.23763758409768343,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3334,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.23763758409768343,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "bd65edf711f6457317a37bf120b4e4b3b1ea606d646e236748dc463f6ad972cc": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00013881,
+        "id": "recorded-c9df4d5cd62dd820",
+        "latency_s": 0.1479154161643237,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3305,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.1479154161643237,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "cb8a8f7009a3afe758046edb3ccbe3a0cea2a2edc3ff9151a785d65aca5f5b6f": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R1",
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001712,
+        "id": "recorded-0b1ab5df1d45a720",
+        "latency_s": 3.4950209169182926,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 531,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 65,
+          "output_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "total_tokens": 596
+        }
+      }
+    ],
+    "latency_s": 3.4950209169182926,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-004\",\n  \"company\": \"Orbit Works\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 189,\n  \"id\": \"D-004\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-004\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-004-R2\",\n      \"text\": \"CFO confirms a current budget freeze; no new software purchases this quarter.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"budget_frozen\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f4c9904d5709f6c1f2c717b95b2a3a9b248f11a03f699f0a5a634d57d3bc5b5d": {
+    "answer": {
+      "evidence_ids": [
+        "D-004-R2"
+      ],
+      "reason_code": "budget_frozen",
+      "score": 2
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014002800000000002,
+        "id": "recorded-f988718aa0d8b8b6",
+        "latency_s": 0.23763758409768343,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3334,
+          "output_tokens": 341
+        }
+      }
+    ],
+    "latency_s": 0.23763758409768343,
+    "request": {
+      "case": {
+        "account_id": "D-004",
+        "company": "Orbit Works",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 189,
+        "id": "D-004",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R1",
+            "text": "Verified company profile: B2B SaaS; 189 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-004",
+            "date": "2026-10-18",
+            "id": "D-004-R2",
+            "text": "CFO confirms a current budget freeze; no new software purchases this quarter."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "budget_frozen"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-004; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-004\",\"company\":\"Orbit Works\",\"conflicting\":false,\"contract\":null,\"headcount\":189,\"id\":\"D-004\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R1\",\"text\":\"Verified company profile: B2B SaaS; 189 employees; sales team of 18.\"},{\"account_id\":\"D-004\",\"date\":\"2026-10-18\",\"id\":\"D-004-R2\",\"text\":\"CFO confirms a current budget freeze; no new software purchases this quarter.\"}],\"sales_staff\":18,\"signals\":[\"budget_frozen\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

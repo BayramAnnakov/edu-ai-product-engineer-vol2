@@ -27,3 +27,8 @@ These tests establish controlled fixture execution and skill usability by agents
 Installers were executed into isolated project directories for Codex and Claude and preserve an existing skill. Discovery paths/invocation syntax were checked against official docs; cross-version slash-menu behavior was not exercised in every host. The helper verifies supplied receipts retrospectively; it does not enforce a live provider spending/time limit or authenticate a runner's evidence label.
 
 The five-question HTML replay was traversed in the browser: counters, economics and outputs reveal progressively, navigation is gated, the own-workflow form generates a real downloaded Markdown plan, and no browser warnings/errors were recorded. Local-file URL automation is blocked by the browser policy, so browser verification used a loopback server; the HTML contains inline data/CSS/JS and no runtime network dependency.
+
+
+## Recorded Lead Scout classroom starter — 24 Oct 2026
+
+The standalone starter contains 30 public development examples with reference labels and 480 exact recorded request variants. It includes no final cases, private case generator/course judge, API credentials or private trace URLs. Seven additional checks pass. A clean-ZIP run with network access disabled completed explicit initialization, reference comparison, policy edit, fixed/adaptive dev, freeze, separate evaluation-packet import, saved-result recovery and decision export. Thirty-six policy/configuration comparisons match original task correctness, model cost, attempts and cache counters. This is software acceptance evidence; it does not establish classroom pacing or human learning outcomes.

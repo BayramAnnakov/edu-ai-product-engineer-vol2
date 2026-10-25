@@ -1,0 +1,1902 @@
+{
+  "1aa5d369762a5e4d9913c986ee4912fff698b1538b7570aba302011f8eccedd9": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140826,
+        "id": "recorded-ec8f731528480a2b",
+        "latency_s": 0.23820316698402166,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3353,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.23820316698402166,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "44ec1b09f15e059033c79ca0a80bed5ef5ef7ed38c579d7b1374de8d6fcedf40": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.0,
+        "id": "recorded-7b53ddf52188e1b8",
+        "latency_s": 0.07959574996493757,
+        "provider": "openai",
+        "status": "failed_not_sent",
+        "usage": {
+          "billing_status": "TLS certificate verification failed before an authenticated HTTP request could be sent",
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      },
+      {
+        "cost_usd": 0.001616,
+        "id": "recorded-27897896b8d7ca3d",
+        "latency_s": 2.806077500106767,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 503,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 61,
+          "output_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "total_tokens": 564
+        }
+      }
+    ],
+    "latency_s": 2.8856732500717044,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "4d8b3a33f182ca9a03173920981c7325874f437b41f9a223531f7a49d1d884d5": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001538,
+        "id": "recorded-b6688d683993cb1a",
+        "latency_s": 1.7291083340533078,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 604,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 33,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 637
+        }
+      }
+    ],
+    "latency_s": 1.7291083340533078,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "65f840da25f01015018c8ad874427e1be6b7135c6f7330c3b214359da66e9f3d": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001878,
+        "id": "recorded-beb542929aab45c3",
+        "latency_s": 2.758977958932519,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 604,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 67,
+          "output_tokens_details": {
+            "reasoning_tokens": 32
+          },
+          "total_tokens": 671
+        }
+      }
+    ],
+    "latency_s": 2.758977958932519,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6a8114b7767ea8530a28ceb3aa859f777e5d8a744c773d5859a7ff359074d89b": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014536200000000004,
+        "id": "recorded-d469dedb05e5ddac",
+        "latency_s": 0.24009154201485217,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3461,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.24009154201485217,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6cedc77bec90ac567f820e12785b6eb8cf7df6693b1b225b6f3e6cf0fb0df52a": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144144,
+        "id": "recorded-c30be79181e7047b",
+        "latency_s": 0.12990075000561774,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3432,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.12990075000561774,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "757e12c50d9b2ad141a481dea0fe4422ec4431f0f2df1a25f6e2473a6710ef9c": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014204400000000002,
+        "id": "recorded-68757f20a1edf23c",
+        "latency_s": 0.13052804209291935,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3382,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.13052804209291935,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "850e5f6b421e4f67109829f72671c913bab5dafd04e87fed12956eb8a2fb4afc": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014536200000000004,
+        "id": "recorded-d469dedb05e5ddac",
+        "latency_s": 0.24009154201485217,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3461,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.24009154201485217,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "917f13d3c4c095c81feb5f7f1bc5186ac98b243359e679ee63f9a5d0b0128b33": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001494,
+        "id": "recorded-fc987bc041a7f62e",
+        "latency_s": 2.3110594579484314,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 582,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 33,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 615
+        }
+      }
+    ],
+    "latency_s": 2.3110594579484314,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "9a36dce9f6192663179ab944e9a7c3b25ffa413ebed426cd57a2c4fdd560665c": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001336,
+        "id": "recorded-0ccf4e4f88c37d2b",
+        "latency_s": 1.4329349158797413,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 503,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 33,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 536
+        }
+      }
+    ],
+    "latency_s": 1.4329349158797413,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "9ea65c8ab18dd3291e80b7acc01d2bf300983b6584d8b3797a7e106c9417eb29": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000140826,
+        "id": "recorded-ec8f731528480a2b",
+        "latency_s": 0.23820316698402166,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3353,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.23820316698402166,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a3ce2484a1e8c0599c762bfb1328ce546c2fa8dbd21133d76083c16a2dd41c13": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00167,
+        "id": "recorded-36fcdfb9b958d3da",
+        "latency_s": 2.312329791020602,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 525,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 62,
+          "output_tokens_details": {
+            "reasoning_tokens": 27
+          },
+          "total_tokens": 587
+        }
+      }
+    ],
+    "latency_s": 2.312329791020602,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b9c4ac3e94d11e0a0962f69186625d6e858af21504e95bf208fe51153d0d00b6": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00138,
+        "id": "recorded-2be4467f8a072eea",
+        "latency_s": 1.9565202500671148,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 525,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 33,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 558
+        }
+      }
+    ],
+    "latency_s": 1.9565202500671148,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "c8161a9e6312a41ff581811a03a6528c518c2dd1747ebaf12362376a89de4e9a": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000144144,
+        "id": "recorded-c30be79181e7047b",
+        "latency_s": 0.12990075000561774,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3432,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.12990075000561774,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "dd52a142f83673582ddc49d007ac3257e3fb1c187ca9ac6ba425b45417de5b2f": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014204400000000002,
+        "id": "recorded-68757f20a1edf23c",
+        "latency_s": 0.13052804209291935,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3382,
+          "output_tokens": 342
+        }
+      }
+    ],
+    "latency_s": 0.13052804209291935,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-001; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-001\",\"company\":\"Northstar Labs\",\"conflicting\":false,\"contract\":{\"account_id\":\"D-001\",\"expires\":\"2027-12-31\",\"record_id\":\"D-001-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":180,\"id\":\"D-001\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-001\",\"date\":\"2026-10-18\",\"id\":\"D-001-R1\",\"text\":\"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"},{\"account_id\":\"D-001\",\"authoritative\":true,\"date\":\"2026-10-18\",\"id\":\"D-001-R2\",\"text\":\"Signed competitor contract with Helix Systems; active through 2027-12-31.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "fc6186866e1e66b561b349f8045e3748e817f1d70436d90bd5f77e9eb6d42e2d": {
+    "answer": {
+      "evidence_ids": [
+        "D-001-R2"
+      ],
+      "reason_code": "locked_in_competitor",
+      "score": 1
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001734,
+        "id": "recorded-65d05a42123c5654",
+        "latency_s": 2.145137459039688,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 582,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 57,
+          "output_tokens_details": {
+            "reasoning_tokens": 22
+          },
+          "total_tokens": 639
+        }
+      }
+    ],
+    "latency_s": 2.145137459039688,
+    "request": {
+      "case": {
+        "account_id": "D-001",
+        "company": "Northstar Labs",
+        "conflicting": false,
+        "contract": {
+          "account_id": "D-001",
+          "expires": "2027-12-31",
+          "record_id": "D-001-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 180,
+        "id": "D-001",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-001",
+            "date": "2026-10-18",
+            "id": "D-001-R1",
+            "text": "Verified company profile: B2B SaaS; 180 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-001",
+            "authoritative": true,
+            "date": "2026-10-18",
+            "id": "D-001-R2",
+            "text": "Signed competitor contract with Helix Systems; active through 2027-12-31."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-001\",\n  \"company\": \"Northstar Labs\",\n  \"conflicting\": false,\n  \"contract\": {\n    \"account_id\": \"D-001\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-001-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 180,\n  \"id\": \"D-001\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-001\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 180 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-001\",\n      \"authoritative\": true,\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-001-R2\",\n      \"text\": \"Signed competitor contract with Helix Systems; active through 2027-12-31.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

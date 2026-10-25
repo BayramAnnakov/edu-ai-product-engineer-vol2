@@ -7,3 +7,9 @@ __pycache__/
 .bakeoff/
 work/
 dist/
+
+lesson1/recorded-starter/.lab-state.json
+lesson1/recorded-starter/policy.json
+lesson1/recorded-starter/prediction.json
+lesson1/recorded-starter/decision.md
+lesson1/recorded-starter/decision.json

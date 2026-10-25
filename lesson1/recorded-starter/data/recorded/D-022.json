@@ -1,0 +1,1818 @@
+{
+  "011acc46e01331e00cdf95eada2baf882efe82fabc91a8cd884ce9d788806dd3": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001582,
+        "id": "recorded-f626492e9f620f84",
+        "latency_s": 2.0457937920000404,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 466,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 65,
+          "output_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "total_tokens": 531
+        }
+      }
+    ],
+    "latency_s": 2.0457937920000404,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "01aec91f5ec2621fd1b77d63da63ef23b3da20d5c885b715ca37102b274605d8": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00013990200000000002,
+        "id": "recorded-addb714d4fdf61fb",
+        "latency_s": 0.24007504107430577,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3331,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.24007504107430577,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "20efae21125d1ab7a7608585783120479b86e415e2361b971ec2b97ce8b2bfe4": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001576,
+        "id": "recorded-71dbeaf3fd600bf0",
+        "latency_s": 2.0065329999197274,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 488,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 60,
+          "output_tokens_details": {
+            "reasoning_tokens": 21
+          },
+          "total_tokens": 548
+        }
+      }
+    ],
+    "latency_s": 2.0065329999197274,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "23bd2cffadb925b1c952d2f3b9ed953a88cf02bbfc95f217ca2e98fda490248f": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001302,
+        "id": "recorded-de04802c9e35444c",
+        "latency_s": 1.6143996249884367,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 466,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 503
+        }
+      }
+    ],
+    "latency_s": 1.6143996249884367,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "3179cefe88026f91f97bae7c253b8f9b948d40430b15f49ea33b4d840f40db9c": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001744,
+        "id": "recorded-bf9e1a79335fd04d",
+        "latency_s": 2.125691208988428,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 552,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 64,
+          "output_tokens_details": {
+            "reasoning_tokens": 25
+          },
+          "total_tokens": 616
+        }
+      }
+    ],
+    "latency_s": 2.125691208988428,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "469eaae8075322a37fed6e05d9311486c5b8639b3fb3b1fdc4c3d14cf1ebd56a": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014259,
+        "id": "recorded-5011e42eb71efac1",
+        "latency_s": 0.284433500142768,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3395,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.284433500142768,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5e0ed812cb0a7bbe4223ae40ae2757ca55103c9603b8a5d1cee520448e80ba2b": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000138684,
+        "id": "recorded-cb31f9bb234ed7dc",
+        "latency_s": 0.16180845885537565,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3302,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.16180845885537565,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "671410518ce4f67ed8959bd422ebdbb5015cef8f4e0b11e34cff070bf6bf1fdf": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00013990200000000002,
+        "id": "recorded-addb714d4fdf61fb",
+        "latency_s": 0.24007504107430577,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3331,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.24007504107430577,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "941f3302d35fa4136710df5af0ec409ec2c7e2f1abe267893e556549de855d3e": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00161,
+        "id": "recorded-c0f06a2280d19bde",
+        "latency_s": 1.9012524159625173,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 530,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 55,
+          "output_tokens_details": {
+            "reasoning_tokens": 16
+          },
+          "total_tokens": 585
+        }
+      }
+    ],
+    "latency_s": 1.9012524159625173,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b7abe784826b23eb5607b724a8c7ddd1643a9691fe3e4a1ee5592ba45e5c4e8a": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001474,
+        "id": "recorded-cd3e2a7cc456f800",
+        "latency_s": 1.4422234580852091,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 552,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 589
+        }
+      }
+    ],
+    "latency_s": 1.4422234580852091,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "dc1f11fa478b7eeb9e373c0ebed68cf017002535a79886db1692a6bc7d5a0854": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014137200000000001,
+        "id": "recorded-e236fadcc3b80195",
+        "latency_s": 0.1261837910860777,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3366,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.1261837910860777,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e3057a2e69eadef4e3e113256231cbc4272f4ec34a9079d069878d355d3ecfdc": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014137200000000001,
+        "id": "recorded-e236fadcc3b80195",
+        "latency_s": 0.1261837910860777,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3366,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.1261837910860777,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e373be06f200cf603a1fac4fcabc6d9308a185edbe004f1ec3180c0a185bca9b": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00143,
+        "id": "recorded-9fe6c7edb2a93a9b",
+        "latency_s": 1.718449124833569,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 530,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 567
+        }
+      }
+    ],
+    "latency_s": 1.718449124833569,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e4659cebf2b121baccb45a326078c0cc61c7743013e755510d9d991e6fa40329": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R1",
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001346,
+        "id": "recorded-c15432ba02f1e89d",
+        "latency_s": 1.4097513752058148,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 488,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 525
+        }
+      }
+    ],
+    "latency_s": 1.4097513752058148,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ed10bc0d2eeb08316375a77aa15cd61ff49b2236381c3904b62d95248a98659e": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000138684,
+        "id": "recorded-cb31f9bb234ed7dc",
+        "latency_s": 0.16180845885537565,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3302,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.16180845885537565,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-022\",\"company\":\"Juniper Cloud 3\",\"conflicting\":false,\"contract\":null,\"headcount\":243,\"id\":\"D-022\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R1\",\"text\":\"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"},{\"account_id\":\"D-022\",\"date\":\"2026-10-18\",\"id\":\"D-022-R2\",\"text\":\"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"}],\"sales_staff\":18,\"signals\":[\"demo\"],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f30080660d9aa4a8474234ae45f7179f5594a15a1a39d7329bfcabe694ad064e": {
+    "answer": {
+      "evidence_ids": [
+        "D-022-R2"
+      ],
+      "reason_code": "buying_signal",
+      "score": 5
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00014259,
+        "id": "recorded-5011e42eb71efac1",
+        "latency_s": 0.284433500142768,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 3395,
+          "output_tokens": 340
+        }
+      }
+    ],
+    "latency_s": 0.284433500142768,
+    "request": {
+      "case": {
+        "account_id": "D-022",
+        "company": "Juniper Cloud 3",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 243,
+        "id": "D-022",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R1",
+            "text": "Verified company profile: B2B SaaS; 243 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-022",
+            "date": "2026-10-18",
+            "id": "D-022-R2",
+            "text": "Head of Revenue Operations requested a forecasting demo; actively evaluating vendors."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [
+          "demo"
+        ],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-022; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-022\",\n  \"company\": \"Juniper Cloud 3\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 243,\n  \"id\": \"D-022\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 243 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-022\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-022-R2\",\n      \"text\": \"Head of Revenue Operations requested a forecasting demo; actively evaluating vendors.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [\n    \"demo\"\n  ],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

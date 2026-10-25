@@ -1,0 +1,1682 @@
+{
+  "0ae52d2b0aad4da6b03348305a5bec2796742b4137d4bd0b264bd02ada1207d9": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00116,
+        "id": "recorded-8154e970e9700571",
+        "latency_s": 2.044549999991432,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 425,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 456
+        }
+      }
+    ],
+    "latency_s": 2.044549999991432,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "12b03385ca0b798ef688d941a789673d9f8d45754fd583da75fea620ce02954e": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000116886,
+        "id": "recorded-2e4b6adbb7263598",
+        "latency_s": 0.23444262496195734,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2783,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.23444262496195734,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "1f81f84204ecf5a8aeb75c571443f163f87fae1089410dd7626a275b29b8db2e": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000116886,
+        "id": "recorded-2e4b6adbb7263598",
+        "latency_s": 0.23444262496195734,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2783,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.23444262496195734,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "31061b9673c7870fa455379e332664a5a1b5186102afce6ab4b864e40aca0724": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115038,
+        "id": "recorded-355681399088df33",
+        "latency_s": 0.12540566711686552,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2739,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12540566711686552,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6d759c06f161d8f45c4a1a9ac368b91afabdaa18836a5341e2c92412014ba559": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011382,
+        "id": "recorded-18e952d217168f5b",
+        "latency_s": 0.14708299981430173,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2710,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.14708299981430173,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "7220b5b2a384a36980fdf13b3e6c0b0241b1bb100aab76d011e29861c13ce134": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115668,
+        "id": "recorded-6e53d9a954bf298f",
+        "latency_s": 0.1274924580939114,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2754,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.1274924580939114,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ae44e557bc5aaaf27be2aea4455f9c85f9436bf0d5ed5adab4cd357cdf7f6530": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115038,
+        "id": "recorded-355681399088df33",
+        "latency_s": 0.12540566711686552,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2739,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12540566711686552,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "beb4ebb851f305d25c65c5f828b8dab78aec1b0c9510befdfc4f9f162afb824f": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011382,
+        "id": "recorded-18e952d217168f5b",
+        "latency_s": 0.14708299981430173,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2710,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.14708299981430173,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "c3358e09bbc7bc28cba2e17d2feae4b08be9806d5fcbd421ae62b047a2d76b06": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001248,
+        "id": "recorded-5e0ddb231c2aa61f",
+        "latency_s": 1.3830874999985099,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 469,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 500
+        }
+      }
+    ],
+    "latency_s": 1.3830874999985099,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "c8bfbfa9780667b069057a671ffa83e66640601830175d04d9f07b39e4c6a39b": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001204,
+        "id": "recorded-78db184ce811640b",
+        "latency_s": 1.552532791160047,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 447,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 478
+        }
+      }
+    ],
+    "latency_s": 1.552532791160047,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "d88568f3edd7dd343d6d2ddb79792b28f8b0f928ccbd749190be42234de8405f": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001474,
+        "id": "recorded-f5f3291c5e0f7689",
+        "latency_s": 1.9600778331514448,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 447,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 58,
+          "output_tokens_details": {
+            "reasoning_tokens": 25
+          },
+          "total_tokens": 505
+        }
+      }
+    ],
+    "latency_s": 1.9600778331514448,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "d9c67e137a9b85104069f35f994fe4239f17ad459eae6cb9d9e4b3d6ad149ee6": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001292,
+        "id": "recorded-419312015e931c65",
+        "latency_s": 1.4657779159024358,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 522
+        }
+      }
+    ],
+    "latency_s": 1.4657779159024358,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e176830df33258baec2ec15925c1db9499abf680c807dd32d5a54bbac1c588d6": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001492,
+        "id": "recorded-5f7c2643244b5253",
+        "latency_s": 2.3692857078276575,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 51,
+          "output_tokens_details": {
+            "reasoning_tokens": 18
+          },
+          "total_tokens": 542
+        }
+      }
+    ],
+    "latency_s": 2.3692857078276575,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-017; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "eac0d143f665fcea33c7eb4fb53ecb0935285d6d950a810b9695217c7217061d": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00143,
+        "id": "recorded-c5d037cddd99c3dd",
+        "latency_s": 2.157316792057827,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 425,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 58,
+          "output_tokens_details": {
+            "reasoning_tokens": 25
+          },
+          "total_tokens": 483
+        }
+      }
+    ],
+    "latency_s": 2.157316792057827,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-017\",\"company\":\"Harbor Stack 2\",\"conflicting\":false,\"contract\":null,\"headcount\":null,\"id\":\"D-017\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-017\",\"date\":\"2026-10-18\",\"id\":\"D-017-R1\",\"text\":\"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ef1e30dda21c5be63b3abe0acbcf0c7d0fd024f77f89a154289529ca3a8a408f": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000115668,
+        "id": "recorded-6e53d9a954bf298f",
+        "latency_s": 0.1274924580939114,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2754,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.1274924580939114,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "fcecd6a53b833d9b4dbbf78cba06edd88f2e50d4bf4e38cfc51cc2031ee0a2f5": {
+    "answer": {
+      "evidence_ids": [
+        "D-017-R1"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001488,
+        "id": "recorded-8fb84a0ecaa80232",
+        "latency_s": 2.1018836670555174,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 469,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 55,
+          "output_tokens_details": {
+            "reasoning_tokens": 22
+          },
+          "total_tokens": 524
+        }
+      }
+    ],
+    "latency_s": 2.1018836670555174,
+    "request": {
+      "case": {
+        "account_id": "D-017",
+        "company": "Harbor Stack 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": null,
+        "id": "D-017",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-017",
+            "date": "2026-10-18",
+            "id": "D-017-R1",
+            "text": "B2B SaaS with a sales team of 18. Headcount is not supplied or verified."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-017\",\n  \"company\": \"Harbor Stack 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": null,\n  \"id\": \"D-017\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-017\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-017-R1\",\n      \"text\": \"B2B SaaS with a sales team of 18. Headcount is not supplied or verified.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

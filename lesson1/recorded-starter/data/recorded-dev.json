@@ -1,0 +1,70 @@
+{
+  "measurement": {
+    "kind": "metered-provider-runs",
+    "pricing": {
+      "as_of": "2026-10-24",
+      "openai": {
+        "cached": 0.1,
+        "input": 2.0,
+        "model": "gpt-6.1-sol",
+        "output": 10.0,
+        "source": "https://developers.openai.com/api/docs/pricing",
+        "write_12h": 5.0,
+        "write_30m": 2.5
+      },
+      "typesafe": {
+        "input": 0.042,
+        "model": "jev-1.14.0",
+        "output": 0.0,
+        "source": "https://docs.typesafe.ai/models"
+      }
+    },
+    "protocol": "Fixed prompts/adapters before S1; one sample per exact provider request, deterministic branch shuffle. Jev has no effort knob. No gold labels or support annotations in provider input. No adaptive retries. Invalid outputs retained. Latency is single-request wall time; aggregate policy rows are composed, not paired fresh workflow runs."
+  },
+  "models": {
+    "large": {
+      "adapter_version": "responses-w1-v1",
+      "model": "gpt-6.1-sol",
+      "provider": "openai"
+    },
+    "typed": {
+      "adapter_version": "choice-evidence-w1-v1",
+      "model": "jev-1.14.0",
+      "provider": "typesafe"
+    }
+  },
+  "parts": [
+    "data/recorded/D-001.json",
+    "data/recorded/D-002.json",
+    "data/recorded/D-003.json",
+    "data/recorded/D-004.json",
+    "data/recorded/D-005.json",
+    "data/recorded/D-006.json",
+    "data/recorded/D-007.json",
+    "data/recorded/D-008.json",
+    "data/recorded/D-009.json",
+    "data/recorded/D-010.json",
+    "data/recorded/D-011.json",
+    "data/recorded/D-012.json",
+    "data/recorded/D-013.json",
+    "data/recorded/D-014.json",
+    "data/recorded/D-015.json",
+    "data/recorded/D-016.json",
+    "data/recorded/D-017.json",
+    "data/recorded/D-018.json",
+    "data/recorded/D-019.json",
+    "data/recorded/D-020.json",
+    "data/recorded/D-021.json",
+    "data/recorded/D-022.json",
+    "data/recorded/D-023.json",
+    "data/recorded/D-024.json",
+    "data/recorded/D-025.json",
+    "data/recorded/D-026.json",
+    "data/recorded/D-027.json",
+    "data/recorded/D-028.json",
+    "data/recorded/D-029.json",
+    "data/recorded/D-030.json"
+  ],
+  "source": "Sanitized actual model recordings, 24 Oct 2026; development cases only",
+  "version": "field-notes-w1.3"
+}

@@ -1,0 +1,2018 @@
+{
+  "062a6e6daf2ef9402af911081d020e194bd1e3502ab1f5afd53f8ddc1d7edbc1": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00018282600000000003,
+        "id": "recorded-1457fc8e3cfc75d1",
+        "latency_s": 0.1330394169781357,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4353,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.1330394169781357,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "0862adc6f1ec041819b94f594250576ff1bec8e2ec03027bb6953cec02af85fa": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00018282600000000003,
+        "id": "recorded-1457fc8e3cfc75d1",
+        "latency_s": 0.1330394169781357,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4353,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.1330394169781357,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "0e29c3ada426128ec0019a199ec132cb064069bf70842c9b10ce767df615368c": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001642,
+        "id": "recorded-121639f52b4ffc66",
+        "latency_s": 2.2205877078231424,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 636,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 673
+        }
+      }
+    ],
+    "latency_s": 2.2205877078231424,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "1ba3dab7885f274f9b5526158a6c30f36566bf771804e4dbee530573c4be6df8": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00017871,
+        "id": "recorded-917aeb50016f96d3",
+        "latency_s": 0.2028773338533938,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4255,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.2028773338533938,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "456a47c43a65dd79b93b726cfeb81a87a774a7a12c6c50a41ef8a58858352205": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00188,
+        "id": "recorded-9ade6c49da5d2cfc",
+        "latency_s": 2.079085750039667,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 560,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 76,
+          "output_tokens_details": {
+            "reasoning_tokens": 37
+          },
+          "total_tokens": 636
+        }
+      }
+    ],
+    "latency_s": 2.079085750039667,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "515185a901314c1356c1cb7d56cfe0017f632a6344d574a888f41da759c87994": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00017871,
+        "id": "recorded-917aeb50016f96d3",
+        "latency_s": 0.2028773338533938,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4255,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.2028773338533938,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "57e4aaeac9138ee9817a9439e50e56c9c0a857e038e5d995c11dc369bfea6f6e": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00149,
+        "id": "recorded-d55c5b8784732ab0",
+        "latency_s": 1.6058604998979717,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 560,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 597
+        }
+      }
+    ],
+    "latency_s": 1.6058604998979717,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "5bc0bf994e9f5eb4873f5cf46d6cf66f5fd6b731a4278b4f209e1f88edec8c7f": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00018160800000000001,
+        "id": "recorded-921409f46d4f2032",
+        "latency_s": 0.12081945803947747,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4324,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.12081945803947747,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "61d7237b09482976d33c1962096d7f765f92a576abbbbd2653ddd658d2d4958a": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001446,
+        "id": "recorded-eb584f5859170790",
+        "latency_s": 1.4362472081556916,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 538,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 575
+        }
+      }
+    ],
+    "latency_s": 1.4362472081556916,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "62d69c9879b44af33c0d7e0f499497a237450611e3865afb67d369b5d35e4403": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00017749200000000001,
+        "id": "recorded-caaf8cb5549dce45",
+        "latency_s": 0.21654075011610985,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4226,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.21654075011610985,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "7c3c3cb061cb4a3ae21fd842aaaf7fda74446b6995f00dda18ddff8cc3ca2da9": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00017749200000000001,
+        "id": "recorded-caaf8cb5549dce45",
+        "latency_s": 0.21654075011610985,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4226,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.21654075011610985,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "92fc876e8e8a7f6b751bd9a7ff693d91870214cedcc4e1f5abc571fe3d4834a8": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002142,
+        "id": "recorded-3482555fecb23465",
+        "latency_s": 2.451314917067066,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 636,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 87,
+          "output_tokens_details": {
+            "reasoning_tokens": 48
+          },
+          "total_tokens": 723
+        }
+      }
+    ],
+    "latency_s": 2.451314917067066,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "97fc1971e865b2d6fc0ba3b52aad956a885fa1aef7e875f59255963911e3b6ec": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001886,
+        "id": "recorded-fff02e22e88f6417",
+        "latency_s": 2.709870666032657,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 538,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 81,
+          "output_tokens_details": {
+            "reasoning_tokens": 42
+          },
+          "total_tokens": 619
+        }
+      }
+    ],
+    "latency_s": 2.709870666032657,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-009\",\"company\":\"Maple Logic\",\"conflicting\":true,\"contract\":{\"account_id\":\"D-009\",\"expires\":\"2027-12-31\",\"record_id\":\"D-009-R2\",\"status\":\"active\",\"verified\":true},\"headcount\":204,\"id\":\"D-009\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-009\",\"date\":\"2026-10-18\",\"id\":\"D-009-R1\",\"text\":\"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"},{\"account_id\":\"D-009\",\"contract_status\":\"active\",\"date\":\"2026-10-18\",\"id\":\"D-009-R2\",\"text\":\"CRM says a competitor contract is active.\"},{\"account_id\":\"D-009\",\"contract_status\":\"disputed\",\"date\":\"2026-10-18\",\"id\":\"D-009-R3\",\"text\":\"Procurement disputes the contract's validity; conflict is unresolved.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a3558d0f3ea2c1c1c4895dacb3d386db79ec0b39952b2bf31611f854c41dbda0": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.002156,
+        "id": "recorded-33d3c583522bfb9f",
+        "latency_s": 2.0662463339976966,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 658,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 84,
+          "output_tokens_details": {
+            "reasoning_tokens": 45
+          },
+          "total_tokens": 742
+        }
+      }
+    ],
+    "latency_s": 2.0662463339976966,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "e5c377f32ceac42f7cea495534cd1e922aaa72a31678d82af6a1c0d1bd2b8dee": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00018160800000000001,
+        "id": "recorded-921409f46d4f2032",
+        "latency_s": 0.12081945803947747,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 4324,
+          "output_tokens": 460
+        }
+      }
+    ],
+    "latency_s": 0.12081945803947747,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "ff9118292671f84723509123adb507ea55a0879d0ccc1087cbd0b3858ccb9216": {
+    "answer": {
+      "evidence_ids": [
+        "D-009-R2",
+        "D-009-R3"
+      ],
+      "reason_code": "not_icp",
+      "score": 3
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001686,
+        "id": "recorded-b119b37bd9381136",
+        "latency_s": 1.8408541670069098,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 658,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 695
+        }
+      }
+    ],
+    "latency_s": 1.8408541670069098,
+    "request": {
+      "case": {
+        "account_id": "D-009",
+        "company": "Maple Logic",
+        "conflicting": true,
+        "contract": {
+          "account_id": "D-009",
+          "expires": "2027-12-31",
+          "record_id": "D-009-R2",
+          "status": "active",
+          "verified": true
+        },
+        "headcount": 204,
+        "id": "D-009",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-009",
+            "date": "2026-10-18",
+            "id": "D-009-R1",
+            "text": "Verified company profile: B2B SaaS; 204 employees; sales team of 18."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "active",
+            "date": "2026-10-18",
+            "id": "D-009-R2",
+            "text": "CRM says a competitor contract is active."
+          },
+          {
+            "account_id": "D-009",
+            "contract_status": "disputed",
+            "date": "2026-10-18",
+            "id": "D-009-R3",
+            "text": "Procurement disputes the contract's validity; conflict is unresolved."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-009; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-009\",\n  \"company\": \"Maple Logic\",\n  \"conflicting\": true,\n  \"contract\": {\n    \"account_id\": \"D-009\",\n    \"expires\": \"2027-12-31\",\n    \"record_id\": \"D-009-R2\",\n    \"status\": \"active\",\n    \"verified\": true\n  },\n  \"headcount\": 204,\n  \"id\": \"D-009\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-009\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 204 employees; sales team of 18.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"active\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R2\",\n      \"text\": \"CRM says a competitor contract is active.\"\n    },\n    {\n      \"account_id\": \"D-009\",\n      \"contract_status\": \"disputed\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-009-R3\",\n      \"text\": \"Procurement disputes the contract's validity; conflict is unresolved.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}

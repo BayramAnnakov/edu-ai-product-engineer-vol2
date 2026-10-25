@@ -1,0 +1,1682 @@
+{
+  "09ff12b7c311251a63be27df9967e632ba2b3ef20044619972b1a6c65e16f24b": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001248,
+        "id": "recorded-1c3babcbabd3c946",
+        "latency_s": 1.834813249995932,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 469,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 500
+        }
+      }
+    ],
+    "latency_s": 1.834813249995932,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "240b6595a59b60a34122c5e65e1083c7c916cf5cde366d5d70a4f0fb357b57cf": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001158,
+        "id": "recorded-be128e50af6c48c6",
+        "latency_s": 1.663518707966432,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 424,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 455
+        }
+      }
+    ],
+    "latency_s": 1.663518707966432,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "24b551cde5656f431bf043acebff3b6bd422f54376f891c4d6654d62212db291": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001532,
+        "id": "recorded-8bfa93bcdc4f4158",
+        "latency_s": 2.0993602499365807,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 55,
+          "output_tokens_details": {
+            "reasoning_tokens": 22
+          },
+          "total_tokens": 546
+        }
+      }
+    ],
+    "latency_s": 2.0993602499365807,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "31daead4d8694cc57db528e9b2e91a81f807b2ee495bf7741649d7ed162d1cdc": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011390400000000001,
+        "id": "recorded-29992f85f9cb1ca8",
+        "latency_s": 0.12227933388203382,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2712,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12227933388203382,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "3ab190b91e1221b646b38a319f3a7cf99a107a63c994e7ec659e5c1087037851": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001422,
+        "id": "recorded-361111d7feca8395",
+        "latency_s": 2.1149372500367463,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 446,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 53,
+          "output_tokens_details": {
+            "reasoning_tokens": 20
+          },
+          "total_tokens": 499
+        }
+      }
+    ],
+    "latency_s": 2.1149372500367463,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "51b3c46d955a731b9febbb66732a45d51d1014ba9f5d4b3eec1f1736e3265600": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001468,
+        "id": "recorded-5707190be5bc7f3f",
+        "latency_s": 2.2735778340138495,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 469,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 53,
+          "output_tokens_details": {
+            "reasoning_tokens": 20
+          },
+          "total_tokens": 522
+        }
+      }
+    ],
+    "latency_s": 2.2735778340138495,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "533fab755dac764ac6ef82dbf01e799357522286b4ad96cd2d54aac7cb3b5d2a": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011579400000000001,
+        "id": "recorded-b0c80ff86eeb6eca",
+        "latency_s": 0.13620116701349616,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2757,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.13620116701349616,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6bdea6711124195f49cdab28ca7992ca663b07ef6d1aa68fa7e005c7c3a3e407": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011579400000000001,
+        "id": "recorded-b0c80ff86eeb6eca",
+        "latency_s": 0.13620116701349616,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2757,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.13620116701349616,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "6eb450e02607454605edffbcb566cb6b6416f172b8df5b61af7bcbaf26a4881c": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000117012,
+        "id": "recorded-14db1242c3307983",
+        "latency_s": 0.17031908291392028,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2786,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.17031908291392028,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "719ae5602925345a91c0864ea925889b974975c069f16bfff0bcf96dd6a1fd0c": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011390400000000001,
+        "id": "recorded-29992f85f9cb1ca8",
+        "latency_s": 0.12227933388203382,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2712,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.12227933388203382,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "a27a9739cd9b2c145b93769276ace5599ed3a430b357074550e9d3f4fb208e97": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001202,
+        "id": "recorded-5716a99c26e61d69",
+        "latency_s": 2.2397275830153376,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 446,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 477
+        }
+      }
+    ],
+    "latency_s": 2.2397275830153376,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "b8a9ff559fdc0d43bd9c2bc4c9d21b6e63e8dc4a400422bcfc4404d92c5457f5": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011512200000000001,
+        "id": "recorded-440ad358e420dc4d",
+        "latency_s": 0.14833625010214746,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2741,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.14833625010214746,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "d24c3bf64de4cdc0b9a92e407f89f9e62186ae46b30bd6202b05aff4a64567ff": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001292,
+        "id": "recorded-13137228e7499365",
+        "latency_s": 4.724215291906148,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 31,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 522
+        }
+      }
+    ],
+    "latency_s": 4.724215291906148,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "low",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "d737b39e4c61124a2b79e13babef6d9ee54bf2128a344d5514c459058eaf5786": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.00011512200000000001,
+        "id": "recorded-440ad358e420dc4d",
+        "latency_s": 0.14833625010214746,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2741,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.14833625010214746,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "dcc31303fafd059d5e6518ac050ac10a2b01b0ac003e4a71399018c559deb420": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.000117012,
+        "id": "recorded-14db1242c3307983",
+        "latency_s": 0.17031908291392028,
+        "provider": "typesafe",
+        "status": "received",
+        "usage": {
+          "input_tokens": 2786,
+          "output_tokens": 260
+        }
+      }
+    ],
+    "latency_s": 0.17031908291392028,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "typed",
+      "identity": {
+        "adapter_version": "choice-evidence-w1-v1",
+        "model": "jev-1.14.0",
+        "provider": "typesafe"
+      },
+      "input_version": "full-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<MESSAGE_METADATA>case=D-013; as_of=2026-10-25</MESSAGE_METADATA>\n<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\n  \"account_id\": \"D-013\",\n  \"company\": \"Cedar Systems 2\",\n  \"conflicting\": false,\n  \"contract\": null,\n  \"headcount\": 216,\n  \"id\": \"D-013\",\n  \"industry\": \"B2B SaaS\",\n  \"records\": [\n    {\n      \"account_id\": \"D-013\",\n      \"date\": \"2026-10-18\",\n      \"id\": \"D-013-R1\",\n      \"text\": \"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"\n    }\n  ],\n  \"sales_staff\": 18,\n  \"signals\": [],\n  \"version\": \"field-notes-w1.3\"\n}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "metadata-v0",
+      "rubric_version": "field-notes-w1.3"
+    }
+  },
+  "f552368c8e2ec8ec707a44786bb1ab64e97d901bceeb4c5a6a15f4a9f257d880": {
+    "answer": {
+      "evidence_ids": [
+        "D-013-R1"
+      ],
+      "reason_code": "icp_fit",
+      "score": 4
+    },
+    "calls": [
+      {
+        "cost_usd": 0.001348,
+        "id": "recorded-caa1e57e2ac4aeac",
+        "latency_s": 2.264188624918461,
+        "provider": "openai",
+        "status": "received",
+        "usage": {
+          "input_tokens": 424,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 50,
+          "output_tokens_details": {
+            "reasoning_tokens": 17
+          },
+          "total_tokens": 474
+        }
+      }
+    ],
+    "latency_s": 2.264188624918461,
+    "request": {
+      "case": {
+        "account_id": "D-013",
+        "company": "Cedar Systems 2",
+        "conflicting": false,
+        "contract": null,
+        "headcount": 216,
+        "id": "D-013",
+        "industry": "B2B SaaS",
+        "records": [
+          {
+            "account_id": "D-013",
+            "date": "2026-10-18",
+            "id": "D-013-R1",
+            "text": "Verified company profile: B2B SaaS; 216 employees; sales team of 18."
+          }
+        ],
+        "sales_staff": 18,
+        "signals": [],
+        "version": "field-notes-w1.3"
+      },
+      "executor": "large",
+      "identity": {
+        "adapter_version": "responses-w1-v1",
+        "model": "gpt-6.1-sol",
+        "provider": "openai"
+      },
+      "input_version": "trim-v1",
+      "payload": {
+        "effort": "high",
+        "max_output_tokens": 4096,
+        "messages": [
+          {
+            "content": "<SCORING_CRITERIA>{\"as_of\": \"2026-10-25\", \"client\": \"Northwind Analytics\", \"contract\": \"score 1–5; one listed reason_code; 1–2 distinct evidence_ids from this account.\", \"exclude\": \"Agencies and accounts with an authoritative, unexpired competitor contract.\", \"fit\": \"B2B SaaS, verified 50–1000 employees and at least 10 sales staff.\", \"priority\": \"Resolve conflicting or insufficient evidence at score 3 / not_icp. Otherwise: exclusions 1; current budget freeze 2; fit 4; fit with fresh evaluation/demo request 5.\", \"product\": \"Pipeline forecasting software for B2B sales teams\", \"reason_codes\": [\"buying_signal\", \"icp_fit\", \"budget_frozen\", \"locked_in_competitor\", \"not_icp\"], \"version\": \"field-notes-w1.3\"}</SCORING_CRITERIA>\n<LEAD>{\"account_id\":\"D-013\",\"company\":\"Cedar Systems 2\",\"conflicting\":false,\"contract\":null,\"headcount\":216,\"id\":\"D-013\",\"industry\":\"B2B SaaS\",\"records\":[{\"account_id\":\"D-013\",\"date\":\"2026-10-18\",\"id\":\"D-013-R1\",\"text\":\"Verified company profile: B2B SaaS; 216 employees; sales team of 18.\"}],\"sales_staff\":18,\"signals\":[],\"version\":\"field-notes-w1.3\"}</LEAD>",
+            "role": "user"
+          }
+        ],
+        "response_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_ids": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 1,
+              "type": "array"
+            },
+            "reason_code": {
+              "enum": [
+                "buying_signal",
+                "icp_fit",
+                "budget_frozen",
+                "locked_in_competitor",
+                "not_icp"
+              ],
+              "type": "string"
+            },
+            "score": {
+              "maximum": 5,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "reason_code",
+            "evidence_ids"
+          ],
+          "type": "object"
+        },
+        "system": "Score the supplied synthetic account against the criteria. Return only the shared JSON contract. Cite only supplied record IDs."
+      },
+      "prefix_version": "stable-v1",
+      "rubric_version": "field-notes-w1.3"
+    }
+  }
+}
