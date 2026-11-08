@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory wiki"
+  short_description: "Build and verify a source-linked memory wiki with a reviewed dreaming pass"
+  default_prompt: "Use $memory-wiki to build a small memory wiki for one recurring question and run one reviewed dreaming pass."

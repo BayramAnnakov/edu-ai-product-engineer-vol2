@@ -148,6 +148,9 @@ class BakeoffTests(unittest.TestCase):
             before = (installed / "SKILL.md").read_bytes()
             with self.assertRaises(FileExistsError): I.install(self.p / host, host)
             self.assertEqual((installed / "SKILL.md").read_bytes(), before)
+            wiki = I.install(self.p / host, host, "memory-wiki")
+            self.assertTrue((wiki / "wiki_map.py").is_file() and (wiki / "SKILL.md").is_file())
+            with self.assertRaises(ValueError): I.install(self.p / host / "x", host, "nope")
 
     def test_kit_links_trace_manifest_and_sanitization_guard(self):
         errors, count = G.check(); self.assertEqual(errors, []); self.assertGreater(count, 20)
