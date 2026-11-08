@@ -1,0 +1,19 @@
+{
+  "snapshot": "2026-11-07",
+  "shortlist": ["A-17", "A-42"],
+  "accounts": {"A-17": "Alder Freight", "A-42": "Juniper Systems"},
+  "records": [
+    {"id":"CALL-17","account_id":"A-17","kind":"call","date":"2026-10-28","text":"Alder Freight told us on a call that budget cuts had delayed the procurement review.","budget_cuts":true},
+    {"id":"CALL-42","account_id":"A-42","kind":"call","date":"2026-10-29","text":"Juniper Systems said on the discovery call that budget cuts had moved hiring into next year.","budget_cuts":true},
+    {"id":"CRM-17","account_id":"A-17","kind":"crm","date":"2026-11-07","text":"Alder Freight · opportunity stage active at the snapshot.","status":"open"},
+    {"id":"CRM-42","account_id":"A-42","kind":"crm","date":"2026-11-07","text":"Juniper Systems · opportunity stage closed-lost at the snapshot.","status":"closed"},
+    {"id":"CRM-42-OLD","account_id":"A-42","kind":"crm","date":"2026-10-30","text":"Juniper Systems · earlier opportunity stage active.","status":"open"},
+    {"id":"EMAIL-17","account_id":"A-17","kind":"email","date":"2026-10-24","text":"Alder Freight shared the procurement calendar and meeting invite."},
+    {"id":"EMAIL-42","account_id":"A-42","kind":"email","date":"2026-11-05","text":"Juniper Systems shared a revised meeting time."},
+    {"id":"CALL-53","account_id":"A-53","kind":"call","date":"2026-11-02","text":"Birch Labs discussed budget cuts on a call with its supplier.","budget_cuts":true},
+    {"id":"CALL-64","account_id":"A-64","kind":"call","date":"2026-11-01","text":"Cedar Logistics said during the planning call that its budget was unchanged.","budget_cuts":false},
+    {"id":"CRM-53","account_id":"A-53","kind":"crm","date":"2026-11-07","text":"Birch Labs · opportunity stage active.","status":"open"},
+    {"id":"EMAIL-64","account_id":"A-64","kind":"email","date":"2026-11-03","text":"Cedar Logistics forwarded a trade event agenda."},
+    {"id":"CALL-80","account_id":"A-80","kind":"call","date":"2026-11-04","text":"Aspen Goods asked whether a renewal would still include weekend support.","budget_cuts":false}
+  ]
+}

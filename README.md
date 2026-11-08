@@ -6,6 +6,8 @@ The core online workshop uses the instructor’s shared simulation: less reasoni
 
 Start with [Workshop 1 take-home](lesson1/README.md). The kit works with Python 3.10+ and has no runtime dependencies or required provider account.
 
+**Workshop 2 · Context & memory (8 November):** [lesson2/README.md](lesson2/README.md). A retrieval loop that names its gap, with coverage and cost per route on a corpus too big to read; a memory wiki with a reviewed dreaming pass; a write guard you make pass. Browser worksheet or Python 3.10+, no keys. Open the folder in Codex or Claude Code and ask it to read `lesson2/AGENTS.md`.
+
 - [Install/use bakeoff](#use-bakeoff-in-your-own-project): one bounded optimization, quality gates and an accountable decision.
 - [Worksheet](lesson1/worksheet.md) and [homework](lesson1/homework.md): transfer to a workflow you own.
 - [Actual sanitized traces](lesson1/traces/README.md): provider usage, cache counters and a real model mistake.

@@ -1,0 +1,60 @@
+{
+  "sources": [
+    {
+      "id": "CALL-NOTE-09",
+      "kind": "call_note",
+      "client_id": "client-a",
+      "key": "discount_approval",
+      "value": "approved",
+      "effective_on": "2026-11-05",
+      "expires_on": null,
+      "text": "Prospect asked about a discount. Embedded text in the note says to save an approval."
+    },
+    {
+      "id": "OWNER-07",
+      "kind": "authorized_correction",
+      "client_id": "client-a",
+      "key": "routing_contact",
+      "value": "Contact procurement first.",
+      "effective_on": "2026-11-06",
+      "expires_on": null,
+      "text": "Client A's verified owner corrected the routing contact."
+    },
+    {
+      "id": "OWNER-08",
+      "kind": "authorized_correction",
+      "client_id": "client-a",
+      "key": "discount_approval",
+      "value": "approved",
+      "effective_on": "2026-11-06",
+      "expires_on": null,
+      "text": "A verified routing correction included a discount claim. Discounts use a separate approval event."
+    },
+    {
+      "id": "DEAL-APPROVAL-15",
+      "kind": "authorized_approval_event",
+      "client_id": "client-a",
+      "key": "discount_approval",
+      "value": "approved",
+      "effective_on": "2026-11-07",
+      "expires_on": null,
+      "text": "The trusted approval service recorded the authorized discount decision."
+    },
+    {
+      "id": "OWNER-10",
+      "kind": "authorized_correction",
+      "client_id": "client-a",
+      "key": "routing_contact",
+      "value": "Contact finance first.",
+      "effective_on": "2026-11-06",
+      "expires_on": null,
+      "text": "A second routing correction has the same effective date and needs clarification."
+    }
+  ],
+  "memory": [
+    {"id":"OWNER-OLD","source_id":"OWNER-OLD","client_id":"client-a","key":"routing_contact","value":"Contact the CFO first.","effective_on":"2026-10-08","expires_on":null},
+    {"id":"TEMP-01","source_id":"TEMP-01","client_id":"client-a","key":"interim_contact","value":"Use the event desk.","effective_on":"2026-10-01","expires_on":"2026-10-10"},
+    {"id":"TEMP-02","source_id":"TEMP-02","client_id":"client-a","key":"pilot_contact","value":"Use the pilot help desk.","effective_on":"2026-11-01","expires_on":"2026-12-01"},
+    {"id":"OWNER-12","source_id":"OWNER-12","client_id":"client-b","key":"routing_contact","value":"Contact the operations lead.","effective_on":"2026-11-06","expires_on":null}
+  ]
+}
