@@ -1,0 +1,1233 @@
+{
+  "model": "claude-sonnet-5-5",
+  "fixture_sha256": "1ac101b21a9f4a704115412290d8453627e92c5c0dacea60a5efa30fb93a4fcd",
+  "provider": "claude",
+  "runs": [
+    {
+      "mode": "single",
+      "elapsed_s": 19.796,
+      "accepted": 18,
+      "usd": 0.0486096,
+      "cap_usd": 0.25,
+      "outcomes": [
+        {
+          "account": "A-17",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-42",
+          "accepted": false,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-53",
+          "accepted": false,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-100",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-151",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "procurement"
+        },
+        {
+          "account": "A-124",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-103",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-111",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-155",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-140",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-114",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-110",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-158",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-148",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-105",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-102",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-162",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-120",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-128",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-130",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        }
+      ],
+      "calls": [
+        {
+          "packet": 1,
+          "worker": 1,
+          "request_sha256": "46dde3de3b1696156abde69b5b91e47dad1926776293eeab416504e0b4a57028",
+          "messages": [],
+          "start_s": 0.0,
+          "end_s": 6.583,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.017046,
+          "rows": [
+            {
+              "account": "A-17",
+              "decision": "eligible",
+              "call": "CALL-17",
+              "crm": [
+                "CRM-17"
+              ]
+            },
+            {
+              "account": "A-42",
+              "decision": "unknown",
+              "call": "CALL-42",
+              "crm": [
+                "CRM-42",
+                "CRM-42-OLD"
+              ]
+            },
+            {
+              "account": "A-53",
+              "decision": "ineligible",
+              "call": "CALL-53",
+              "crm": [
+                "CRM-53"
+              ]
+            },
+            {
+              "account": "A-100",
+              "decision": "ineligible",
+              "call": "CALL-100",
+              "crm": [
+                "CRM-100"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 6,
+            "output_tokens": 705,
+            "cache_creation_input_tokens": 2448,
+            "cache_read_input_tokens": 1920
+          }
+        },
+        {
+          "packet": 2,
+          "worker": 1,
+          "request_sha256": "85cdb88be404d246eb23e722b094aaa9dc3b646a7a2934f41805a55977a487cd",
+          "messages": [],
+          "start_s": 6.583,
+          "end_s": 9.488,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0071199,
+          "rows": [
+            {
+              "account": "A-151",
+              "decision": "eligible",
+              "call": "CALL-151",
+              "crm": [
+                "CRM-151"
+              ]
+            },
+            {
+              "account": "A-124",
+              "decision": "ineligible",
+              "call": "CALL-124",
+              "crm": [
+                "CRM-124"
+              ]
+            },
+            {
+              "account": "A-103",
+              "decision": "ineligible",
+              "call": "CALL-103",
+              "crm": [
+                "CRM-103"
+              ]
+            },
+            {
+              "account": "A-111",
+              "decision": "unknown",
+              "call": "CALL-111",
+              "crm": [
+                "CRM-111",
+                "CRM-111-DUP"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 1218,
+            "cache_read_input_tokens": 739
+          }
+        },
+        {
+          "packet": 3,
+          "worker": 1,
+          "request_sha256": "a43015e74004652c410e36f89a12a28324bd5a4b60fa0ed132b2924d9b999d76",
+          "messages": [],
+          "start_s": 9.488,
+          "end_s": 12.352,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0070919,
+          "rows": [
+            {
+              "account": "A-155",
+              "decision": "eligible",
+              "call": "CALL-155",
+              "crm": [
+                "CRM-155"
+              ]
+            },
+            {
+              "account": "A-140",
+              "decision": "ineligible",
+              "call": "CALL-140",
+              "crm": [
+                "CRM-140"
+              ]
+            },
+            {
+              "account": "A-114",
+              "decision": "unknown",
+              "call": "CALL-114",
+              "crm": [
+                "CRM-114",
+                "CRM-114-DUP"
+              ]
+            },
+            {
+              "account": "A-110",
+              "decision": "ineligible",
+              "call": "CALL-110",
+              "crm": [
+                "CRM-110"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 1211,
+            "cache_read_input_tokens": 739
+          }
+        },
+        {
+          "packet": 4,
+          "worker": 1,
+          "request_sha256": "104fde05b5f1455966f9ab262242175eb405038914525f7a2f12385d016ea563",
+          "messages": [],
+          "start_s": 12.352,
+          "end_s": 15.005,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0067579,
+          "rows": [
+            {
+              "account": "A-158",
+              "decision": "eligible",
+              "call": "CALL-158",
+              "crm": [
+                "CRM-158"
+              ]
+            },
+            {
+              "account": "A-148",
+              "decision": "ineligible",
+              "call": "CALL-148",
+              "crm": [
+                "CRM-148"
+              ]
+            },
+            {
+              "account": "A-105",
+              "decision": "ineligible",
+              "call": "CALL-105",
+              "crm": [
+                "CRM-105"
+              ]
+            },
+            {
+              "account": "A-102",
+              "decision": "ineligible",
+              "call": "CALL-102",
+              "crm": [
+                "CRM-102"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 208,
+            "cache_creation_input_tokens": 1150,
+            "cache_read_input_tokens": 739
+          }
+        },
+        {
+          "packet": 5,
+          "worker": 1,
+          "request_sha256": "08d9e4594c17f9ee218dea684e267ee7cf7f6eee38cd46441417604d3db21590",
+          "messages": [],
+          "start_s": 15.005,
+          "end_s": 19.793,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0105939,
+          "rows": [
+            {
+              "account": "A-162",
+              "decision": "ineligible",
+              "call": "CALL-162",
+              "crm": [
+                "CRM-162"
+              ]
+            },
+            {
+              "account": "A-120",
+              "decision": "ineligible",
+              "call": "CALL-120",
+              "crm": [
+                "CRM-120"
+              ]
+            },
+            {
+              "account": "A-128",
+              "decision": "ineligible",
+              "call": "CALL-128",
+              "crm": [
+                "CRM-128"
+              ]
+            },
+            {
+              "account": "A-130",
+              "decision": "ineligible",
+              "call": "CALL-130",
+              "crm": [
+                "CRM-130"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 556,
+            "cache_creation_input_tokens": 1239,
+            "cache_read_input_tokens": 739
+          }
+        }
+      ]
+    },
+    {
+      "mode": "shared",
+      "elapsed_s": 6.519,
+      "accepted": 19,
+      "usd": 0.0264854,
+      "cap_usd": 0.25,
+      "outcomes": [
+        {
+          "account": "A-17",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-42",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-53",
+          "accepted": false,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-100",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-151",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "procurement"
+        },
+        {
+          "account": "A-124",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-103",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-111",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-155",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-140",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-114",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-110",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-158",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-148",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-105",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-102",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-162",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-120",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-128",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-130",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        }
+      ],
+      "calls": [
+        {
+          "packet": 1,
+          "worker": 1,
+          "request_sha256": "46dde3de3b1696156abde69b5b91e47dad1926776293eeab416504e0b4a57028",
+          "messages": [],
+          "start_s": 0.0,
+          "end_s": 5.975,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.009264999999999999,
+          "rows": [
+            {
+              "account": "A-17",
+              "decision": "eligible",
+              "call": "CALL-17",
+              "crm": [
+                "CRM-17"
+              ]
+            },
+            {
+              "account": "A-42",
+              "decision": "ineligible",
+              "call": "CALL-42",
+              "crm": [
+                "CRM-42"
+              ]
+            },
+            {
+              "account": "A-53",
+              "decision": "ineligible",
+              "call": "CALL-53",
+              "crm": [
+                "CRM-53"
+              ]
+            },
+            {
+              "account": "A-100",
+              "decision": "ineligible",
+              "call": "CALL-100",
+              "crm": [
+                "CRM-100"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 754,
+            "cache_creation_input_tokens": 392,
+            "cache_read_input_tokens": 1530
+          }
+        },
+        {
+          "packet": 2,
+          "worker": 2,
+          "request_sha256": "85cdb88be404d246eb23e722b094aaa9dc3b646a7a2934f41805a55977a487cd",
+          "messages": [],
+          "start_s": 0.0,
+          "end_s": 2.592,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0039024000000000003,
+          "rows": [
+            {
+              "account": "A-151",
+              "decision": "eligible",
+              "call": "CALL-151",
+              "crm": [
+                "CRM-151"
+              ]
+            },
+            {
+              "account": "A-124",
+              "decision": "ineligible",
+              "call": "CALL-124",
+              "crm": [
+                "CRM-124"
+              ]
+            },
+            {
+              "account": "A-103",
+              "decision": "ineligible",
+              "call": "CALL-103",
+              "crm": [
+                "CRM-103"
+              ]
+            },
+            {
+              "account": "A-111",
+              "decision": "unknown",
+              "call": "CALL-111",
+              "crm": [
+                "CRM-111",
+                "CRM-111-DUP"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 393,
+            "cache_read_input_tokens": 1564
+          }
+        },
+        {
+          "packet": 3,
+          "worker": 3,
+          "request_sha256": "a43015e74004652c410e36f89a12a28324bd5a4b60fa0ed132b2924d9b999d76",
+          "messages": [],
+          "start_s": 0.001,
+          "end_s": 2.556,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0039057,
+          "rows": [
+            {
+              "account": "A-155",
+              "decision": "eligible",
+              "call": "CALL-155",
+              "crm": [
+                "CRM-155"
+              ]
+            },
+            {
+              "account": "A-140",
+              "decision": "ineligible",
+              "call": "CALL-140",
+              "crm": [
+                "CRM-140"
+              ]
+            },
+            {
+              "account": "A-114",
+              "decision": "unknown",
+              "call": "CALL-114",
+              "crm": [
+                "CRM-114",
+                "CRM-114-DUP"
+              ]
+            },
+            {
+              "account": "A-110",
+              "decision": "ineligible",
+              "call": "CALL-110",
+              "crm": [
+                "CRM-110"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 394,
+            "cache_read_input_tokens": 1557
+          }
+        },
+        {
+          "packet": 4,
+          "worker": 3,
+          "request_sha256": "104fde05b5f1455966f9ab262242175eb405038914525f7a2f12385d016ea563",
+          "messages": [],
+          "start_s": 2.556,
+          "end_s": 5.135,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0038017999999999997,
+          "rows": [
+            {
+              "account": "A-158",
+              "decision": "eligible",
+              "call": "CALL-158",
+              "crm": [
+                "CRM-158"
+              ]
+            },
+            {
+              "account": "A-148",
+              "decision": "ineligible",
+              "call": "CALL-148",
+              "crm": [
+                "CRM-148"
+              ]
+            },
+            {
+              "account": "A-105",
+              "decision": "ineligible",
+              "call": "CALL-105",
+              "crm": [
+                "CRM-105"
+              ]
+            },
+            {
+              "account": "A-102",
+              "decision": "ineligible",
+              "call": "CALL-102",
+              "crm": [
+                "CRM-102"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 208,
+            "cache_creation_input_tokens": 392,
+            "cache_read_input_tokens": 1498
+          }
+        },
+        {
+          "packet": 5,
+          "worker": 2,
+          "request_sha256": "08d9e4594c17f9ee218dea684e267ee7cf7f6eee38cd46441417604d3db21590",
+          "messages": [],
+          "start_s": 2.592,
+          "end_s": 6.517,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0056105,
+          "rows": [
+            {
+              "account": "A-162",
+              "decision": "ineligible",
+              "call": "CALL-162",
+              "crm": [
+                "CRM-162"
+              ]
+            },
+            {
+              "account": "A-120",
+              "decision": "ineligible",
+              "call": "CALL-120",
+              "crm": [
+                "CRM-120"
+              ]
+            },
+            {
+              "account": "A-128",
+              "decision": "ineligible",
+              "call": "CALL-128",
+              "crm": [
+                "CRM-128"
+              ]
+            },
+            {
+              "account": "A-130",
+              "decision": "ineligible",
+              "call": "CALL-130",
+              "crm": [
+                "CRM-130"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 388,
+            "cache_creation_input_tokens": 392,
+            "cache_read_input_tokens": 1585
+          }
+        }
+      ]
+    },
+    {
+      "mode": "messages",
+      "elapsed_s": 7.755,
+      "accepted": 19,
+      "usd": 0.0274194,
+      "cap_usd": 0.25,
+      "outcomes": [
+        {
+          "account": "A-17",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-42",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-53",
+          "accepted": false,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-100",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-151",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "procurement"
+        },
+        {
+          "account": "A-124",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-103",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-111",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-155",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-140",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-114",
+          "accepted": true,
+          "decision": "unknown",
+          "draft_to": null
+        },
+        {
+          "account": "A-110",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-158",
+          "accepted": true,
+          "decision": "eligible",
+          "draft_to": "CFO"
+        },
+        {
+          "account": "A-148",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-105",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-102",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-162",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-120",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-128",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        },
+        {
+          "account": "A-130",
+          "accepted": true,
+          "decision": "ineligible",
+          "draft_to": null
+        }
+      ],
+      "calls": [
+        {
+          "packet": 1,
+          "worker": 1,
+          "request_sha256": "46dde3de3b1696156abde69b5b91e47dad1926776293eeab416504e0b4a57028",
+          "messages": [
+            {
+              "from": 2,
+              "to": 1,
+              "accounts": [
+                "A-42"
+              ]
+            },
+            {
+              "from": 3,
+              "to": 1,
+              "accounts": [
+                "A-53"
+              ]
+            }
+          ],
+          "start_s": 0.001,
+          "end_s": 5.214,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.008055,
+          "rows": [
+            {
+              "account": "A-17",
+              "decision": "eligible",
+              "call": "CALL-17",
+              "crm": [
+                "CRM-17"
+              ]
+            },
+            {
+              "account": "A-42",
+              "decision": "ineligible",
+              "call": "CALL-42",
+              "crm": [
+                "CRM-42"
+              ]
+            },
+            {
+              "account": "A-53",
+              "decision": "ineligible",
+              "call": "CALL-53",
+              "crm": [
+                "CRM-53"
+              ]
+            },
+            {
+              "account": "A-100",
+              "decision": "ineligible",
+              "call": "CALL-100",
+              "crm": [
+                "CRM-100"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 633,
+            "cache_creation_input_tokens": 392,
+            "cache_read_input_tokens": 1530
+          }
+        },
+        {
+          "packet": 2,
+          "worker": 2,
+          "request_sha256": "85cdb88be404d246eb23e722b094aaa9dc3b646a7a2934f41805a55977a487cd",
+          "messages": [
+            {
+              "from": 1,
+              "to": 2,
+              "accounts": [
+                "A-103"
+              ]
+            },
+            {
+              "from": 3,
+              "to": 2,
+              "accounts": [
+                "A-124"
+              ]
+            }
+          ],
+          "start_s": 0.001,
+          "end_s": 2.706,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0038984,
+          "rows": [
+            {
+              "account": "A-151",
+              "decision": "eligible",
+              "call": "CALL-151",
+              "crm": [
+                "CRM-151"
+              ]
+            },
+            {
+              "account": "A-124",
+              "decision": "ineligible",
+              "call": "CALL-124",
+              "crm": [
+                "CRM-124"
+              ]
+            },
+            {
+              "account": "A-103",
+              "decision": "ineligible",
+              "call": "CALL-103",
+              "crm": [
+                "CRM-103"
+              ]
+            },
+            {
+              "account": "A-111",
+              "decision": "unknown",
+              "call": "CALL-111",
+              "crm": [
+                "CRM-111",
+                "CRM-111-DUP"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 392,
+            "cache_read_input_tokens": 1564
+          }
+        },
+        {
+          "packet": 3,
+          "worker": 3,
+          "request_sha256": "a43015e74004652c410e36f89a12a28324bd5a4b60fa0ed132b2924d9b999d76",
+          "messages": [
+            {
+              "from": 1,
+              "to": 3,
+              "accounts": [
+                "A-140"
+              ]
+            },
+            {
+              "from": 2,
+              "to": 3,
+              "accounts": [
+                "A-114"
+              ]
+            }
+          ],
+          "start_s": 0.0,
+          "end_s": 2.687,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0039057,
+          "rows": [
+            {
+              "account": "A-155",
+              "decision": "eligible",
+              "call": "CALL-155",
+              "crm": [
+                "CRM-155"
+              ]
+            },
+            {
+              "account": "A-140",
+              "decision": "ineligible",
+              "call": "CALL-140",
+              "crm": [
+                "CRM-140"
+              ]
+            },
+            {
+              "account": "A-114",
+              "decision": "unknown",
+              "call": "CALL-114",
+              "crm": [
+                "CRM-114",
+                "CRM-114-DUP"
+              ]
+            },
+            {
+              "account": "A-110",
+              "decision": "ineligible",
+              "call": "CALL-110",
+              "crm": [
+                "CRM-110"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 217,
+            "cache_creation_input_tokens": 394,
+            "cache_read_input_tokens": 1557
+          }
+        },
+        {
+          "packet": 4,
+          "worker": 1,
+          "request_sha256": "104fde05b5f1455966f9ab262242175eb405038914525f7a2f12385d016ea563",
+          "messages": [
+            {
+              "from": 2,
+              "to": 1,
+              "accounts": [
+                "A-148"
+              ]
+            },
+            {
+              "from": 3,
+              "to": 1,
+              "accounts": [
+                "A-105"
+              ]
+            }
+          ],
+          "start_s": 5.214,
+          "end_s": 7.753,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.0038058,
+          "rows": [
+            {
+              "account": "A-158",
+              "decision": "eligible",
+              "call": "CALL-158",
+              "crm": [
+                "CRM-158"
+              ]
+            },
+            {
+              "account": "A-148",
+              "decision": "ineligible",
+              "call": "CALL-148",
+              "crm": [
+                "CRM-148"
+              ]
+            },
+            {
+              "account": "A-105",
+              "decision": "ineligible",
+              "call": "CALL-105",
+              "crm": [
+                "CRM-105"
+              ]
+            },
+            {
+              "account": "A-102",
+              "decision": "ineligible",
+              "call": "CALL-102",
+              "crm": [
+                "CRM-102"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 208,
+            "cache_creation_input_tokens": 393,
+            "cache_read_input_tokens": 1498
+          }
+        },
+        {
+          "packet": 5,
+          "worker": 2,
+          "request_sha256": "08d9e4594c17f9ee218dea684e267ee7cf7f6eee38cd46441417604d3db21590",
+          "messages": [
+            {
+              "from": 1,
+              "to": 2,
+              "accounts": [
+                "A-128"
+              ]
+            },
+            {
+              "from": 3,
+              "to": 2,
+              "accounts": [
+                "A-120"
+              ]
+            }
+          ],
+          "start_s": 2.706,
+          "end_s": 7.551,
+          "model": "claude-sonnet-5-5",
+          "usd": 0.007754499999999999,
+          "rows": [
+            {
+              "account": "A-162",
+              "decision": "ineligible",
+              "call": "CALL-162",
+              "crm": [
+                "CRM-162"
+              ]
+            },
+            {
+              "account": "A-120",
+              "decision": "ineligible",
+              "call": "CALL-120",
+              "crm": [
+                "CRM-120"
+              ]
+            },
+            {
+              "account": "A-128",
+              "decision": "ineligible",
+              "call": "CALL-128",
+              "crm": [
+                "CRM-128"
+              ]
+            },
+            {
+              "account": "A-130",
+              "decision": "ineligible",
+              "call": "CALL-130",
+              "crm": [
+                "CRM-130"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 2,
+            "output_tokens": 602,
+            "cache_creation_input_tokens": 393,
+            "cache_read_input_tokens": 1585
+          }
+        }
+      ]
+    }
+  ],
+  "pricing": "CLI-reported list-price estimate on signed-in subscription"
+}

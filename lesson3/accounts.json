@@ -1,0 +1,469 @@
+[
+  {
+    "account": "A-17",
+    "name": "Alder Freight",
+    "call": {
+      "id": "CALL-17",
+      "date": "2026-10-28",
+      "text": "Alder Freight told us on a call that budget cuts had delayed the procurement review."
+    },
+    "crm": [
+      {
+        "id": "CRM-17",
+        "date": "2026-11-07",
+        "text": "Alder Freight \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "eligible",
+    "current_crm_ids": [
+      "CRM-17"
+    ]
+  },
+  {
+    "account": "A-42",
+    "name": "Juniper Systems",
+    "call": {
+      "id": "CALL-42",
+      "date": "2026-10-29",
+      "text": "Juniper Systems said on the discovery call that budget cuts had moved hiring into next year."
+    },
+    "crm": [
+      {
+        "id": "CRM-42",
+        "date": "2026-11-07",
+        "text": "Juniper Systems \u00b7 opportunity stage closed-lost at the snapshot."
+      },
+      {
+        "id": "CRM-42-OLD",
+        "date": "2026-10-30",
+        "text": "Juniper Systems \u00b7 earlier opportunity stage active."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-42"
+    ]
+  },
+  {
+    "account": "A-53",
+    "name": "Birch Labs",
+    "call": {
+      "id": "CALL-53",
+      "date": "2026-11-02",
+      "text": "Birch Labs discussed budget cuts on a call with its supplier."
+    },
+    "crm": [
+      {
+        "id": "CRM-53",
+        "date": "2026-11-07",
+        "text": "Birch Labs \u00b7 opportunity stage active."
+      }
+    ],
+    "approval": "revoked",
+    "recipient": "CFO",
+    "expected_research": "eligible",
+    "current_crm_ids": [
+      "CRM-53"
+    ]
+  },
+  {
+    "account": "A-100",
+    "name": "Holly Foods",
+    "call": {
+      "id": "CALL-100",
+      "date": "2026-10-28",
+      "text": "Holly Foods discussed the renewal timeline and a security questionnaire on the call."
+    },
+    "crm": [
+      {
+        "id": "CRM-100",
+        "date": "2026-11-07",
+        "text": "Holly Foods \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-100"
+    ]
+  },
+  {
+    "account": "A-151",
+    "name": "Elm Textiles",
+    "call": {
+      "id": "CALL-151",
+      "date": "2026-10-09",
+      "text": "Elm Textiles confirmed budget cuts for the next quarter and asked to revisit pricing."
+    },
+    "crm": [
+      {
+        "id": "CRM-151",
+        "date": "2026-11-07",
+        "text": "Elm Textiles \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "procurement",
+    "expected_research": "eligible",
+    "current_crm_ids": [
+      "CRM-151"
+    ]
+  },
+  {
+    "account": "A-124",
+    "name": "Spruce Works",
+    "call": {
+      "id": "CALL-124",
+      "date": "2026-10-30",
+      "text": "Spruce Works confirmed budget cuts for the next quarter and asked to revisit pricing."
+    },
+    "crm": [
+      {
+        "id": "CRM-124",
+        "date": "2026-11-07",
+        "text": "Spruce Works \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-124"
+    ]
+  },
+  {
+    "account": "A-103",
+    "name": "Aspen Capital",
+    "call": {
+      "id": "CALL-103",
+      "date": "2026-11-03",
+      "text": "Aspen Capital asked whether a renewal would still include weekend support."
+    },
+    "crm": [
+      {
+        "id": "CRM-103",
+        "date": "2026-11-07",
+        "text": "Aspen Capital \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-103"
+    ]
+  },
+  {
+    "account": "A-111",
+    "name": "Sequoia Analytics",
+    "call": {
+      "id": "CALL-111",
+      "date": "2026-10-23",
+      "text": "Sequoia Analytics explained on the call that a budget reduction would shrink the pilot scope."
+    },
+    "crm": [
+      {
+        "id": "CRM-111",
+        "date": "2026-11-07",
+        "text": "Sequoia Analytics \u00b7 opportunity stage closed-lost at the snapshot."
+      },
+      {
+        "id": "CRM-111-DUP",
+        "date": "2026-11-07",
+        "text": "Sequoia Analytics \u00b7 second opportunity row at the snapshot, stage active."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "unknown",
+    "current_crm_ids": [
+      "CRM-111",
+      "CRM-111-DUP"
+    ]
+  },
+  {
+    "account": "A-155",
+    "name": "Aspen Networks",
+    "call": {
+      "id": "CALL-155",
+      "date": "2026-10-27",
+      "text": "Aspen Networks explained on the call that a budget reduction would shrink the pilot scope."
+    },
+    "crm": [
+      {
+        "id": "CRM-155",
+        "date": "2026-11-07",
+        "text": "Aspen Networks \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "eligible",
+    "current_crm_ids": [
+      "CRM-155"
+    ]
+  },
+  {
+    "account": "A-140",
+    "name": "Cedar Foods",
+    "call": {
+      "id": "CALL-140",
+      "date": "2026-10-01",
+      "text": "Cedar Foods told us on a call that budget cuts had delayed the procurement review."
+    },
+    "crm": [
+      {
+        "id": "CRM-140",
+        "date": "2026-11-07",
+        "text": "Cedar Foods \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-140"
+    ]
+  },
+  {
+    "account": "A-114",
+    "name": "Tamarack Media",
+    "call": {
+      "id": "CALL-114",
+      "date": "2026-10-11",
+      "text": "Tamarack Media confirmed budget cuts for the next quarter and asked to revisit pricing."
+    },
+    "crm": [
+      {
+        "id": "CRM-114",
+        "date": "2026-11-07",
+        "text": "Tamarack Media \u00b7 opportunity stage closed-lost at the snapshot."
+      },
+      {
+        "id": "CRM-114-DUP",
+        "date": "2026-11-07",
+        "text": "Tamarack Media \u00b7 second opportunity row at the snapshot, stage active."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "unknown",
+    "current_crm_ids": [
+      "CRM-114",
+      "CRM-114-DUP"
+    ]
+  },
+  {
+    "account": "A-110",
+    "name": "Sequoia Foods",
+    "call": {
+      "id": "CALL-110",
+      "date": "2026-10-29",
+      "text": "Sequoia Foods asked whether a renewal would still include weekend support."
+    },
+    "crm": [
+      {
+        "id": "CRM-110",
+        "date": "2026-11-07",
+        "text": "Sequoia Foods \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-110"
+    ]
+  },
+  {
+    "account": "A-158",
+    "name": "Willow Works",
+    "call": {
+      "id": "CALL-158",
+      "date": "2026-11-02",
+      "text": "Willow Works told us on a call that budget cuts had delayed the procurement review."
+    },
+    "crm": [
+      {
+        "id": "CRM-158",
+        "date": "2026-11-07",
+        "text": "Willow Works \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "eligible",
+    "current_crm_ids": [
+      "CRM-158"
+    ]
+  },
+  {
+    "account": "A-148",
+    "name": "Linden Networks",
+    "call": {
+      "id": "CALL-148",
+      "date": "2026-10-04",
+      "text": "Linden Networks told us on a call that budget cuts had delayed the procurement review."
+    },
+    "crm": [
+      {
+        "id": "CRM-148",
+        "date": "2026-11-07",
+        "text": "Linden Networks \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-148"
+    ]
+  },
+  {
+    "account": "A-105",
+    "name": "Juniper Textiles",
+    "call": {
+      "id": "CALL-105",
+      "date": "2026-11-04",
+      "text": "Juniper Textiles discussed the renewal timeline and a security questionnaire on the call."
+    },
+    "crm": [
+      {
+        "id": "CRM-105",
+        "date": "2026-11-07",
+        "text": "Juniper Textiles \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-105"
+    ]
+  },
+  {
+    "account": "A-102",
+    "name": "Laurel Textiles",
+    "call": {
+      "id": "CALL-102",
+      "date": "2026-10-20",
+      "text": "Laurel Textiles discussed the renewal timeline and a security questionnaire on the call."
+    },
+    "crm": [
+      {
+        "id": "CRM-102",
+        "date": "2026-11-07",
+        "text": "Laurel Textiles \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-102"
+    ]
+  },
+  {
+    "account": "A-162",
+    "name": "Rowan Labs",
+    "call": {
+      "id": "CALL-162",
+      "date": "2026-10-06",
+      "text": "Rowan Labs wanted a reference customer in the same industry before the next call."
+    },
+    "crm": [
+      {
+        "id": "CRM-162",
+        "date": "2026-11-07",
+        "text": "Rowan Labs \u00b7 opportunity stage closed-lost at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-162"
+    ]
+  },
+  {
+    "account": "A-120",
+    "name": "Laurel Health",
+    "call": {
+      "id": "CALL-120",
+      "date": "2026-11-06",
+      "text": "Laurel Health requested an integration demo for its operations team."
+    },
+    "crm": [
+      {
+        "id": "CRM-120",
+        "date": "2026-11-07",
+        "text": "Laurel Health \u00b7 opportunity stage closed-lost at the snapshot."
+      },
+      {
+        "id": "CRM-120-OLD",
+        "date": "2026-10-23",
+        "text": "Laurel Health \u00b7 earlier opportunity stage active."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-120"
+    ]
+  },
+  {
+    "account": "A-128",
+    "name": "Juniper Studios",
+    "call": {
+      "id": "CALL-128",
+      "date": "2026-10-18",
+      "text": "Juniper Studios walked through the onboarding plan and named a project owner."
+    },
+    "crm": [
+      {
+        "id": "CRM-128",
+        "date": "2026-11-07",
+        "text": "Juniper Studios \u00b7 opportunity stage active at the snapshot."
+      },
+      {
+        "id": "CRM-128-OLD",
+        "date": "2026-10-30",
+        "text": "Juniper Studios \u00b7 earlier opportunity stage closed-lost."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-128"
+    ]
+  },
+  {
+    "account": "A-130",
+    "name": "Rowan Dynamics",
+    "call": {
+      "id": "CALL-130",
+      "date": "2026-10-13",
+      "text": "Rowan Dynamics said during the planning call that its budget was unchanged."
+    },
+    "crm": [
+      {
+        "id": "CRM-130",
+        "date": "2026-11-07",
+        "text": "Rowan Dynamics \u00b7 opportunity stage active at the snapshot."
+      }
+    ],
+    "approval": "approved",
+    "recipient": "CFO",
+    "expected_research": "ineligible",
+    "current_crm_ids": [
+      "CRM-130"
+    ]
+  }
+]
