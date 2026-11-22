@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kill-resume drill"
+  short_description: "Crash a worker after one external write commits and prove recovery from the destination's records"
+  default_prompt: "Use $kill-resume-drill on one external write in this project, in a disposable copy."

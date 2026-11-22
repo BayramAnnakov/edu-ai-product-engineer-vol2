@@ -8,7 +8,7 @@ Start with [Workshop 1 take-home](lesson1/README.md). The kit works with Python 
 
 **Workshop 2 · Context & memory (8 November):** [lesson2/README.md](lesson2/README.md). A retrieval loop that names its gap, with coverage and cost per route on a corpus too big to read; a memory wiki with a reviewed dreaming pass; a write guard you make pass. Browser worksheet or Python 3.10+, no keys. Open the folder in Codex or Claude Code and ask it to read `lesson2/AGENTS.md`. The reusable method from that session is [skills/memory-wiki/SKILL.md](skills/memory-wiki/SKILL.md); install it into your own project with `--skill memory-wiki` below.
 
-**Workshop 3 · Durable execution (22 November).** Start with the [learner worksheet](lesson3/learner-worksheet.html). Download the HTML file and open it in your browser to predict what happened to a draft when its worker crashed. The [local lab](lesson3/README.md) uses Python 3.11+ to replay the crash and duplicate timers.
+**Workshop 3 · Durable execution (22 November):** [lesson3/README.md](lesson3/README.md). Start with the [learner worksheet](lesson3/learner-worksheet.html): download the HTML file and open it in your browser to predict what happened to a draft when its worker crashed. A worker dies after the drafts service commits; you repair three identity choices, prove recovery from the service's records, then break your own green checks. The local lab needs Python 3.11+ with the pinned `dbos` package and no keys. Open the folder in Codex or Claude Code and ask it to read `lesson3/AGENTS.md`. Take the method to one write in your own product with [skills/kill-resume-drill/SKILL.md](skills/kill-resume-drill/SKILL.md) (`--skill kill-resume-drill` below).
 
 - [Install/use bakeoff](#use-bakeoff-in-your-own-project): one bounded optimization, quality gates and an accountable decision.
 - [Worksheet](lesson1/worksheet.md) and [homework](lesson1/homework.md): transfer to a workflow you own.
@@ -36,6 +36,8 @@ python3 scripts/install_skill.py --host codex --target /path/to/your/project
 python3 scripts/install_skill.py --host claude --target /path/to/your/project
 # Workshop 2's memory wiki skill, the same way:
 python3 scripts/install_skill.py --host claude --skill memory-wiki --target /path/to/your/project
+# Workshop 3's kill-resume drill:
+python3 scripts/install_skill.py --host claude --skill kill-resume-drill --target /path/to/your/project
 ```
 
 In **Codex**, invoke `$bakeoff`; in **Claude Code**, invoke `/bakeoff`. Example:

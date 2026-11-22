@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Copy a complete local skill (bakeoff or memory-wiki) into a project; never overwrite an existing skill."""
+"""Copy a complete local skill (bakeoff, memory-wiki or kill-resume-drill) into a project; never overwrite an existing skill."""
 import argparse
 from pathlib import Path
 import shutil
 
 
-SKILLS = ("bakeoff", "memory-wiki")
+SKILLS = ("bakeoff", "memory-wiki", "kill-resume-drill")
 
 
 def install(target, host, skill="bakeoff"):

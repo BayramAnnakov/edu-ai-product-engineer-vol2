@@ -24,6 +24,8 @@ TIMER = {
 }
 TIMER_DUE_TICK = 10
 DECEMBER = dict(ALDER, event_id="job-dec-17", request_id="outreach/17/dec")
+# A new event that refers to the existing November request, e.g. a CRM reconciliation.
+RECONCILE = dict(ALDER, event_id="reconcile-17")
 PILOT = {
     "event_id": "job-151",
     "request_id": "outreach/151/nov",
@@ -161,6 +163,19 @@ def deliver_december():
             raise ValueError("Resume the November jobs first.")
         deliver(db, DECEMBER, "wire-05")
         deliver(db, DECEMBER, "wire-06")
+
+
+def deliver_reconcile():
+    with transaction() as db:
+        if not db.execute(
+            "INSERT OR IGNORE INTO phases VALUES ('reconcile')"
+        ).rowcount:
+            return
+        if not db.execute("SELECT 1 FROM phases WHERE name='december'").fetchone():
+            raise ValueError("Run the December phase first.")
+        if db.execute("SELECT 1 FROM inbox WHERE status!='done' LIMIT 1").fetchone():
+            raise ValueError("Resume the December jobs first.")
+        deliver(db, RECONCILE, "wire-07")
 
 
 def inspect():

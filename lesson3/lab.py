@@ -106,6 +106,7 @@ def main():
             "outage",
             "resume",
             "december",
+            "reconcile",
             "inspect",
             "run",
             "verify",
@@ -150,6 +151,12 @@ def main():
         except ValueError as exc:
             p.error(str(exc))
         worker("resume")
+    if action == "reconcile":
+        try:
+            service.deliver_reconcile()
+        except ValueError as exc:
+            p.error(str(exc))
+        worker("resume")
     data = service.inspect()
     if action in ("run", "verify"):
         if not checkpoint.exists():
@@ -168,6 +175,29 @@ def main():
         print(json.dumps(report["checks"], indent=2))
         if not all(report["checks"].values()):
             sys.exit(1)
+    elif action == "reconcile":
+        event = service.RECONCILE["event_id"]
+        print(
+            json.dumps(
+                {
+                    "event": event,
+                    "request": service.RECONCILE["request_id"],
+                    "deliveries": [
+                        f"{h['kind']}: {h['detail']}"
+                        for h in data["history"]
+                        if h["kind"] in ("enqueued", "repeat delivery")
+                        and h["detail"].split(" / ")[1] == event
+                    ],
+                    "jobs": [
+                        {"key": j["key"], "status": j["status"], "result": j["result"]}
+                        for j in data["jobs"]
+                        if j["event"]["event_id"] == event
+                    ],
+                    "drafts": len(data["drafts"]),
+                },
+                indent=2,
+            )
+        )
     elif action == "crash":
         print(
             json.dumps(

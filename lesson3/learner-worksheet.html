@@ -30,13 +30,13 @@
 python lab.py crash --state trial-1
 python lab.py inspect --state trial-1</pre>
 <details><summary>Inspect the recorded service receipt</summary><div class='evidence'><table><thead><tr><th scope='col'>Worker exit</th><th scope='col'>DBOS workflow</th><th scope='col'>Journal</th><th scope='col'>Draft receipt</th></tr></thead><tbody><tr><td>-9</td><td>followup/wire-01</td><td>PENDING</td><td>D-001 · outreach/17/nov</td></tr></tbody></table></div></details></div></section>
-<section data-stage="2" hidden><h2>2. Before resuming</h2><p>Birch’s old timer arrives twice after approval is withdrawn. Elm’s owner changes the contact. The original Alder request is retried.</p>
+<section data-stage="2" hidden><h2>2. Before resuming</h2><p>Birch’s old timer arrives twice after approval is withdrawn. Elm’s owner changes the contact (Elm Textiles is Client A in the W2 records). The original Alder request is retried.</p>
 <label>Predict Alder’s next receipt, Birch’s handled events and draft count, and Elm’s recipient.<textarea required name="outage" rows="2"></textarea></label>
 <button type="button" data-commit="outage">Save forecast and open the retry</button></section>
 <div data-stage="3" hidden><section><h2>3. Inspect the starter and repair it</h2>
 <pre class="terminal">python lab.py outage --state trial-1
 python lab.py resume --state trial-1</pre>
-<details><summary>Inspect the recorded November outcomes</summary><div class='evidence'><table><thead><tr><th scope='col'>Starter service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>2</td><td>D-001, D-002</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-003</td><td>CFO</td></tr></tbody></table></div><p>Birch · 2 deliveries → 2 handled event(s) → 2 revoked decision(s) → 0 drafts.</p></details>
+<details><summary>Inspect the recorded November outcomes</summary><div class='evidence'><table><thead><tr><th scope='col'>Starter service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>2</td><td>D-001, D-002</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-003</td><td>CFO</td></tr></tbody></table></div><p>Birch · 2 deliveries → 2 handled event(s) → 2 revoked decision(s) → 0 drafts.</p><p>DBOS journal at the November checkpoint: SUCCESS for 4/4 completed workflows.</p></details>
 <p>Alder approves another follow-up for December. Two deliveries carry that new event. Predict how many distinct requests and drafts Alder should now have.</p>
 <label>What identifies a redelivery? What identifies a draft request? Explain why a fresh request for the same account must still get through.<textarea required name="identities" rows="3"></textarea></label>
 <pre class="terminal">python lab.py december --state trial-1
@@ -47,7 +47,9 @@ python lab.py run --state trial-2
 python lab.py verify --state trial-2
 python lab.py resume --state trial-2</pre>
 <details><summary>Inspect the rehearsal after repair</summary><div class='evidence'><table><thead><tr><th scope='col'>Repaired service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>1</td><td>D-001</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-002</td><td>procurement</td></tr></tbody></table></div><p>Birch · 2 deliveries → 1 handled event(s) → 1 revoked decision(s) → 0 drafts.</p><p>wire-05 and wire-06 delivered job-dec-17 for outreach/17/dec. One December job completed and the service returned D-003. November retained D-001.</p></details>
-<details><summary>Compare the deliberately wrong account-key repair</summary><p>Account-key repair: 2 deliveries, 0 December jobs, 0 December receipts. Verification passed 6/7 and exited 1.</p></details></section>
+<details><summary>Compare the deliberately wrong account-key repair</summary><p>Account-key repair: 2 deliveries, 0 December jobs, 0 December receipts. Verification passed 6/7 and exited 1.</p></details>
+<p>After your repair passes 7/7: give your coding agent the prompt from the “Break your green checks” slide.</p>
+<label>Optional · Your mutation: which key lost reconcile-17, how many jobs it got, what verify said, the test you added<textarea name="mutation" rows="2"></textarea></label></section>
 <section data-path="live" hidden><h2>Your two local run reports</h2>
 <p>Choose the report from each trial. The worksheet reads them locally and includes the service receipts and check counts in your decision.</p>
 <label>Starter · trial-1/report.json<input type="file" accept=".json,application/json" data-report="starter"></label><p role="status" id="starter-status"></p>
@@ -67,9 +69,16 @@ python lab.py resume --state trial-2</pre>
 <label>Cite their time intervals. What would you repeat before recommending a cheaper or more accurate configuration?<textarea name="team" rows="3"></textarea></label></section>
 <section><h2>Your W4 handoff</h2><label>Cite the November workflow status and both duplicate Alder receipt IDs. Why should the W4 grader reject this run?<textarea name="grader" rows="2"></textarea></label>
 <label>Keep, change or repeat? Explain your decision using the measured result.<textarea name="decision" rows="2"></textarea></label>
-<label>Optional transfer to your own project<textarea name="transfer" rows="2"></textarea></label></section></div>
+</section>
+<section id="own-write"><h2>One write in your own product</h2><p>The lab handed you a request ID and a service that honours it. Your product may have neither.</p>
+<label>1 · The write: one call that changes something outside the worker<textarea name="ownWrite" rows="2"></textarea></label>
+<label>2 · The request identity: known before the model runs, survives a restart (not an attempt ID, a timestamp or model text). Also name the trigger identity.<textarea name="ownIdentity" rows="2"></textarea></label>
+<label>3 · The destination's contract<select name="ownContract"><option value="">Choose one</option><option>It honours an idempotency key</option><option>It has a natural key I can look up</option><option>Nothing: the outcome after a crash is unknown</option></select></label>
+<label>How: the key or the lookup you will use, or what the worker does after a crash when the outcome is unknown<textarea name="ownContractHow" rows="2"></textarea></label>
+<label>4 · What you read again at write time, and which source owns each<textarea name="ownReread" rows="2"></textarea></label>
+<p class="small">Homework: copy <code>.claude/skills/kill-resume-drill</code> from the lab into your project’s <code>.claude/skills/</code> (Codex: ask it to read that SKILL.md and follow it), then have your agent run the drill on this write in a disposable copy.</p></section></div>
 <p><button type="submit" id="save">Download decision.md ↓</button> <span id="feedback" role="status" aria-live="polite"></span></p></form></main>
-<script type="application/json" id="rubric">{"replay": {"event": "reconcile-17", "request": "outreach/17/nov", "receipt": "D-001", "before": 3, "after": 3}, "novemberReceipts": ["D-001", "D-002"], "sharedIntervals": {"1": [0.0, 5.975], "2": [0.0, 2.592], "3": [0.001, 2.556], "4": [2.556, 5.135], "5": [2.592, 6.517]}, "teams": {"single": [18, "19.80"], "shared": [19, "6.52"], "messages": [19, "7.75"]}, "starterChecks": {"service committed before workflow completion": true, "original receipt recovered": false, "revoked draft suppressed": true, "two deliveries resolved once": false, "verified correction used": false, "workflow history complete": true, "new request on the same account delivered once": false}, "repairChecks": {"service committed before workflow completion": true, "original receipt recovered": true, "revoked draft suppressed": true, "two deliveries resolved once": true, "verified correction used": true, "workflow history complete": true, "new request on the same account delivered once": true}}</script><script>const form = document.querySelector("#worksheet");
+<script type="application/json" id="rubric">{"replay": {"event": "reconcile-17", "request": "outreach/17/nov", "jobs": 1, "receipt": "D-001", "delivery": "enqueued: wire-07 / reconcile-17 / reconcile-17", "before": 3, "after": 3, "verify_after": 7}, "novemberReceipts": ["D-001", "D-002"], "sharedIntervals": {"1": [0.0, 5.975], "2": [0.0, 2.592], "3": [0.001, 2.556], "4": [2.556, 5.135], "5": [2.592, 6.517]}, "teams": {"single": [18, "19.80"], "shared": [19, "6.52"], "messages": [19, "7.75"]}, "starterChecks": {"service committed before workflow completion": true, "original receipt recovered": false, "revoked draft suppressed": true, "two deliveries resolved once": false, "verified correction used": false, "workflow history complete": true, "new request on the same account delivered once": false}, "repairChecks": {"service committed before workflow completion": true, "original receipt recovered": true, "revoked draft suppressed": true, "two deliveries resolved once": true, "verified correction used": true, "workflow history complete": true, "new request on the same account delivered once": true}}</script><script>const form = document.querySelector("#worksheet");
 const feedback = document.querySelector("#feedback");
 const rubric = JSON.parse(document.querySelector("#rubric").textContent);
 const fields = [...form.elements].filter(el => el.name && el.type !== "file");
@@ -94,7 +103,7 @@ function saveDraft() {
 }
 function show() {
   document.querySelectorAll("[data-stage]").forEach(box => { box.hidden = stage < Number(box.dataset.stage); });
-  document.querySelectorAll("[data-path]").forEach(box => { box.hidden = mode() !== box.dataset.path; });
+  document.querySelectorAll("[data-path]").forEach(box => { box.hidden = mode() !== box.dataset.path || stage < 3; });
   document.querySelectorAll("[data-commit]").forEach((button,i) => {
     el(steps[i]).readOnly = i < stage;
     button.hidden = i < stage;
@@ -187,7 +196,7 @@ form.addEventListener("submit", event => {
         feedback.textContent = "Cite the incoming event and the logical request from the trace in your explanation."; return;
       }
     }
-    for (const name of ["identities","configuration","accepted","seconds","packets","team","grader","decision"]) {
+    for (const name of ["identities","configuration","accepted","seconds","packets","team","grader","decision","ownWrite","ownIdentity","ownContract","ownContractHow","ownReread"]) {
       if (!requireValue(name,"Complete the evidence field: " + el(name).labels[0].firstChild.textContent)) return;
     }
     const packets = val("packets").split(",").map(v => v.trim());
@@ -209,7 +218,7 @@ form.addEventListener("submit", event => {
       feedback.textContent = "Cite the November status and both duplicate Alder receipt IDs from the starter."; return;
     }
   }
-  const active = fields.filter(f => plan ? ["mode","prediction","journal","outage","transfer"].includes(f.name) :
+  const active = fields.filter(f => plan ? ["mode","prediction","journal","outage","ownWrite","ownIdentity","ownContract","ownContractHow","ownReread"].includes(f.name) :
     !f.closest("[data-path]")?.hidden);
   const lines = [plan ? "# Workshop 3 · Prediction" : "# Workshop 3 · Recovery decision", "",
     "Recovery evidence: " + ({live:"Two local reports checked",replay:"Recorded trace diagnosis",plan:"Prediction only"})[mode()], ""];
