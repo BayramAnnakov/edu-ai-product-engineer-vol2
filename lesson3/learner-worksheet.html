@@ -3,9 +3,88 @@
 @media(max-width:740px){main,header,footer{width:calc(100% - 32px)}header{height:60px}header strong{font-size:21px}.grid{grid-template-columns:1fr}.timeline{display:grid;gap:9px}.timeline>div{padding:0;border:0}.intro{font-size:20px}.card,.specimen{padding:13px}.card b{font-size:23px}main{padding-top:16px}footer{min-height:53px}.terminal{font-size:13px}td,th{padding:7px 6px 7px 0}}
 @media(min-width:741px) and (max-height:800px){.deck header{height:58px}.deck main{padding-top:17px}.deck .phase{padding-bottom:9px}.deck h1{font-size:clamp(37px,4vw,54px);margin:9px 0 12px}.deck .content{gap:12px}.deck .intro{font-size:20px}.deck .card,.deck .specimen,.deck .terminal{padding:12px 16px}.deck th,.deck td{padding-top:6px;padding-bottom:6px}.deck footer{min-height:52px;padding:6px 0}}
 @media(max-width:500px){.evidence table{font-size:13px}.evidence th{font-size:10px;letter-spacing:0}.evidence td,.evidence th{padding:6px 4px 6px 0}.evidence td:last-child,.evidence th:last-child{padding-right:0}}
-@media print{header,footer,dialog,button{display:none!important}.deck section[hidden],.deck [data-reveal][hidden]{display:block!important}.deck section{break-after:page}main{padding:0}.sheet textarea{height:3em}}
+@media print{header,footer,dialog,button{display:none!important}.deck section[hidden],.deck [data-reveal][hidden],.deck [data-until][hidden]{display:block!important}.deck section{break-after:page}main{padding:0}.sheet textarea{height:3em}}
 
 .sheet [data-stage]> * + *{margin-top:13px}.sheet textarea[readonly]{background:var(--paper)}.sheet #feedback{max-width:95%}
+/* Deck system v2 (21 Nov 2026, design gate): paper ground, Charter for reading, upright sans for labels, mono for commands.
+   One accent (#c4122f) with one job: the question you must answer. Previous system: workshop-fieldnotes-v1.css. */
+body.deck{--pw:#fbfaf6;--i1:#1d2836;--lab:#4a5361;--hr:#d9d6cc;--alarm:#c4122f;--codebg:#efece3;background:var(--pw);color:var(--i1);font:400 19px/1.5 Charter,"Bitstream Charter",Georgia,serif;font-variant-numeric:lining-nums}
+body.deck .phase,body.deck .tag,body.deck .label,body.deck th,body.deck .count,body.deck header .right,body.deck footer button,body.deck .k{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+body.deck header{border-bottom:1px solid var(--hr);height:58px}
+body.deck header strong{font:700 18px Charter,serif;letter-spacing:0;color:var(--i1)}
+body.deck .mark{color:var(--i1);font-size:26px}
+body.deck header .right{font-size:15px;color:var(--i1)}
+body.deck main section .phase{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--lab);border:0;padding:0}
+body.deck h1{font:700 52px/1.1 Charter,serif;letter-spacing:-.02em;color:var(--i1);margin:4px 0 14px}
+body.deck .intro{font:400 22px/1.42 Charter,serif;max-width:900px}
+body.deck .content{gap:16px}
+body.deck .timeline{border-block:1px solid var(--hr);padding:14px 0}
+body.deck .timeline>div{border-left:1px solid var(--hr);padding:0 24px}
+body.deck .timeline>div:first-child{border-left:0;padding-left:0}
+body.deck .tag,body.deck .label{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--lab)}
+body.deck .timeline b,body.deck .card b{font:700 24px/1.2 Charter,serif;color:var(--i1)}
+body.deck .grid{gap:32px}
+body.deck .card{background:transparent;border:0;border-top:1px solid var(--i1);border-radius:0;padding:12px 0 0;font-size:18px}
+body.deck .card.warn{border-top-color:var(--alarm)}
+body.deck .card.warn b{color:var(--alarm)}
+body.deck .specimen{background:transparent;border:0;border-radius:0;padding:0}
+body.deck .specimen strong{font-weight:700}
+body.deck .terminal{background:var(--codebg);color:var(--i1);border:0;border-radius:0;font:500 17px/1.6 "SF Mono",Menlo,ui-monospace,monospace;padding:12px 16px}
+body.deck code{font:500 .86em "SF Mono",Menlo,ui-monospace,monospace;background:var(--codebg);padding:1px 5px;white-space:nowrap;color:var(--i1)}
+body.deck .ask{border-left:4px solid var(--alarm);padding:2px 0 2px 20px;font:600 24px/1.3 Charter,serif;color:var(--i1)}
+body.deck .ask code{font-weight:600}
+body.deck table{font-size:18px;font-variant-numeric:tabular-nums lining-nums}
+body.deck th{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--lab);border-bottom:1px solid var(--i1);padding:0 16px 8px 0}
+body.deck td{border-bottom:1px solid var(--hr);padding:8px 16px 8px 0}
+body.deck td:first-child{font-weight:700}
+body.deck .num td:not(:first-child),body.deck .num th:not(:first-child){text-align:right}
+body.deck .num td:last-child,body.deck .num th:last-child{padding-right:0}
+body.deck .small,body.deck .sources{font:400 15px/1.45 Charter,serif;color:var(--lab)}
+body.deck .found{border-top:1px solid var(--i1);padding-top:10px;font-size:19px}
+body.deck a{color:var(--i1)}
+body.deck footer{background:var(--pw);border-top:1px solid var(--hr)}
+body.deck footer button{background:transparent;border:0;color:var(--i1);font-size:15px;font-weight:500;padding:8px 0}
+body.deck .count{font-size:13px;letter-spacing:.04em;color:var(--lab)}
+body.deck dialog{background:var(--pw)}
+body.deck .diagram{margin:4px 0}
+body.deck .diagram svg{width:100%;height:auto;display:block;font-family:Charter,serif}
+body.deck .diagram .k{font:600 12px "Helvetica Neue",Helvetica,sans-serif;letter-spacing:.06em;fill:var(--lab)}
+body.deck .diagram .t{font-size:19px;fill:var(--i1)}
+body.deck .diagram .s{font-size:15px;fill:var(--lab)}
+body.deck .diagram .box{fill:none;stroke:var(--hr);stroke-width:1}
+body.deck .diagram .box.strong{stroke:var(--i1)}
+body.deck .diagram .box.alarm{stroke:var(--alarm);stroke-dasharray:5 4}
+body.deck .diagram .alarm-t{fill:var(--alarm)}
+body.deck .diagram .ln{stroke:var(--i1);stroke-width:1.5}
+body.deck .diagram .ink-fill{fill:var(--i1)}
+body.deck .specimen p{font-size:17px;line-height:1.5}
+@media(max-width:740px){body.deck code{white-space:normal;overflow-wrap:anywhere}body.deck h1{font-size:34px}body.deck .ask{font-size:20px}body.deck .diagram svg{min-width:0}}
+
+/* design gate round 3: type floor, rules that survive compression, one job per device */
+body.deck{--hr:#b4b0a3;--codebg:#ebe7db}
+body.deck h1{font-size:48px;margin:4px 0 14px}
+body.deck .intro{font-size:22px;max-width:880px}
+body.deck p,body.deck .card,body.deck .timeline>div,body.deck .specimen p{font-size:20px;line-height:1.45}
+body.deck .specimen p{max-width:1000px}
+body.deck .found{border-top:0;padding-top:4px;font-size:20px;max-width:960px}
+body.deck .ask{font-size:25px}
+body.deck main section .phase,body.deck .tag,body.deck .label,body.deck th{font:600 14px "Helvetica Neue",Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--lab)}
+body.deck table{font-size:20px}
+body.deck td{padding:9px 16px 9px 0}
+body.deck .terminal{font-size:19px;border:1px solid var(--hr)}
+body.deck code{border:1px solid var(--hr);font-variant-ligatures:none;letter-spacing:.02em;padding:0 5px}
+body.deck .small,body.deck .sources{font-size:16px}
+body.deck header .right{padding:0}
+body.deck .diagram .k{font-size:14px}
+body.deck .diagram .s{font-size:17px}
+body.deck .diagram .box.dead{stroke:var(--i1);stroke-dasharray:5 4}
+body.deck .diagram .dead-t{fill:var(--i1);text-decoration:line-through}
+
+body.deck p,body.deck td{text-wrap:pretty}
+body.deck .ask{text-wrap:balance}
+body.deck code,body.deck .terminal{font-family:Menlo,"SF Mono",ui-monospace,monospace;letter-spacing:.04em}
+body.deck .diagram .box{stroke:var(--lab)}
+body.deck .diagram .dead-t{text-decoration:none}
 </style></head><body class="sheet"><header><span class="mark" aria-hidden="true">⌜⌟</span><strong>AIPE / VOL. 2</strong></header><main><div class="phase">WORKSHOP 03 · SOLO WORKSHEET</div><h1>Recovery decision</h1><p class="intro">Alder’s worker said “Creating draft…” and went silent. Keep the recovery terminal idle until you have written your first move.</p>
 <form id="worksheet"><section><h2>Your starting point</h2>
 <label>Recovery evidence<select name="mode" required><option value="">Choose a path</option><option>My local DBOS run</option><option>Recorded instructor run</option><option>Prediction only</option></select></label>
@@ -36,20 +115,21 @@ python lab.py inspect --state trial-1</pre>
 <div data-stage="3" hidden><section><h2>3. Inspect the starter and repair it</h2>
 <pre class="terminal">python lab.py outage --state trial-1
 python lab.py resume --state trial-1</pre>
-<details><summary>Inspect the recorded November outcomes</summary><div class='evidence'><table><thead><tr><th scope='col'>Starter service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>2</td><td>D-001, D-002</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-003</td><td>CFO</td></tr></tbody></table></div><p>Birch · 2 deliveries → 2 handled event(s) → 2 revoked decision(s) → 0 drafts.</p><p>DBOS journal at the November checkpoint: SUCCESS for 4/4 completed workflows.</p></details>
+<details><summary>Inspect the recorded November outcomes</summary><div class='evidence'><table><thead><tr><th scope='col'>Starter service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>2</td><td>D-001, D-002</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-003</td><td>CFO</td></tr></tbody></table></div><p>Birch · 2 deliveries → 2 handled events → 2 revoked decisions → 0 drafts.</p><p>DBOS journal at the November checkpoint: SUCCESS for 4/4 completed workflows.</p></details>
 <p>Alder approves another follow-up for December. Two deliveries carry that new event. Predict how many distinct requests and drafts Alder should now have.</p>
 <label>What identifies a redelivery? What identifies a draft request? Explain why a fresh request for the same account must still get through.<textarea required name="identities" rows="3"></textarea></label>
-<pre class="terminal">python lab.py december --state trial-1
+<button type="button" data-commit="identities">Save your explanation and open the repair steps</button>
+<div data-stage="4" hidden><pre class="terminal">python lab.py december --state trial-1
 python lab.py verify --state trial-1</pre>
 <p>Keep trial-1/report.json from the failing starter. Edit policy.py and run the complete drill in a fresh directory.</p>
 <pre class="terminal">python -m unittest -v check_policy
 python lab.py run --state trial-2
 python lab.py verify --state trial-2
 python lab.py resume --state trial-2</pre>
-<details><summary>Inspect the rehearsal after repair</summary><div class='evidence'><table><thead><tr><th scope='col'>Repaired service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>1</td><td>D-001</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-002</td><td>procurement</td></tr></tbody></table></div><p>Birch · 2 deliveries → 1 handled event(s) → 1 revoked decision(s) → 0 drafts.</p><p>wire-05 and wire-06 delivered job-dec-17 for outreach/17/dec. One December job completed and the service returned D-003. November retained D-001.</p></details>
+<details><summary>Inspect the rehearsal after repair</summary><div class='evidence'><table><thead><tr><th scope='col'>Repaired service</th><th scope='col'>Drafts</th><th scope='col'>IDs</th><th scope='col'>Recipient or skip</th></tr></thead><tbody><tr><td>Alder Freight</td><td>1</td><td>D-001</td><td>CFO</td></tr><tr><td>Birch Labs</td><td>0</td><td>—</td><td>skipped: revoked</td></tr><tr><td>Elm Textiles</td><td>1</td><td>D-002</td><td>procurement</td></tr></tbody></table></div><p>Birch · 2 deliveries → 1 handled event → 1 revoked decision → 0 drafts.</p><p>wire-05 and wire-06 delivered job-dec-17 for outreach/17/dec. One December job completed and the service returned D-003. November retained D-001.</p></details>
 <details><summary>Compare the deliberately wrong account-key repair</summary><p>Account-key repair: 2 deliveries, 0 December jobs, 0 December receipts. Verification passed 6/7 and exited 1.</p></details>
 <p>After your repair passes 7/7: give your coding agent the prompt from the “Break your green checks” slide.</p>
-<label>Optional · Your mutation: which key lost reconcile-17, how many jobs it got, what verify said, the test you added<textarea name="mutation" rows="2"></textarea></label></section>
+<label>Optional · Your mutation: which key lost reconcile-17, how many jobs it got, what verify said, the test you added<textarea name="mutation" rows="2"></textarea></label></div></section>
 <section data-path="live" hidden><h2>Your two local run reports</h2>
 <p>Choose the report from each trial. The worksheet reads them locally and includes the service receipts and check counts in your decision.</p>
 <label>Starter · trial-1/report.json<input type="file" accept=".json,application/json" data-report="starter"></label><p role="status" id="starter-status"></p>
@@ -61,7 +141,7 @@ python lab.py resume --state trial-2</pre>
 <label>Cite the event ID and the logical request. Why do they justify that outcome?<textarea name="diagnosis" rows="2"></textarea></label></section>
 <section><h2>4. Decide what the team trace supports</h2>
 <p>Open the saved comparison output or run <code>python compare.py</code> in the learner ZIP. The three configurations processed the same five packets.</p>
-<details><summary>Inspect the recorded team results and call intervals</summary><div class='evidence'><table><thead><tr><th scope='col'>Configuration</th><th scope='col'>Accepted / 20</th><th scope='col'>CLI USD</th><th scope='col'>USD / accepted</th><th scope='col'>Whole job</th></tr></thead><tbody><tr><td>One worker</td><td>18</td><td>$0.04861</td><td>$0.00270</td><td>19.80 s</td></tr><tr><td>Three · shared index</td><td>19</td><td>$0.02649</td><td>$0.00139</td><td>6.52 s</td></tr><tr><td>Three · direct messages</td><td>19</td><td>$0.02742</td><td>$0.00144</td><td>7.75 s</td></tr></tbody></table></div><p>Packet 1 input hash 46dde3de3b16 matches across all three configurations.</p><p>Shared-index calls overlap: packet 1 on worker 1 (0.000–5.975 s) and packet 2 on worker 2 (0.000–2.592 s).</p><p><strong>Packet 1</strong> · W2 → W1 (A-42) · W3 → W1 (A-53). The call began at 0.001 s and ended at 5.214 s. Across the five packets the workers exchanged 10 CRM messages.</p><p>One run per configuration, fixed order, different cache usage. CLI costs are list-price estimates.</p></details>
+<details><summary>Inspect the recorded team results and call intervals</summary><div class='evidence'><table><thead><tr><th scope='col'>Configuration</th><th scope='col'>Accepted / 20</th><th scope='col'>CLI USD</th><th scope='col'>USD / accepted</th><th scope='col'>Whole job</th></tr></thead><tbody><tr><td>One worker</td><td>18</td><td>$0.04861</td><td>$0.00270</td><td>19.80 s</td></tr><tr><td>Three · shared index</td><td>19</td><td>$0.02649</td><td>$0.00139</td><td>6.52 s</td></tr><tr><td>Three · direct messages</td><td>19</td><td>$0.02742</td><td>$0.00144</td><td>7.75 s</td></tr></tbody></table></div><p>Packet 1 input hash 46dde3de3b16 matches across all three configurations.</p><p>Shared-index calls overlap: packet 1 on worker 1 (0.000–5.975 s) and packet 2 on worker 2 (0.000–2.592 s).</p><p><strong>Direct-messages run, packet 1</strong> · worker 2 → worker 1 (A-42) · worker 3 → worker 1 (A-53). The call began at 0.001 s and ended at 5.214 s. Across the five packets the workers exchanged 10 CRM messages.</p><p>One run per configuration, fixed order, different cache usage. CLI costs are list-price estimates.</p></details>
 <label>Comparison evidence<select name="teamMode"><option>Recorded instructor run</option><option>My live CLI run</option><option>My live API run</option></select></label>
 <label>Configuration measured<select name="configuration"><option value="">Select one</option><option value="single">One worker</option><option value="shared">Three · shared index</option><option value="messages">Three · direct messages</option></select></label>
 <div class="grid"><label>Accepted accounts out of 20<input type="number" name="accepted" min="0" max="20" step="1"></label><label>Whole job, seconds (two decimal places)<input type="number" name="seconds" min="0.01" step="0.01"></label></div>
@@ -76,13 +156,13 @@ python lab.py resume --state trial-2</pre>
 <label>3 · The destination's contract<select name="ownContract"><option value="">Choose one</option><option>It honours an idempotency key</option><option>It has a natural key I can look up</option><option>Nothing: the outcome after a crash is unknown</option></select></label>
 <label>How: the key or the lookup you will use, or what the worker does after a crash when the outcome is unknown<textarea name="ownContractHow" rows="2"></textarea></label>
 <label>4 · What you read again at write time, and which source owns each<textarea name="ownReread" rows="2"></textarea></label>
-<p class="small">Homework: copy <code>.claude/skills/kill-resume-drill</code> from the lab into your project’s <code>.claude/skills/</code> (Codex: ask it to read that SKILL.md and follow it), then have your agent run the drill on this write in a disposable copy.</p></section></div>
+<p class="small">Homework: copy <code>skills/kill-resume-drill</code> from the lab into your project’s <code>.claude/skills/</code> (Codex: ask it to read that SKILL.md and follow it), then have your agent run the drill on this write in a disposable copy.</p></section></div>
 <p><button type="submit" id="save">Download decision.md ↓</button> <span id="feedback" role="status" aria-live="polite"></span></p></form></main>
 <script type="application/json" id="rubric">{"replay": {"event": "reconcile-17", "request": "outreach/17/nov", "jobs": 1, "receipt": "D-001", "delivery": "enqueued: wire-07 / reconcile-17 / reconcile-17", "before": 3, "after": 3, "verify_after": 7}, "novemberReceipts": ["D-001", "D-002"], "sharedIntervals": {"1": [0.0, 5.975], "2": [0.0, 2.592], "3": [0.001, 2.556], "4": [2.556, 5.135], "5": [2.592, 6.517]}, "teams": {"single": [18, "19.80"], "shared": [19, "6.52"], "messages": [19, "7.75"]}, "starterChecks": {"service committed before workflow completion": true, "original receipt recovered": false, "revoked draft suppressed": true, "two deliveries resolved once": false, "verified correction used": false, "workflow history complete": true, "new request on the same account delivered once": false}, "repairChecks": {"service committed before workflow completion": true, "original receipt recovered": true, "revoked draft suppressed": true, "two deliveries resolved once": true, "verified correction used": true, "workflow history complete": true, "new request on the same account delivered once": true}}</script><script>const form = document.querySelector("#worksheet");
 const feedback = document.querySelector("#feedback");
 const rubric = JSON.parse(document.querySelector("#rubric").textContent);
 const fields = [...form.elements].filter(el => el.name && el.type !== "file");
-const steps = ["prediction", "journal", "outage"];
+const steps = ["prediction", "journal", "outage", "identities"];
 const key = "field-notes-w3-20261122-v2";
 const el = name => form.elements.namedItem(name);
 const val = name => el(name).value.trim();
@@ -93,7 +173,7 @@ try {
   const saved = JSON.parse(localStorage.getItem(key) || "{}");
   const values = saved.values || JSON.parse(localStorage.getItem("field-notes-w3-20261122-v1") || "{}");
   fields.forEach(f => { if (typeof values[f.name] === "string") f.value = values[f.name]; });
-  while (stage < Math.min(3, saved.stage || 0) && val(steps[stage])) stage++;
+  while (stage < Math.min(4, saved.stage || 0) && val(steps[stage])) stage++;
   Object.assign(reports, saved.reports || {});
 } catch {}
 function saveDraft() {
@@ -103,7 +183,7 @@ function saveDraft() {
 }
 function show() {
   document.querySelectorAll("[data-stage]").forEach(box => { box.hidden = stage < Number(box.dataset.stage); });
-  document.querySelectorAll("[data-path]").forEach(box => { box.hidden = mode() !== box.dataset.path || stage < 3; });
+  document.querySelectorAll("[data-path]").forEach(box => { box.hidden = mode() !== box.dataset.path || stage < 4; });
   document.querySelectorAll("[data-commit]").forEach((button,i) => {
     el(steps[i]).readOnly = i < stage;
     button.hidden = i < stage;
@@ -126,7 +206,7 @@ document.querySelectorAll("[data-commit]").forEach(button => {
     stage++;
     feedback.textContent = "";
     show(); saveDraft();
-    const nextField = el(steps[stage] || "identities");
+    const nextField = el(steps[stage] || "configuration");
     nextField.focus({preventScroll:true});
   });
 });
@@ -181,7 +261,7 @@ form.addEventListener("submit", event => {
   if (!requireValue("mode","Choose an evidence path.") || !requireValue("prediction","Write your first move.")) return;
   const plan = mode() === "plan";
   if (!plan) {
-    if (stage < 3) { feedback.textContent = "Save each forecast before exporting a decision."; return; }
+    if (stage < 4) { feedback.textContent = "Save each forecast and your identities explanation before exporting a decision."; return; }
     if (mode() === "live" && (!reports.starter || !reports.repaired)) {
       feedback.textContent = "Attach valid starter and repaired reports for local-run credit."; return;
     }

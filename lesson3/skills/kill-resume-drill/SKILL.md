@@ -10,7 +10,7 @@ first result. A redelivered trigger does nothing new. A genuinely new request st
 changed instruction is honoured at write time. Proof comes from the destination's own records.
 
 Work only in a disposable copy or a sandbox (a local registry, a test-mode account, a scratch folder). Never touch a
-production destination or a git remote. If the only destination is production, stop and say so.
+production destination; use a git remote only if it is a throwaway repository created for the drill. If the only destination is production, stop and say so.
 
 ## 1. Fill the card with the user, before any code
 

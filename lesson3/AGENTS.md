@@ -19,5 +19,7 @@ For "Break your green checks", follow the prompt in `README.md`; there you may a
 For the team comparison, `python compare.py` prints the recording; a live run needs the learner's own Claude Code
 login and their explicit go-ahead, because it spends model budget.
 
-To apply the drill to the learner's own project, use `.claude/skills/kill-resume-drill/SKILL.md` in a disposable copy
+To apply the drill to the learner's own project, use `skills/kill-resume-drill/SKILL.md` (copy it into that project's `.claude/skills/`) in a disposable copy
 of that project. Do not ask for or use credentials, and never write to a production destination.
+
+The drill skill is for the learner's own project after the lab. Do not load it while helping with the Lead Scout repair.

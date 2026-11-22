@@ -1,6 +1,6 @@
 # Lead Scout · Durable execution
 
-Open learner-worksheet.html first. Alder's last message was “Creating draft…” Write your first move with the recovery terminal idle. After the journal appears, write down which service record would distinguish the possible outcomes. The worksheet then reveals the crash commands. You can complete the recorded path in a browser.
+Open learner-worksheet.html first. If you work with a coding agent, ask it to read AGENTS.md before anything else. Alder's last message was “Creating draft…” Write your first move with the recovery terminal idle. After the journal appears, write down which service record would distinguish the possible outcomes. The worksheet then reveals the crash commands. You can complete the recorded path in a browser.
 
 ## Setup before class
 
@@ -61,7 +61,7 @@ It tries both plausible inbox keys in fresh trial folders with
 
 ## Your own write
 
-Fill the four lines in the worksheet's last section: the write, the request identity, the destination's contract and what you read again at write time. For homework, copy `.claude/skills/kill-resume-drill` into your project's `.claude/skills/` (Claude Code picks it up as /kill-resume-drill; in Codex, ask it to read that SKILL.md and follow it). Then have your agent run the drill on that write in a disposable copy.
+Fill the four lines in the worksheet's last section: the write, the request identity, the destination's contract and what you read again at write time. For homework, copy `skills/kill-resume-drill` from this folder into your project's `.claude/skills/` (Claude Code picks it up as /kill-resume-drill; in Codex, ask it to read that SKILL.md and follow it). Then have your agent run the drill on that write in a disposable copy.
 
 ## Team debrief
 
@@ -70,3 +70,17 @@ Run the following at the debrief to print the captured comparison. For a live ru
     python compare.py
 
 Identify the matching packet input, name two overlapping calls and cite their intervals. Each arm ran once in a fixed order with different cache usage. Record the accepted count and elapsed time for one configuration, then give a keep/change/repeat decision and the next comparison that would test it. Use the worksheet to export decision.md.
+
+## Homework
+
+Due before Workshop 4 on 6 December. Cap: 3–4 hours.
+
+- **Track A, building with agents:** one issue → PR pipeline, in a throwaway repository you create for the drill (or a local stand-in for the PR registry; say which). The PR identity is the key (for example branch `issue-<n>`); the agent checks for an existing PR before creating one. Kill a run after the PR is created, resume it, and show the original URL. A new issue must still produce a new PR.
+- **Track B, an agent inside your product:** your product's longest job. Durable state plus an idempotency key on its one real side effect, and an approval check on resume. Carry a correction into the outage and show the record at the destination.
+- **Both tracks:** start from the four-line card in the worksheet and run /kill-resume-drill on that write in a disposable copy. Submit `drill-card.md` from the drill and `decision.md` from the worksheet. Where your work genuinely splits into independent parts, add the same one-agent-versus-team comparison on it.
+
+Extensions, if you have time:
+
+- **The sequential task.** Run the team comparison on work whose steps depend on each other, and show where the team loses.
+- **Two critics.** Compare a critic that sees only the evidence with one that reads the workers' conclusions.
+- **Agent teams as a demo.** Experimental; expect many more tokens than one agent (not measured in this lab).
