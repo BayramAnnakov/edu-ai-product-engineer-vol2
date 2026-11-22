@@ -115,6 +115,9 @@ def main():
     p.add_argument(
         "--state", required=True, type=Path, help="One dedicated directory per run"
     )
+    p.add_argument(
+        "--json", action="store_true", help="Print raw JSON instead of the summary"
+    )
     args = p.parse_args()
     os.environ["SCOUT_LAB_STATE"] = str(args.state.resolve())
     action = args.action
@@ -172,45 +175,110 @@ def main():
         if action == "run":
             report["elapsed_s"] = round(monotonic() - start, 3)
         (args.state / "report.json").write_text(json.dumps(report, indent=2) + "\n")
-        print(json.dumps(report["checks"], indent=2))
+        if args.json:
+            print(json.dumps(report["checks"], indent=2))
+        else:
+            print(show_outcome(data))
+            print(show_checks(report["checks"], args.state / "report.json"))
         if not all(report["checks"].values()):
             sys.exit(1)
     elif action == "reconcile":
         event = service.RECONCILE["event_id"]
-        print(
-            json.dumps(
-                {
-                    "event": event,
-                    "request": service.RECONCILE["request_id"],
-                    "deliveries": [
-                        f"{h['kind']}: {h['detail']}"
-                        for h in data["history"]
-                        if h["kind"] in ("enqueued", "repeat delivery")
-                        and h["detail"].split(" / ")[1] == event
-                    ],
-                    "jobs": [
-                        {"key": j["key"], "status": j["status"], "result": j["result"]}
-                        for j in data["jobs"]
-                        if j["event"]["event_id"] == event
-                    ],
-                    "drafts": len(data["drafts"]),
-                },
-                indent=2,
-            )
-        )
+        summary = {
+            "event": event,
+            "request": service.RECONCILE["request_id"],
+            "deliveries": [
+                f"{h['kind']}: {h['detail']}"
+                for h in data["history"]
+                if h["kind"] in ("enqueued", "repeat delivery")
+                and h["detail"].split(" / ")[1] == event
+            ],
+            "jobs": [
+                {"key": j["key"], "status": j["status"], "result": j["result"]}
+                for j in data["jobs"]
+                if j["event"]["event_id"] == event
+            ],
+            "drafts": len(data["drafts"]),
+        }
+        if args.json:
+            print(json.dumps(summary, indent=2))
+        else:
+            lines = [f"New event {event} for the existing request {summary['request']}"]
+            lines += ["  inbox: " + d for d in summary["deliveries"]]
+            lines.append(f"  jobs run for it: {len(summary['jobs'])}")
+            lines += [f"    {j['key']}  {j['status']}  returned {j['result']}" for j in summary["jobs"]]
+            lines.append(f"  drafts in the service: {summary['drafts']}")
+            print("\n".join(lines))
     elif action == "crash":
-        print(
-            json.dumps(
-                {
-                    "worker_exit": code,
-                    "workflows": data["workflows"],
-                    "completed_steps": data["completed_steps"],
-                },
-                indent=2,
-            )
-        )
-    else:
+        journal = {
+            "worker_exit": code,
+            "workflows": data["workflows"],
+            "completed_steps": data["completed_steps"],
+        }
+        if args.json:
+            print(json.dumps(journal, indent=2))
+        else:
+            print(f"Worker exited with {code} (killed in the middle of a step).")
+            print(show_journal(data))
+    elif args.json:
         print(json.dumps(data, indent=2))
+    else:
+        print(show_state(data))
+
+
+def show_journal(data):
+    steps = {}
+    for row in data["completed_steps"]:
+        steps.setdefault(row["id"], []).append(row["step"])
+    lines = ["DBOS JOURNAL  (which steps finished, per workflow)"]
+    for w in data["workflows"]:
+        lines.append(f"  {w['id']:<22} {w['status']:<8} finished: {', '.join(steps.get(w['id'], [])) or '-'}")
+    return "\n".join(lines) if data["workflows"] else "DBOS JOURNAL  (empty)"
+
+
+def show_state(data):
+    lines = ["DRAFTS SERVICE  (what exists at the destination)"]
+    for d in data["drafts"]:
+        name = service.ACCOUNTS.get(d["account"], d["account"])
+        lines.append(f"  {d['id']}  {d['account']:<6} {name:<14} {d['request']:<17} to {d['recipient']:<12} {d['revision']}")
+    if not data["drafts"]:
+        lines.append("  (no drafts)")
+    lines.append("")
+    lines.append("INBOX  (one row per inbox key; a repeat key is not run again)")
+    for j in data["jobs"]:
+        e = j["event"]
+        lines.append(f"  key {j['key']:<17} event {e['event_id']:<12} request {e['request_id']:<17} {j['status']:<8} {j['result'] or ''}")
+    lines.append("")
+    lines.append(show_journal(data))
+    lines.append("")
+    lines.append("HISTORY")
+    for h in data["history"]:
+        lines.append(f"  {h['seq']:>3}  {h['kind']:<20} {h['detail']}")
+    return "\n".join(lines)
+
+
+def show_outcome(data):
+    drafts, jobs = data["drafts"], data["jobs"]
+    ids = lambda request: ", ".join(d["id"] for d in drafts if d["request"] == request) or "none"
+    runs = lambda event: sum(j["event"]["event_id"] == event for j in jobs)
+    elm = ", ".join(d["recipient"] for d in drafts if d["account"] == service.PILOT["account"]) or "none"
+    birch = sum(d["account"] == service.TIMER["account"] for d in drafts)
+    return "\n".join([
+        "WHAT HAPPENED AT THE DESTINATION",
+        f"  Alder November ({service.ALDER['request_id']}): drafts {ids(service.ALDER['request_id'])}",
+        f"  Alder December ({service.DECEMBER['request_id']}): {runs(service.DECEMBER['event_id'])} job(s) run, drafts {ids(service.DECEMBER['request_id'])}",
+        f"  Birch timer ({service.TIMER['event_id']}): handled {runs(service.TIMER['event_id'])} time(s), drafts {birch}",
+        f"  Elm ({service.PILOT['request_id']}): draft to {elm}",
+        "  Every record: python lab.py inspect --state <folder>",
+        "",
+    ])
+
+
+def show_checks(checks, path):
+    passed = sum(checks.values())
+    lines = [f"Recovery checks: {passed} of {len(checks)} pass  (report: {path})"]
+    lines += [f"  {'PASS' if ok else 'FAIL'}  {name}" for name, ok in checks.items()]
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":

@@ -343,7 +343,7 @@ def trace_observations(runs):
                 left["end_s"], right["end_s"]
             ):
                 intervals = [
-                    f"packet {c['packet']} on worker {c['worker']} ({c['start_s']:.3f}–{c['end_s']:.3f} s)"
+                    f"packet {c['packet']} ({c['start_s']:.3f}–{c['end_s']:.3f} s)"
                     for c in (left, right)
                 ]
                 return match, "Shared-index calls overlap: " + " and ".join(

@@ -135,7 +135,7 @@ def create_draft(event):
         ).fetchone()
         if old:
             result = f"D-{old['id']:03d}"
-            record(db, "receipt replay", f"{event['request_id']} / {result}")
+            record(db, "existing receipt returned", f"{event['request_id']} / {result}")
             return result
         account = db.execute(
             "SELECT * FROM accounts WHERE id=?", (account_id,)
