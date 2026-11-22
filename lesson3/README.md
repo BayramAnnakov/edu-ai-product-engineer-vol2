@@ -14,12 +14,6 @@ Use Python 3.11+ on macOS, Linux or WSL. Run these in the extracted folder. The 
     source .venv/bin/activate
     python -m pip install -r requirements.txt
 
-If you have a Claude Code login, you can start the separate one-versus-three comparison in a second terminal: the same five research calls, one at a time or three in parallel. Activate the same environment there. Leave its output until the debrief.
-
-    python compare.py --live --provider claude --max-budget-usd 0.25 --output my-team-run.json > team-output.txt
-
-The cap applies to each of the three configurations. Use a fresh output filename for each paid run. Without a Claude login, use the supplied recording at the debrief.
-
 Every `lab.py` command prints a readable summary: the drafts service first, then the inbox, the DBOS journal and the history. Add `--json` for the raw data.
 
 ## 1. The crash
@@ -84,11 +78,15 @@ After all three fixes pass 7/7, give your coding agent the prompt from the “Br
 
 Fill the four lines in the worksheet's last section: the write, the request key, the destination's contract and what you read again at write time. For homework, get `skills/kill-resume-drill` from the course repository (github.com/BayramAnnakov/edu-ai-product-engineer-vol2) and copy it into your project's `.claude/skills/` (Claude Code picks it up as /kill-resume-drill; in Codex, ask it to read that SKILL.md and follow it). Then have your agent run the drill on that write in a disposable copy.
 
-## Team debrief
+## Side experiment: one agent or three
 
-Run the following at the debrief to print the captured comparison. For a live run, open team-output.txt instead.
+A separate run, not the crash lab: the same five research calls on 20 W2 accounts, one at a time or three in parallel. Before you look, write the quality floor and time limit from your W1 decision.md that would make three in parallel worth it. Then print the recording:
 
     python compare.py
+
+Optional, after class, with a Claude Code login: repeat it live. The cap applies to each of the three configurations; use a fresh output filename for each paid run.
+
+    python compare.py --live --provider claude --max-budget-usd 0.25 --output my-team-run.json
 
 Identify the matching packet input, name two calls that ran at the same time and cite their intervals. Each configuration ran once in a fixed order with different cache usage. Record the accepted count and elapsed time for one configuration, then give a keep/change/repeat decision and the next comparison that would test it. Use the worksheet to export decision.md.
 
